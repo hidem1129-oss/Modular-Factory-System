@@ -42,7 +42,7 @@ i2cset -y 1 0x14 0x30 0x10
 ```
 
 ## Architecture
-```Markdwon
+```text
 [ Raspberry Pi 5 ]
         │ I²C
  ┌──────┴─────────┐────────────────┐────────────...
