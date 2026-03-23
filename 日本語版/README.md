@@ -57,17 +57,14 @@
 ---
 
 ## アーキテクチャ
-```Markdwon
+```text
 [ Raspberry Pi 5 ]
-
-│ I²C
-┌──────┴─────────┐────────────────┐────────────...
-
-│ │ │
-サーボノード センサーノード モーターノード ...
-
-│ │ │
-アクチュエータ 計測アクチュエータ ...
+        │ I²C
+ ┌──────┴─────────┐────────────────┐────────────...
+ │                │                │
+Servo Node   Sensor Node       Motor Node       ...
+ │                │                │
+Actuator      Measurement       Actuator        ...
 ```
 - 上位制御：Raspberry Pi 5
 - ローカル制御：Raspberry Pi Pico
