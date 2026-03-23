@@ -7,15 +7,16 @@
 
 ## Demo
 
-See the system in action  
+A modular factory system where multiple nodes (actuator / sensor / motor)
+are controlled via I²C and orchestrated from a central controller. 
 - YouTube: https://youtube.com/...
 - Local video: ./Media/demo.mp4
 
 ---
 ## Choose your path
 
-- Engineers (run the system) → [Quick Start](./Software/servo_node/quick_start/README.md)
-- Recruiters (DX overview) → [Japanese Overview](./日本語版/README.md)
+- 🛠 Engineers (run the system) → [Quick Start](./Software/servo_node/quick_start/README.md)
+- 🧑‍💼 Recruiters (DX overview) → [Japanese Overview](./日本語版/README.md)
 
 ---
 
@@ -33,6 +34,24 @@ It enables:
 - Rapid prototyping of factory systems
 - Reconfiguration of physical workflows
 - Integration of control, sensing, and data analytics
+
+## Core System
+
+The core of this project is not a specific actuator, but a **modular node architecture**:
+
+- Distributed I²C node system
+- Register-based communication protocol
+- State machine-driven execution model
+- Hardware-agnostic module design
+
+This allows different modules to be plugged into the same system:
+
+- Servo Node (actuator example)
+- Photo Sensor Node (measurement example)
+- Motor Node (drive example)
+
+This architecture abstracts physical devices into standardized nodes,
+similar to microservices in software systems.
 
 ---
 
@@ -63,23 +82,6 @@ Actuator      Measurement       Actuator        ...
 - Scalable system design
 👉 Detailed design: ./Software/servo_node/design/README.md
 
-## Core System
-
-The core of this project is not a specific actuator, but a **modular node architecture**:
-
-- Distributed I²C node system
-- Register-based communication protocol
-- State machine-driven execution model
-- Hardware-agnostic module design
-
-This allows different modules to be plugged into the same system:
-
-- Servo Node (actuator example)
-- Photo Sensor Node (measurement example)
-- Motor Node (drive example)
-
-This architecture abstracts physical devices into standardized nodes,
-similar to microservices in software systems.
 
 ## Technical Highlights
 - Register map (0x00–0x3F)
