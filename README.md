@@ -14,8 +14,8 @@ See the system in action
 ---
 ## Choose your path
 
-- Engineers → [Quick Start](./Software/servo_node/quick_start/README.md)
-- Recruiters → [Japanese Overview](./日本語版/README.md)
+- Engineers (run the system) → [Quick Start](./Software/servo_node/quick_start/README.md)
+- Recruiters (DX overview) → [Japanese Overview](./日本語版/README.md)
 
 ---
 
@@ -38,7 +38,7 @@ It enables:
 
 ## Quick Start
 
-Start with the actuator node:  
+Start with a simple actuator example: 
 [Servo Node Quick Start](./Software/servo_node/quick_start/README.md)
 
 Example:
@@ -59,15 +59,9 @@ Actuator      Measurement       Actuator        ...
 ```
 - Distributed node architecture
 - Register-based communication
+- Hardware modules behave as interchangeable nodes
 - Scalable system design
-Details: ./Software/servo_node/design/README.md
-
-## Technical Highlights
-- Register map (0x00–0x3F)
-- DATA_READY / UPDATE_CNT synchronization
-- Command validation (accept / reject model)
-- E-STOP propagation across nodes
-- Modular firmware architecture
+👉 Detailed design: ./Software/servo_node/design/README.md
 
 ## Core System
 
@@ -83,6 +77,16 @@ This allows different modules to be plugged into the same system:
 - Servo Node (actuator example)
 - Photo Sensor Node (measurement example)
 - Motor Node (drive example)
+
+This architecture abstracts physical devices into standardized nodes,
+similar to microservices in software systems.
+
+## Technical Highlights
+- Register map (0x00–0x3F)
+- DATA_READY / UPDATE_CNT synchronization
+- Command validation (accept / reject model)
+- E-STOP propagation across nodes
+- Modular firmware architecture
 
 ## Why this matters
 
