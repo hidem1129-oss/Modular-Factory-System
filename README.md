@@ -8,8 +8,14 @@
 ## Demo
 
 See the system in action  
-- Demo Video: ./Media/demo.mp4  
 - YouTube: https://youtube.com/...
+- Local video: ./Media/demo.mp4
+
+---
+## Choose your path
+
+- Engineers → [Quick Start](./Software/servo_node/quick_start/README.md)
+- Recruiters → [Japanese Overview](./日本語版/README.md)
 
 ---
 
@@ -62,6 +68,21 @@ Details: ./Software/servo_node/design/README.md
 - Command validation (accept / reject model)
 - E-STOP propagation across nodes
 - Modular firmware architecture
+
+## Core System
+
+The core of this project is not a specific actuator, but a **modular node architecture**:
+
+- Distributed I²C node system
+- Register-based communication protocol
+- State machine-driven execution model
+- Hardware-agnostic module design
+
+This allows different modules to be plugged into the same system:
+
+- Servo Node (actuator example)
+- Photo Sensor Node (measurement example)
+- Motor Node (drive example)
 
 ## Why this matters
 
