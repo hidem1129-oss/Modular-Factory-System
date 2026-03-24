@@ -17,7 +17,7 @@ The firmware is designed based on a **modular node architecture**, where:
 
 ## How it works
 
-👉 [How It Works](../../How_It_Works/)
+👉 [How It Works](How_It_Works/)
 
 ---
 
