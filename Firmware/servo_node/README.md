@@ -84,6 +84,7 @@ Hardware abstraction layer for servo control.
 ## Getting Started
 
 👉 Start here:
+
 [Quick Start Guide](Modular-Factory-System/Firmware/servo_node/quick_start/README.md)
 
 ## Related
