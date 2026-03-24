@@ -32,4 +32,4 @@ Input → Process → Execute → Feedback
 - Feedback: results written back to registers
 
 ## Next
-👉 See a real implementation:[Servo Node](../Firmware/servo_node/)
+👉 See a real implementation : [Servo Node](../Firmware/servo_node/)
