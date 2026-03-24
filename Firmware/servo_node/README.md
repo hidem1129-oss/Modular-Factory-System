@@ -88,6 +88,6 @@ Hardware abstraction layer for servo control.
 
 ## Related
 
-Core system → ../../common/core/
-API → ../../common/include/
-Platform → ../../common/platform/
+- Core system → ../../common/core/
+- API → ../../common/include/
+- Platform → ../../common/platform/
