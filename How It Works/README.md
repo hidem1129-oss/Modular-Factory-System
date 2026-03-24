@@ -4,7 +4,7 @@ This section explains how a single control node works.
 
 ---
 
-## Watch
+## Watch the system in action
 
 👉 https://youtube.com/...
 
