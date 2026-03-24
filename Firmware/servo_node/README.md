@@ -72,9 +72,13 @@ Hardware abstraction layer for servo control.
 ## How it works
 
 1. Host writes target values to registers
+
 2. Core validates and processes commands
+
 3. Servo node receives execution via callbacks
+
 4. Servo movement is performed through HAL
+
 5. Feedback is written back to registers
 
 ## Getting Started
