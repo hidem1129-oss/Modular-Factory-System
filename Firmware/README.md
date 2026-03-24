@@ -15,6 +15,12 @@ The firmware is designed based on a **modular node architecture**, where:
 
 ---
 
+## How it works
+
+👉 [How It Works](../How It Works/)
+
+---
+
 ## Structure
 
 The firmware is divided into two main parts:
@@ -63,6 +69,12 @@ In other words:
 > Node directories are not standalone firmware,  
 > but extensions of the shared firmware core.
 
+This structure enables:
+
+- reuse of core functionality
+- easy addition of new node types
+- consistent behavior across the system
+
 ---
 
 ## Design Philosophy
@@ -80,17 +92,8 @@ but applied to physical devices.
 
 ---
 
-## Getting Started
+## Learn More
 
-To start using the firmware:
-
-👉 Begin with the servo node example:
-
-- [Servo Node Quick Start](./servo_node/quick_start/README.md)
-
----
-
-## Related Documentation
-
+- How nodes work → [How It Works](../How It Works/)
 - System Architecture → ../Docs/architecture/
 - Protocol Design → ../Docs/protocol/
