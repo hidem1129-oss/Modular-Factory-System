@@ -29,7 +29,7 @@ Input → Process → Execute → Feedback
 - Input: command written to registers
 - Process: validation and state transition
 - Execute: node-specific logic runs
-- Feedback: results written back
+- Feedback: results written back to registers
 
 ## Next
-👉 See implementation:[Servo Node]()
+👉 See a real implementation:[Servo Node](../Firmware/servo_node/)
