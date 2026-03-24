@@ -83,9 +83,7 @@ Hardware abstraction layer for servo control.
 
 ## Getting Started
 
-👉 Start here:
-
-[Quick Start Guide](./quick_start)
+👉 Start here:[Quick Start Guide](./quick_start)
 
 ## Related
 
