@@ -112,11 +112,36 @@ This project demonstrates:
 - Data-driven control loops
 - Physical system orchestration
 
+## Hardware and BOM ~About manufacturing~
+
+Custom PCBs are used for control and monitoring modules.  
+Each board has a DigiKey MyList-based BOM.
+
+- [Power Monitor Board BOM](https://www.digikey.jp/ja/mylists/list/RITVVGPV8U)
+- [DC Motor Control Board BOM](https://www.digikey.jp/ja/mylists/list/UO08XWYEAF)
+- [Servo Control Board BOM](https://www.digikey.jp/ja/mylists/list/1G5XREGH36)
+- [Sensor Board BOM](https://www.digikey.jp/ja/mylists/list/EW3FT9N8K2)
+- [Controller Board BOM](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78)
+- [Pi 5 Board BOM](https://www.digikey.jp/ja/mylists/list/QO09LGCG39)
+- [Other Components BOM](https://www.digikey.jp/ja/mylists/list/5G1M6HVIDC)
+
+See: [Hardware BOM](./Hardware/README.md)
+
+## Current Status
+
+- Multi-node I²C control: implemented
+- Camera-based sorting demo: implemented
+- SQLite logging: implemented
+- Grafana dashboard: implemented
+- Custom PCB modules: implemented
+- BOM management via DigiKey MyLists: prepared
+
 ## Future Work
-- Multi-node orchestration
-- Digital twin / debugger interface
-- Grafana / Power BI integration
-- AI-based sorting system
+
+- Flow-editor style orchestration UI
+- More reusable module slots and standardized harnesses
+- Additional use cases using the same control modules
+- Recruiter-oriented 5-minute technical walkthrough video
 
 ## Disclaimer
 This project is intended for educational and PoC purposes.
