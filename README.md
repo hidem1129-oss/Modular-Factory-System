@@ -8,6 +8,8 @@
 
 ## Demo Video
 
+<img width="248" height="140" alt="Adobe Express - gif" src="https://github.com/user-attachments/assets/b950c0a5-6086-4731-b46b-9f26fcd5e588" />
+
 ### Contest Version
 
 This video was created for a prototype contest and gives a compact overview of the system.
