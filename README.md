@@ -5,12 +5,21 @@
 
 ---
 
-## Demo
+## Demo Video
 
-A modular factory system where multiple nodes (actuator / sensor / motor)
-are controlled via I²C and orchestrated from a central controller. 
-- YouTube: https://youtube.com/...
-- Local video: ./Media/demo.mp4
+### Contest Version
+
+This video was created for a prototype contest and gives a compact overview of the system.
+
+- YouTube: https://youtu.be/8Od8Ocg0tjE
+
+The video demonstrates:
+- modular tabletop factory hardware
+- I²C-based motor / servo / sensor control
+- camera-based color sorting
+- SQLite logging
+- Grafana visualization
+- custom PCB-based control and monitoring modules
 
 ---
 ## Choose your path
