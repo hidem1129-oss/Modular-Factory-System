@@ -112,7 +112,7 @@ This project demonstrates:
 - Data-driven control loops
 - Physical system orchestration
 
-## Hardware and BOM ~About manufacturing~
+## Hardware and BOM -About manufacturing-
 
 Custom PCBs are used for control and monitoring modules.  
 Each board has a DigiKey MyList-based BOM.
