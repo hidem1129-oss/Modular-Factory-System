@@ -1,6 +1,6 @@
 <img width="1920" height="1080" alt="samne" src="https://github.com/user-attachments/assets/3304786b-fce8-4f30-938c-a0456ee5e704" />
 
-*Overall view of the modular tabletop factory system, including conveyor, camera, and distributed control hardware.*
+Overall view of the modular tabletop factory system, including conveyor, camera, and distributed control hardware.
 
 # Modular Factory System
 
@@ -12,7 +12,7 @@
 
 <img width="248" height="140" alt="Adobe Express - gif" src="https://github.com/user-attachments/assets/b950c0a5-6086-4731-b46b-9f26fcd5e588" />
 
-*Animated preview of the conveyor-based demo running on the modular factory platform.*
+Animated preview of the conveyor-based demo running on the modular factory platform.
 
 ### Contest Version
 
