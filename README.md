@@ -5,7 +5,9 @@
 <img width="1920" height="1080" alt="samne" src="https://github.com/user-attachments/assets/3304786b-fce8-4f30-938c-a0456ee5e704" />
 
 
+
 *Overall view of the modular tabletop factory system, including conveyor, camera, and distributed control hardware.*
+
 
 
 ---
