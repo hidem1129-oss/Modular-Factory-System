@@ -64,7 +64,7 @@ This enables:
 
 ## Related Documents
 
-- Firmware overview → ../README.md
-- Servo node → ../servo_node/
-- Motor node → ../motor_node/
-- Sensor node → ../sensor_node/
+- Firmware overview → [README.md]()
+- Servo node → [servo_node]()
+- Motor node → [motor_node]()
+- Sensor node → [sensor_node]()
