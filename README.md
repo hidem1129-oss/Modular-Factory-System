@@ -135,6 +135,8 @@ Each board has a DigiKey MyList-based BOM.
 
 See: [Hardware BOM](./Hardware/README.md)
 
+Passive components not listed may be used as long as they have matching characteristics.
+
 ## Current Status
 
 - Multi-node I²C control: implemented
