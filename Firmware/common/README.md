@@ -8,7 +8,7 @@ This directory contains shared firmware components used across all Raspberry Pi 
 
 The `common` layer provides the reusable foundation of the firmware architecture.
 
-It defines how all nodes behave in a consistent and unified way.
+It defines how all nodes behave in a consistent and unified way, regardless of whether the node controls a motor, a servo, or a sensor.
 
 ---
 
@@ -16,11 +16,12 @@ It defines how all nodes behave in a consistent and unified way.
 
 The `common` layer is responsible for:
 
-- Shared node behavior (state handling, control flow)
-- Register-based communication handling
-- Public APIs for node-specific implementations
-- Platform and build configuration
-- Common design documentation
+- shared node behavior
+- register-based communication handling
+- state handling and control flow
+- public APIs for node-specific implementations
+- platform and build configuration
+- common design documentation
 
 ---
 
@@ -29,31 +30,41 @@ The `common` layer is responsible for:
 - `core/` : shared control logic and state handling
 - `include/` : public headers used by node-specific implementations
 - `platform/` : build/runtime configuration and Pico-specific entry points
-- `docs/` : common design notes and architecture documents
+- `docs/` : design notes and common firmware documentation
 
 ---
 
-## Relationship to node-specific firmware
+## How it fits into the system
 
-Node-specific firmware such as `servo_node` or `sensor_node` is built on top of this shared layer.
+Node-specific firmware directories such as `servo_node/`, `motor_node/`, and `sensor_node/` extend this common layer.
 
-In other words:
+```text
+node-specific implementation
+        ↓
+common/include
+        ↓
+common/core
+        ↓
+common/platform
+```
 
-- `common/` defines the reusable firmware core
-- each node directory defines device-specific behavior
-- node-specific code extends the shared system, rather than replacing it
-
----
+This structure allows each node to share the same communication model and execution behavior while keeping device-specific logic separate.
 
 ## Design Concept
 
-This architecture separates:
+The common layer abstracts each physical device as a standardized firmware node.
 
-- **what is common** → implemented in `common/`
-- **what is device-specific** → implemented in each node directory
+This enables:
 
-This allows:
+- consistent I²C behavior across nodes
+- reusable register handling
+- unified state transitions
+- easier addition of new node types
+- reduced duplication between firmware implementations
 
-- easy addition of new node types
-- consistent behavior across nodes
-- reusable firmware components
+## Related Documents
+
+- Firmware overview → ../README.md
+- Servo node → ../servo_node/
+- Motor node → ../motor_node/
+- Sensor node → ../sensor_node/
