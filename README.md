@@ -4,7 +4,8 @@
 
 <img width="1920" height="1080" alt="samne" src="https://github.com/user-attachments/assets/3304786b-fce8-4f30-938c-a0456ee5e704" />
 
-Overall view of the modular tabletop factory system, including conveyor, camera, and distributed control hardware.
+*Overall view of the modular tabletop factory system, including conveyor, camera, and distributed control hardware.*
+
 
 ---
 
@@ -12,7 +13,8 @@ Overall view of the modular tabletop factory system, including conveyor, camera,
 
 <img width="248" height="140" alt="Adobe Express - gif" src="https://github.com/user-attachments/assets/b950c0a5-6086-4731-b46b-9f26fcd5e588" />
 
-Animated preview of the conveyor-based demo running on the modular factory platform.
+*Animated preview of the conveyor-based demo running on the modular factory platform.*
+
 
 ### Contest Version
 
@@ -27,6 +29,7 @@ The video demonstrates:
 - SQLite logging
 - Grafana visualization
 - custom PCB-based control and monitoring modules
+
 
 ---
 ## Choose your path
@@ -50,6 +53,7 @@ It enables:
 - Rapid prototyping of factory systems
 - Reconfiguration of physical workflows
 - Integration of control, sensing, and data analytics
+  
 
 ## Core System
 
@@ -68,6 +72,7 @@ This allows different modules to be plugged into the same system:
 
 This architecture abstracts physical devices into standardized nodes,
 similar to microservices in software systems.
+
 
 ---
 
@@ -107,6 +112,7 @@ Actuator      Measurement       Actuator        ...
 - E-STOP propagation across nodes
 - Modular firmware architecture
 
+
 ## Why this matters
 
 Modern DX requires:
@@ -120,7 +126,8 @@ This project demonstrates:
 - Data-driven control loops
 - Physical system orchestration
 
-## Hardware and BOM -About manufacturing-
+
+## Hardware and BOM
 
 Custom PCBs are used for control and monitoring modules.  
 Each board has a DigiKey MyList-based BOM.
@@ -143,6 +150,7 @@ Passive components not listed may be used as long as they have matching characte
 - Camera-based sorting demo: implemented
 - SQLite logging: implemented
 - Grafana dashboard: implemented
+- Power monitoring dashboard: implemented
 - Custom PCB modules: implemented
 - BOM management via DigiKey MyLists: prepared
 
