@@ -96,6 +96,7 @@ Actuator      Measurement       Actuator        ...
 - Register-based communication
 - Hardware modules behave as interchangeable nodes
 - Scalable system design
+  
 👉 Detailed design: ./Software/servo_node/design/README.md
 
 
