@@ -63,7 +63,9 @@ In the physical demo system, the motor node can be used for:
 - other simple timed motion tasks
 
 ## Related Documents
-- Firmware overview → ../README.md
-- Common firmware core → ../common/
-- Servo node → ../servo_node/
-- Sensor node → ../sensor_node/
+
+- Firmware overview → [README.md]()
+- Common firmware core → [common]()
+- Servo node → [servo_node]()
+- Sensor node → [sensor_node]()
+
