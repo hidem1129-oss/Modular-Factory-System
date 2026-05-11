@@ -92,7 +92,7 @@ In the physical demo system, the servo node can be used for:
 
 ## Related Documents
 
-- Firmware overview → ../README.md
-- Common firmware core → ../common/
-- Motor node → ../motor_node/
-- Sensor node → ../sensor_node/
+- Firmware overview → [`../README.md`](../README.md)
+- Common firmware core → [`../common/`](../common/)
+- Motor node → [`../motor_node/`](../motor_node/)
+- Sensor node → [`../sensor_node/`](../sensor_node/)
