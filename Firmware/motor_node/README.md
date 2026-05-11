@@ -63,6 +63,8 @@ The host controller writes motor parameters to I²C registers.
 
 The common firmware core handles register access and state transitions, while the motor node implements the device-specific output behavior.
 
+---
+
 ## Example use in the demo
 
 In the physical demo system, the motor node can be used for:
@@ -71,6 +73,8 @@ In the physical demo system, the motor node can be used for:
 - paper feed or take-up mechanisms
 - rack-and-pinion style motion
 - other simple timed motion tasks
+
+---
 
 ## Related Documents
 
