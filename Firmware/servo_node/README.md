@@ -42,18 +42,6 @@ It includes servo-specific logic such as:
 - generating PWM output through the hardware abstraction layer
 - updating status and feedback values
 
-### `design/`
-
-This directory contains design documentation for the servo node.
-
-It may include:
-
-- register usage
-- execution model
-- HAL design
-- command handling
-- implementation notes
-
 ---
 
 ## Relationship to common firmware
