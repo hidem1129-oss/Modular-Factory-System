@@ -139,5 +139,5 @@ For example:
 
 - Firmware overview → [`../Firmware/`](../Firmware/)
 - Software overview → [`../Software/`](../Software/)
-- Use cases → [`../Use%20cases/`](../Use%20cases/)
+- Use cases → [`../Use_cases/`](../Use_cases/)
 - Japanese overview → [`../日本語版/`](../日本語版/)
