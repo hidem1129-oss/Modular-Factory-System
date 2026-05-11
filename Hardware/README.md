@@ -34,8 +34,6 @@ Each PCB has a dedicated role in the system.
 | Power Monitor Board | Power distribution / monitoring | Distributes 5 V power and monitors voltage/current |
 | Auxiliary / Cable Boards | Wiring support | Helps organize harnessing and module connections |
 
-> Board names may be adjusted depending on the actual PCB directory names.
-
 ---
 
 ## Common Design Requirements
@@ -110,3 +108,35 @@ Hardware/
 │  ├─ pcb/
 │  └─ images/
 ```
+
+---
+
+## Relationship to Firmware and Software
+
+The hardware layer works together with the firmware and software layers.
+
+```text
+Hardware PCB
+    ↓
+Firmware node
+    ↓
+I²C register interface
+    ↓
+Host-side orchestration / logging
+    ↓
+Grafana visualization
+```
+
+For example:
+- a DC motor board is driven by Firmware/motor_node
+- a servo board is driven by Firmware/servo_node
+- a sensor board is read by Firmware/sensor_node
+- power monitor data is logged and visualized by the software layer
+
+---
+
+## Related Documents
+- Firmware overview → [`../Firmware/`](../Firmware/)
+- Software overview → [`../Software/`](../Software/)
+- Use cases → [`../Use%20cases/`](../Use%20cases/)
+- Japanese overview → [`../日本語版/`](../日本語版/)
