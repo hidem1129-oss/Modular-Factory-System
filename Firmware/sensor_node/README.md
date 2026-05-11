@@ -76,7 +76,7 @@ In the physical demo system, the sensor node can be used for:
 
 ## Related Documents
 
-Firmware overview → [../README.md](../README.md)
-Common firmware core → [../common/](../common/)
-Motor node → [../motor_node/](../motor_node/)
-Servo node → [../servo_node/](../servo_node/)
+- Firmware overview → [../README.md](../README.md)
+- Common firmware core → [../common/](../common/)
+- Motor node → [../motor_node/](../motor_node/)
+- Servo node → [../servo_node/](../servo_node/)
