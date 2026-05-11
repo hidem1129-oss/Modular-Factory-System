@@ -27,7 +27,7 @@ Each PCB has a dedicated role in the system.
 
 | Board | Role | Main Function |
 |---|---|---|
-| [Controller / Interface Board](/Controller%20Board) | System interface | Connects Raspberry Pi 5 to I²C modules |
+| [Controller / Interface Board](/Controller_Board) | System interface | Connects Raspberry Pi 5 to I²C modules |
 | DC Motor Board | Actuator control | Drives DC motors such as conveyors and linear mechanisms |
 | Servo Board | Actuator control | Drives servo motors for sorting gates and clamp mechanisms |
 | Sensor Board | Sensor input | Connects photo-reflectors and other detection sensors |
