@@ -137,7 +137,7 @@ For example:
 
 ## Related Documents
 
-- Firmware overview → [`../Firmware/`](../Firmware/)
-- Software overview → [`../Software/`](../Software/)
-- Use cases → [`../Use_cases/`](../Use_cases/)
-- Japanese overview → [`../日本語版/`](../日本語版/)
+- Firmware overview → [`Firmware`](../Firmware/)
+- Software overview → [`Software`](../Software/)
+- Use cases → [`Use_cases`](../Use_cases/)
+- Japanese overview → [`日本語版`](../日本語版/)
