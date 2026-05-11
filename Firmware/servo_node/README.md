@@ -1,92 +1,98 @@
-# Servo Node
+# servo_node
 
-This directory contains the implementation of a **servo actuator node**  
-based on the shared firmware core.
-
----
-
-## Overview
-
-The servo node is an example of a **node-specific implementation**  
-that extends the common firmware system.
-
-It demonstrates how a physical actuator can be controlled through:
-
-- register-based commands
-- state machine execution
-- distributed node architecture
+This directory contains firmware for a servo actuator node.
 
 ---
 
-## What it does
+## Purpose
 
-The servo node allows:
+The `servo_node` controls servo motors through the shared I²C node architecture.
 
-- position control via register input
-- execution of movement commands
-- feedback reporting through registers
-
-It is designed as a simple and clear example of how to integrate an actuator  
-into the modular node system.
+It is used to drive small actuator mechanisms such as sorting gates, diverter arms, and paper clamp mechanisms in the Modular Factory System.
 
 ---
 
-## Architecture
+## Responsibilities
 
-The servo node is built on top of the shared firmware layers:
+The servo node is responsible for:
+
+- receiving servo control commands via I²C registers
+- applying target position or setpoint values
+- executing timed or position-based servo movement
+- generating PWM output for servo control
+- reporting status and feedback values
+- integrating servo-specific behavior with the shared firmware core
+
+---
+
+## Directory Structure
+
+- `src/` : servo-specific firmware implementation
+- `design/` : design notes and implementation documents for the servo node
+- `include/` : servo-specific headers, if needed
+- `quick_start/` : quick start notes, planned to be integrated into use-case documentation
+- `test/` : test notes, planned to be integrated into use-case documentation
+- `media/` : media files, optional
+
+### `src/`
+
+This directory contains the actual firmware implementation for the servo node.
+
+It includes servo-specific logic such as:
+
+- reading servo control parameters from I²C registers
+- applying target position or movement parameters
+- executing servo movement
+- generating PWM output through the hardware abstraction layer
+- updating status and feedback values
+
+### `design/`
+
+This directory contains design documentation for the servo node.
+
+It may include:
+
+- register usage
+- execution model
+- HAL design
+- command handling
+- implementation notes
+
+---
+
+## Relationship to common firmware
+
+The servo node is built on top of the shared firmware core.
 
 ```text
-node-specific (servo_node)
-        ↓
-include (public API)
-        ↓
-core (execution engine)
-        ↓
-platform (hardware/runtime)
+servo_node
+    ↓
+common/include
+    ↓
+common/core
+    ↓
+common/platform
 ```
+The host controller writes servo parameters to I²C registers.
 
-## Key Components
-node_app_servo.c
-Defines the behavior of the servo node.
+The common firmware core handles register access and state transitions, while the servo node implements the device-specific servo output behavior.
 
-- reads register values
-- executes control logic
-- writes feedback values
+---
 
-## node_profile_servo.c
+## Example use in the demo
 
-Defines the characteristics of the node:
+In the physical demo system, the servo node can be used for:
 
-- module type
-- capabilities
-- default parameters
+- sorting gates
+- diverter arms
+- paper clamp mechanisms
+- small mechanical actuation tasks
 
-## servo_hal.c / servo_hal.h
+---
 
-Hardware abstraction layer for servo control.
+## Related Documents
 
-- PWM output
-- timing control
-- device-specific handling
-
-## How it works
-
-1. Host writes target values to registers
-
-2. Core validates and processes commands
-
-3. Servo node receives execution via callbacks
-
-4. Servo movement is performed through HAL
-
-5. Feedback is written back to registers
-
-## Getting Started
-
-👉 Start here:[Quick Start Guide](./quick_start)
-
-## Related
-
-- Core system → ../../common/core/
-- API → ../../common/include/
-- Platform → ../../common/platform/
+- Firmware overview → ../README.md
+- Common firmware core → ../common/
+- Motor node → ../motor_node/
+- Sensor node → ../sensor_node/
