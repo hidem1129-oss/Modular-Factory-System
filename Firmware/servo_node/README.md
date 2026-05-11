@@ -28,7 +28,7 @@ The servo node is responsible for:
 ## Directory Structure
 
 - `src/` : servo-specific firmware implementation
-- `README.md` : overview of the motor node firmware
+- `README.md` : overview of the servo node firmware
 
 ### `src/`
 
