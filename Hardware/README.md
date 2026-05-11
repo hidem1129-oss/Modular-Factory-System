@@ -128,14 +128,15 @@ Grafana visualization
 ```
 
 For example:
-- a DC motor board is driven by Firmware/motor_node
-- a servo board is driven by Firmware/servo_node
-- a sensor board is read by Firmware/sensor_node
+- a DC motor board is driven by [`Firmware/motor_node`](../Firmware/motor_node)
+- a servo board is driven by [`Firmware/servo_node`](../Firmware/servo_node)
+- a sensor board is read by [`Firmware/sensor_node`](../Firmware/sensor_node)
 - power monitor data is logged and visualized by the software layer
 
 ---
 
 ## Related Documents
+
 - Firmware overview → [`../Firmware/`](../Firmware/)
 - Software overview → [`../Software/`](../Software/)
 - Use cases → [`../Use%20cases/`](../Use%20cases/)
