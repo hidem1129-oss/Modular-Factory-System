@@ -28,11 +28,7 @@ The servo node is responsible for:
 ## Directory Structure
 
 - `src/` : servo-specific firmware implementation
-- `design/` : design notes and implementation documents for the servo node
-- `include/` : servo-specific headers, if needed
-- `quick_start/` : quick start notes, planned to be integrated into use-case documentation
-- `test/` : test notes, planned to be integrated into use-case documentation
-- `media/` : media files, optional
+- `README.md` : overview of the motor node firmware
 
 ### `src/`
 
