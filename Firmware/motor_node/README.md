@@ -29,9 +29,19 @@ The motor node is responsible for:
 ## Directory Structure
 
 - `src/` : motor-specific firmware implementation
-- `include/` : motor node headers, if used
-- `docs/` : design notes or usage documentation, if used
-- `test/` : test procedures or validation notes, if used
+- `README.md` : overview of the motor node firmware
+
+### `src/`
+
+This directory contains the actual firmware implementation for the DC motor node.
+
+It includes motor-specific logic such as:
+
+- reading motor control parameters from I²C registers
+- applying speed or setpoint values
+- controlling start / stop behavior
+- controlling motor direction, if supported by the firmware version
+- updating status and feedback values
 
 ---
 
