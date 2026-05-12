@@ -105,7 +105,6 @@ Hardware/
 │  ├─ README.md
 │  ├─ schematic/
 │  └─ gerber/
-
 ```
 
 ---
