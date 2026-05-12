@@ -104,9 +104,8 @@ Hardware/
 ├─ XXXXX_board/
 │  ├─ README.md
 │  ├─ schematic/
-│  ├─ gerber/
-│  ├─ pcb/
-│  └─ images/
+│  └─ gerber/
+
 ```
 
 ---
