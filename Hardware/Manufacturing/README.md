@@ -81,4 +81,4 @@ Hardware/
 
 ## Related Documents
 
-Hardware overview → ../README.md
+Hardware overview → [README.md](../README.md)
