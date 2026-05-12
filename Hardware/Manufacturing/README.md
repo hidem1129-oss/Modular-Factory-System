@@ -61,6 +61,7 @@ Before ordering components, please check:
 - equivalent replacement parts
 
 Passive components may be substituted if they match the required package size, rating, and electrical characteristics.
+For example, I use resistors from YAGEO, but you can use products from another vendor such as KOA.
 
 ---
 
