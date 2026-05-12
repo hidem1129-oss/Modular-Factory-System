@@ -1,5 +1,10 @@
 # Power_Monitor_Board
 
+---
+<img width="2016" height="1512" alt="IMG_1260" src="https://github.com/user-attachments/assets/d4146cf6-dabb-4de8-b1d1-86981b8779a9" />
+
+---
+
 This directory contains hardware design files for the Power Monitor Board.
 
 The Power Monitor Board distributes 5 V power to multiple branches and monitors voltage / current for each power line.
