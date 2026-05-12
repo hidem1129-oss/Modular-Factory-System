@@ -1,6 +1,6 @@
 # Sensor_Board
 
-This directory contains manufacturing and schematic data for the Board_Name.
+This directory contains manufacturing and schematic data for the Sensor_Board.
 
 ---
 
