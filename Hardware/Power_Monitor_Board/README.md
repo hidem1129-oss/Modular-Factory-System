@@ -87,7 +87,7 @@ The schematic is stored in:
 The Gerber files can be used as prototype PCB manufacturing data.
 
 
-When uploading the Gerber files to a PCB manufacturer such as Seeed Studio Fusion, please check the generated preview and manufacturing settings before ordering.
+When uploading the Gerber files to a PCB manufacturer such as [Seeed Studio Fusion](https://www.fusionpcb.jp/), please check the generated preview and manufacturing settings before ordering.
 
 Check especially:
 
@@ -149,7 +149,7 @@ The board can be used to monitor:
 
 ## Related Documents
 
-Hardware overview → [README.md](../README.md)
-Manufacturing index → [Manufacturing](../Manufacturing/)
-Software overview → [Software](../../Software/)
-Grafana / logging related documents → [Software](../../Software/)
+- Hardware overview → [README.md](../README.md)
+- Manufacturing index → [Manufacturing](../Manufacturing/)
+- Software overview → [Software](../../Software/)
+- Grafana / logging related documents → [Software](../../Software/)
