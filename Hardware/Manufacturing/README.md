@@ -38,7 +38,7 @@ Please check:
 
 | Board | Gerber Data | DigiKey MyList / BOM | Notes |
 |---|---|---|---|
-| Controller_Board | [`Controller_Board/gerber/`](../Controller_Board/gerber/) | [DigiKey MyList](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78)| Interface board for Raspberry Pi 5 and I²C modules |
+| Controller_Board | [`Controller_Board/gerber/`](../Controller_Board/gerber/) | [DigiKey MyList](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78) | Interface board for Raspberry Pi 5 and I²C modules |
 | DC_Motor_Board | [`DC_Motor_Board/gerber/`](../DC_Motor_Board/gerber/) | [DigiKey MyList](https://www.digikey.jp/ja/mylists/list/UO08XWYEAF) | DC motor control board |
 | Servo_Board | [`Servo_Board/gerber/`](../Servo_Board/gerber/) | [DigiKey MyList](https://www.digikey.jp/ja/mylists/list/1G5XREGH36) | Servo actuator board |
 | Sensor_Board | [`Sensor_Board/gerber/`](../Sensor_Board/gerber/) | [DigiKey MyList](https://www.digikey.jp/ja/mylists/list/EW3FT9N8K2) | Sensor input board |
