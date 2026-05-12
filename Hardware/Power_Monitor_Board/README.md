@@ -56,14 +56,15 @@ This makes it useful not only as a power distribution board, but also as a diagn
 ---
 
 ## Main Components
-| Component	| Purpose |
+
+| Component | Purpose |
 |---|---|
-|INA219 |	Current / voltage monitoring |
-|TCA9548A	| I²C multiplexer for multiple monitoring channels |
-|Shunt resistors | Current measurement |
-|Terminal blocks / connectors	| Power input and branch output |
-|Switches / indicators | Power branch operation and visibility, if mounted |
-|Passive components |	Pull-ups, filtering, and support circuitry |
+| INA219 | Current / voltage monitoring |
+| TCA9548A | I²C multiplexer for multiple monitoring channels |
+| Shunt resistors | Current measurement |
+| Terminal blocks / connectors | Power input and branch output |
+| Switches / indicators | Power branch operation and visibility, if mounted |
+| Passive components | Pull-ups, filtering, and support circuitry |
 
 ---
 
@@ -80,9 +81,10 @@ The exact file names may depend on the PCB CAD export settings.
 ## Manufacturing Data
 
 Gerber data for this board is stored in:
-- gerber/
+- [`gerber/`](./gerber/)
+
 The schematic is stored in:
-- schematic/
+- [`schematic/`](./schematic/)
 
 The Gerber files can be used as prototype PCB manufacturing data.
 
