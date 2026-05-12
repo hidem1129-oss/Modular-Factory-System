@@ -141,4 +141,4 @@ For example:
 - Software overview → [`Software`](../Software/)
 - Use cases → [`Use_cases`](../Use_cases/)
 - Japanese overview → [`日本語版`](../日本語版/)
-- Manufacturing → [`Manufacturing/`](./Manufacturing/)
+- Manufacturing → [`Manufacturing`](./Manufacturing/)
