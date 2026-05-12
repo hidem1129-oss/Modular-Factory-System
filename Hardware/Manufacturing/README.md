@@ -60,14 +60,14 @@ Before ordering components, please check:
 - minimum order quantity
 - equivalent replacement parts
 
-Passive components may be substituted if they match the required package size, rating, and electrical characteristics.
+Passive components may be substituted if they match the required package size, rating, tolerance, and electrical characteristics.
 
-For example, I use resistors from YAGEO, but you can use products from another vendor such as KOA.
+For example, YAGEO resistors used in the prototype may be replaced with equivalent resistors from another vendor such as KOA.
 
-However, even if the IC is replaced, operation cannot be guaranteed.
+However, IC substitutions are not guaranteed to work because behavior, electrical characteristics, and register compatibility may differ.
 
 ---
 
 ## Related Documents
 
-Hardware overview → [README.md](../README.md)
+- Hardware overview → [README.md](../README.md)
