@@ -69,8 +69,8 @@ This makes it useful not only as a power distribution board, but also as a diagn
 
 ## Directory Structure
 
-- gerber/ : Gerber data used for PCB manufacturing
-- schematic/ : circuit schematic files
+- [`gerber/`](./gerber/) : Gerber data used for PCB manufacturing
+- [`schematic/`](./schematic/) : circuit schematic files
 - README.md : overview of the Power Monitor Board
 
 The exact file names may depend on the PCB CAD export settings.
