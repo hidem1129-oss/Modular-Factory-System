@@ -64,6 +64,8 @@ Passive components may be substituted if they match the required package size, r
 
 For example, I use resistors from YAGEO, but you can use products from another vendor such as KOA.
 
+However, even if the IC is replaced, operation cannot be guaranteed.
+
 ---
 
 ## Related Documents
