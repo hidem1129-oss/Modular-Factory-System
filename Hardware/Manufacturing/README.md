@@ -64,21 +64,6 @@ Passive components may be substituted if they match the required package size, r
 
 ---
 
-## Relationship to Board Directories
-
-The Gerber data itself remains inside each board directory.
-
-This keeps each board self-contained while allowing this `Manufacturing` directory to act as a central index for fabrication and procurement.
-
-```text
-Hardware/
-├─ Manufacturing/
-│  └─ README.md   ← manufacturing index
-└─ Each_Board/
-   └─ gerber/     ← actual manufacturing data
-```
----
-
 ## Related Documents
 
 Hardware overview → [README.md](../README.md)
