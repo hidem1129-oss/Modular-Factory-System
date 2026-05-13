@@ -69,31 +69,6 @@ This makes it useful not only as a power distribution board, but also as a diagn
 
 ---
 
-## Manufacturing Data
-
-Gerber data for this board is stored in:
-- [`gerber/`](./gerber/)
-
-The schematic is stored in:
-- [`schematic/`](./schematic/)
-
-The Gerber files can be used as prototype PCB manufacturing data.
-
-
-When uploading the Gerber files to a PCB manufacturer such as [Seeed Studio Fusion](https://www.fusionpcb.jp/), please check the generated preview and manufacturing settings before ordering.
-
-Check especially:
-
-- board dimensions
-- layer count
-- board outline
-- drill file detection
-- board thickness
-- copper weight
-- quantity
-
----
-
 ## BOM
 
 The component list is managed through DigiKey MyList.
