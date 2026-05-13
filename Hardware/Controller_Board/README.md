@@ -38,18 +38,6 @@ This makes the board a bridge between host-side orchestration and physical devic
 
 ---
 
-## Manufacturing Data
-
-Gerber data for this board is stored in:
-
-- [`gerber/`](./gerber/)
-
-The schematic is stored in:
-
-- [`schematic/`](./schematic/)
-
----
-
 ## BOM
 
 - DigiKey MyList: [Controller_Board](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78)
