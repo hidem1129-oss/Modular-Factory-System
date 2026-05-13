@@ -8,18 +8,37 @@
 
 This directory contains manufacturing and schematic data for the Controller_Board.
 
----
-
 ## Purpose
 
-この基板の役割を1〜2文で説明。
+The `Controller_Board` provides the hardware interface between the Raspberry Pi 5 and the distributed I²C modules.
+
+It organizes the I²C connection and related wiring so that the central controller (Raspberry Pi 5) can communicate with motor, servo, sensor, and monitoring boards.
 
 ---
 
 ## Role in the system
 
-システム内でどこに接続されるかを説明。
+This board is connected to the Raspberry Pi 5 and acts as the physical interface for the modular I²C bus.
 
+```text
+Raspberry Pi 5
+      ↓
+Controller_Board
+      ↓
+I²C-connected hardware modules
+```
+
+---
+
+## Role in the system
+
+It helps reduce wiring complexity and provides a consistent connection point for the rest of the system.
+
+The Raspberry Pi Pico mounted on this board interprets commands received from the Raspberry Pi 5 via I²C and controls the actuators.
+
+The command format is standardized so that it is common to all actuators and sensors.
+
+The role of this board is to interpret this format and generate the actual control signals.
 ---
 
 ## Directory Structure
@@ -44,7 +63,7 @@ The schematic is stored in:
 
 ## BOM
 
-- DigiKey MyList: [Board BOM](URL)
+- DigiKey MyList: [Board BOM]([URL](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78))
 
 ---
 
