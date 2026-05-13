@@ -6,35 +6,65 @@
 
 ---
 
-This directory contains manufacturing and schematic data for the Servo_Board.
+This directory contains hardware design files for the Servo_Board.
+
+The Servo_Board provides the hardware interface for servo motor-based actuator mechanisms in the Modular Factory System.
 
 ---
 
 ## Purpose
 
-この基板の役割を1〜2文で説明。
+The `Servo_Board` drives servo motors used for small position-controlled mechanisms.
+
+It is designed for mechanisms such as sorting gates, diverter arms, paper clamp mechanisms, and other small actuator modules that require controlled angular movement.
 
 ---
 
 ## Role in the system
 
-システム内でどこに接続されるかを説明。
+This board receives local control signals from a Pico-based control node and drives connected servo motors.
+
+```text
+Raspberry Pi 5
+      ↓ I²C commands
+Controller / servo control node
+      ↓ local servo control signals
+Servo_Board
+      ↓ PWM output
+Servo motor / gate / clamp mechanism
+```
+
+The host-side software sends standardized commands through the I²C control architecture.
+
+The local controller interprets those commands and generates PWM signals for the servo motors through this board.
 
 ---
 
 ## Main Functions
-
-...
+- drives servo motors used in physical demo mechanisms
+- supports position or angle-based actuator control
+- supports timed servo movement depending on firmware configuration
+- provides a reusable servo output interface for different tabletop mechanisms
+- helps separate host-side orchestration from low-level servo signal generation
+- supports mechanisms such as sorting gates, diverters, and clamps
 
 ---
 
 ## Main Components
 
-...
+| Component | Purpose |
+|---|---|
+| Servo connector | Output connection to the servo motor |
+| Control signal connector | Receives local control signals from the controller node |
+| Power connector | Supplies servo-side power |
+| Damping resistance | Stabilize the signal by suppressing ringing |
+| Passive components | Decoupling, filtering, and electrical support |
+
+---
 
 ## BOM
 
-- DigiKey MyList: [Board BOM](URL)
+- DigiKey MyList: [Servo_Board](https://www.digikey.jp/ja/mylists/list/1G5XREGH36)
 
 ---
 
@@ -42,3 +72,4 @@ This directory contains manufacturing and schematic data for the Servo_Board.
 
 - Hardware overview → [`../README.md`](../README.md)
 - Manufacturing index → [`../Manufacturing/`](../Manufacturing/)
+- Firmware servo node → [`../../Firmware/servo_node/`](../../Firmware/servo_node/)
