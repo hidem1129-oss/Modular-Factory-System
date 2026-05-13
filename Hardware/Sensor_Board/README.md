@@ -66,6 +66,7 @@ The parts listed in the BOM have the same pin assignment and similar electrical 
 ---
 
 ## BOM
+
 - DigiKey MyList: [Sensor_Board](https://www.digikey.jp/ja/mylists/list/EW3FT9N8K2)
 
 ---
