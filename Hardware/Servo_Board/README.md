@@ -22,7 +22,7 @@ It is designed for mechanisms such as sorting gates, diverter arms, paper clamp 
 
 ## Role in the system
 
-This board receives local control signals from a Pico-based control node and drives connected servo motors.
+This board receives local PWM control signals from a Pico-based control node and routes them to connected servo motors.
 
 ```text
 Raspberry Pi 5
@@ -41,7 +41,8 @@ The local controller interprets those commands and generates PWM signals for the
 ---
 
 ## Main Functions
-- drives servo motors used in physical demo mechanisms
+
+- routes PWM control signals to servo motors used in physical demo mechanisms
 - supports position or angle-based actuator control
 - supports timed servo movement depending on firmware configuration
 - provides a reusable servo output interface for different tabletop mechanisms
