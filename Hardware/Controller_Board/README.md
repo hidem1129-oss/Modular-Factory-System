@@ -38,14 +38,6 @@ This makes the board a bridge between host-side orchestration and physical devic
 
 ---
 
-## Directory Structure
-
-- [`gerber/`](./gerber/) : Gerber data used for PCB manufacturing
-- [`schematic/`](./schematic/) : circuit schematic files
-- `README.md` : overview of this board
-
----
-
 ## Manufacturing Data
 
 Gerber data for this board is stored in:
