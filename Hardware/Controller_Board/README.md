@@ -1,6 +1,12 @@
 # Controller_Board
 
-This directory contains manufacturing and schematic data for the Board_Name.
+---
+
+<img width="2016" height="1512" alt="IMG_1266" src="https://github.com/user-attachments/assets/4e713d58-47d6-476f-9424-5ad72323e8e6" />
+
+---
+
+This directory contains manufacturing and schematic data for the Controller_Board.
 
 ---
 
