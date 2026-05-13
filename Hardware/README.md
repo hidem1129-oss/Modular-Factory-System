@@ -112,6 +112,23 @@ Hardware/
 - `README.md` : overview of each board
 
 ---
+## Manufacturing
+
+The Gerber files can be used as prototype PCB manufacturing data.
+
+When uploading the Gerber files to a PCB manufacturer such as [Seeed Studio Fusion](https://www.fusionpcb.jp/), please check the generated preview and manufacturing settings before ordering.
+
+Check especially:
+
+- board dimensions
+- layer count
+- board outline
+- drill file detection
+- board thickness
+- copper weight
+- quantity
+
+---
 
 ## Relationship to Firmware and Software
 
