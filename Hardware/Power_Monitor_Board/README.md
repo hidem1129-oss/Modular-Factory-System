@@ -99,18 +99,6 @@ This helps visualize the relationship between physical motion and electrical loa
 
 ---
 
-## Example use in the demo
-
-The board can be used to monitor:
-
-- conveyor motor current
-- servo operation current
-- module-level power consumption
-- idle vs active current difference
-- abnormal current draw during wiring or mechanical issues
-
----
-
 ## Related Documents
 
 - Hardware overview → [README.md](../README.md)
