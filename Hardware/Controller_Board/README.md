@@ -43,7 +43,7 @@ This makes the board a bridge between host-side orchestration and physical devic
 - receives register-based I²C commands from the Raspberry Pi 5
 - translates host-side commands into local control signals
 - provides a consistent control interface for actuator and sensor modules
-- hosts a Raspberry Pi Pico as the local controller
+- hosts a Raspberry Pi Pico WH as the local controller
 - helps separate host-side orchestration from low-level hardware control
 - reduces wiring complexity around the central controller
 
@@ -64,18 +64,6 @@ This makes the board a bridge between host-side orchestration and physical devic
 ## BOM
 
 - DigiKey MyList: [Controller_Board](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78)
-
----
-
-## Example use in the demo
-
-The board can be used to monitor:
-
-- conveyor motor current
-- servo operation current
-- module-level power consumption
-- idle vs active current difference
-- abnormal current draw during wiring or mechanical issues
 
 ---
 
