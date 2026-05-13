@@ -10,31 +10,31 @@ This directory contains manufacturing and schematic data for the Controller_Boar
 
 ## Purpose
 
-The `Controller_Board` provides the hardware interface between the Raspberry Pi 5 and the distributed I²C modules.
+The `Controller_Board` is a Pico-based I²C control node used in the Modular Factory System.
 
-It organizes the I²C connection and related wiring so that the central controller (Raspberry Pi 5) can communicate with motor, servo, sensor, and monitoring boards.
+It receives register-based commands from the Raspberry Pi 5 via I²C and translates them into local control signals for connected actuators or sensors.
+
+This board is not only a wiring interface, but also a local control layer between the host controller and the physical hardware.
 
 ---
 
 ## Role in the system
 
-This board is connected to the Raspberry Pi 5 and acts as the physical interface for the modular I²C bus.
+This board acts as a local I²C-controlled hardware node.
 
 ```text
 Raspberry Pi 5
-      ↓
+      ↓ I²C commands
 Controller_Board
-      ↓
-I²C-connected hardware modules
+      ↓ local control signals
+Actuators / sensors / module circuitry
 ```
 
-It helps reduce wiring complexity and provides a consistent connection point for the rest of the system.
+The Raspberry Pi 5 sends standardized commands over I²C.
 
-The Raspberry Pi Pico mounted on this board interprets commands received from the Raspberry Pi 5 via I²C and controls the actuators.
+The Raspberry Pi Pico mounted on this board interprets those commands and generates the actual control signals required by the connected hardware.
 
-The command format is standardized so that it is common to all actuators and sensors.
-
-The role of this board is to interpret this format and generate the actual control signals.
+This makes the board a bridge between host-side orchestration and physical device control.
 
 ---
 
