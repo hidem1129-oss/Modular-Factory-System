@@ -107,6 +107,10 @@ Hardware/
 │  └─ gerber/
 ```
 
+- gerber/ : Gerber data used for PCB manufacturing
+- schematic/ : circuit schematic files
+- README.md : overview of each board
+
 ---
 
 ## Relationship to Firmware and Software
