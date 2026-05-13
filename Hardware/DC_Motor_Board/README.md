@@ -1,6 +1,12 @@
 # DC_Motor_Board
 
-This directory contains manufacturing and schematic data for the Board_Name.
+---
+
+<img width="2016" height="1512" alt="IMG_1265" src="https://github.com/user-attachments/assets/c9682a4a-c9f7-4dca-b592-62784203ba1d" />
+
+---
+
+This directory contains manufacturing and schematic data for the DC_Motor_Board.
 
 ---
 
