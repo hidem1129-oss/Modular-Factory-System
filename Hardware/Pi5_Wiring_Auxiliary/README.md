@@ -22,14 +22,6 @@ This directory contains manufacturing and schematic data for the Pi5_Wiring_Auxi
 
 ---
 
-## Directory Structure
-
-- [`gerber/`](./gerber/) : Gerber data used for PCB manufacturing
-- [`schematic/`](./schematic/) : circuit schematic files
-- `README.md` : overview of this board
-
----
-
 ## Manufacturing Data
 
 Gerber data for this board is stored in:
