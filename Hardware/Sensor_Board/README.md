@@ -6,35 +6,68 @@
 
 ---
 
-This directory contains manufacturing and schematic data for the Sensor_Board.
+This directory contains hardware design files for the Sensor_Board.
+
+The Sensor_Board provides the hardware interface for sensor-based detection mechanisms in the Modular Factory System.
 
 ---
 
 ## Purpose
 
-この基板の役割を1〜2文で説明。
+The `Sensor_Board` provides the wiring and signal interface for sensors used in the Modular Factory System.
+
+It is designed for sensors such as photo-reflectors that detect workpieces, timing points, or physical changes in tabletop factory mechanisms.
 
 ---
 
 ## Role in the system
 
-システム内でどこに接続されるかを説明。
+This board receives sensor-side signals and routes them to a Pico-based sensor control node.
+
+```text
+Physical sensor
+      ↓ sensor signal
+Sensor_Board
+      ↓ local input signal
+Controller / sensor control node
+      ↓ I²C feedback values
+Raspberry Pi 5
+```
+
+The local controller reads the sensor input and exposes the measured value through the I²C register interface.
+
+The host-side software can use this value for detection, branching, logging, or visualization.
 
 ---
 
 ## Main Functions
 
-...
+- connects physical sensors to the local control node
+- routes sensor signals to the Pico-based firmware node
+- supports workpiece detection in tabletop demo mechanisms
+- provides a reusable sensor input interface for different mechanisms
+- helps separate host-side orchestration from low-level sensor reading
+- supports sensor-based triggering, branching, and logging
 
 ---
 
 ## Main Components
 
-...
+| Component | Purpose |
+|---|---|
+| [Photo-reflector](https://akizukidenshi.com/catalog/g/g104500/) | Connection point for the workpiece detection sensor |
+| Control signal connector | Routes sensor signals to the controller node |
+| Pull-up / support components | Signal stabilization and basic support circuitry |
+| Passive components | Decoupling, filtering, and electrical support |
+
+The photo-reflector in the link is not available at Digikey.
+
+The parts in the BOM have the same pin assignment and similar electrical characteristics, but their operation has not been confirmed.
+
+---
 
 ## BOM
-
-- DigiKey MyList: [Board BOM](URL)
+- DigiKey MyList: [Sensor_Board](https://www.digikey.jp/ja/mylists/list/EW3FT9N8K2)
 
 ---
 
@@ -42,3 +75,4 @@ This directory contains manufacturing and schematic data for the Sensor_Board.
 
 - Hardware overview → [`../README.md`](../README.md)
 - Manufacturing index → [`../Manufacturing/`](../Manufacturing/)
+- Firmware sensor node → [`../../Firmware/sensor_node/`](../../Firmware/sensor_node/)
