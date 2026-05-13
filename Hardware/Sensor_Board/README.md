@@ -14,9 +14,9 @@ The Sensor_Board provides the hardware interface for sensor-based detection mech
 
 ## Purpose
 
-The `Sensor_Board` provides the wiring and signal interface for sensors used in the Modular Factory System.
+The `Sensor_Board` provides the wiring and signal interface for a photo-reflector used in the Modular Factory System.
 
-It is designed for sensors such as photo-reflectors that detect workpieces, timing points, or physical changes in tabletop factory mechanisms.
+It is designed to detect workpieces, timing points, or physical changes in tabletop factory mechanisms.
 
 ---
 
@@ -42,10 +42,9 @@ The host-side software can use this value for detection, branching, logging, or 
 
 ## Main Functions
 
-- connects physical sensors to the local control node
-- routes sensor signals to the Pico-based firmware node
+- connects a photo-reflector to the local control node
+- routes the photo-reflector signal to the Pico-based firmware node
 - supports workpiece detection in tabletop demo mechanisms
-- provides a reusable sensor input interface for different mechanisms
 - helps separate host-side orchestration from low-level sensor reading
 - supports sensor-based triggering, branching, and logging
 
@@ -60,9 +59,9 @@ The host-side software can use this value for detection, branching, logging, or 
 | Pull-up / support components | Signal stabilization and basic support circuitry |
 | Passive components | Decoupling, filtering, and electrical support |
 
-The photo-reflector in the link is not available at Digikey.
+The photo-reflector linked above is not available from DigiKey.
 
-The parts in the BOM have the same pin assignment and similar electrical characteristics, but their operation has not been confirmed.
+The parts listed in the BOM have the same pin assignment and similar electrical characteristics, but their operation has not yet been confirmed.
 
 ---
 
