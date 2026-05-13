@@ -1,7 +1,7 @@
 # Power_Monitor_Board
 
 ---
-<img width="1512" height="2016" alt="IMG_1262" src="https://github.com/user-attachments/assets/3af0aa77-a5ec-42f8-935f-0b0a057a1795" />
+<img width="1512" height="2016" alt="IMG_1262" style="transform: rotate(-90deg)" src="https://github.com/user-attachments/assets/3af0aa77-a5ec-42f8-935f-0b0a057a1795" />
 
 ---
 
