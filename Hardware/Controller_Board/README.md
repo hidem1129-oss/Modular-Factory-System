@@ -28,10 +28,6 @@ Controller_Board
 I²C-connected hardware modules
 ```
 
----
-
-## Role in the system
-
 It helps reduce wiring complexity and provides a consistent connection point for the rest of the system.
 
 The Raspberry Pi Pico mounted on this board interprets commands received from the Raspberry Pi 5 via I²C and controls the actuators.
