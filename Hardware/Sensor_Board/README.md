@@ -55,7 +55,7 @@ The host-side software can use this value for detection, branching, logging, or 
 
 | Component | Purpose |
 |---|---|
-| [Photo-reflector](https://akizukidenshi.com/catalog/g/g104500/) | Connection point for the workpiece detection sensor |
+| [Photo-reflector](https://akizukidenshi.com/catalog/g/g104500/) | Detect objects |
 | Control signal connector | Routes sensor signals to the controller node |
 | Pull-up / support components | Signal stabilization and basic support circuitry |
 | Passive components | Decoupling, filtering, and electrical support |
