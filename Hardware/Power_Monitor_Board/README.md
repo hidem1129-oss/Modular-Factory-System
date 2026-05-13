@@ -78,28 +78,6 @@ The component list is managed through DigiKey MyList.
 
 ---
 
-## Relationship to Firmware and Software
-
-The Power Monitor Board is not a motor or servo control node.
-
-Instead, it provides measurement data that can be collected by the host-side software.
-
-```text
-Power_Monitor_Board
-      ↓
-I²C measurement access
-      ↓
-SQLite logging
-      ↓
-Grafana dashboard
-```
-
-In the demo system, power data can be logged together with node status and actuator behavior.
-
-This helps visualize the relationship between physical motion and electrical load.
-
----
-
 ## Related Documents
 
 - Hardware overview → [`../README.md`](../README.md)
