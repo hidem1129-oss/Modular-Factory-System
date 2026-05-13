@@ -22,17 +22,15 @@ This directory contains manufacturing and schematic data for the DC_Motor_Board.
 
 ---
 
-## Manufacturing Data
+## Main Functions
 
-Gerber data for this board is stored in:
-
-- [`gerber/`](./gerber/)
-
-The schematic is stored in:
-
-- [`schematic/`](./schematic/)
+...
 
 ---
+
+## Main Components
+
+...
 
 ## BOM
 
