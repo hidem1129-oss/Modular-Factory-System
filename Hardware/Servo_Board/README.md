@@ -14,7 +14,7 @@ The Servo_Board provides the hardware interface for servo motor-based actuator m
 
 ## Purpose
 
-The `Servo_Board` drives servo motors used for small position-controlled mechanisms.
+The `Servo_Board` provides the wiring and power interface for servo motors used in small position-controlled mechanisms.
 
 It is designed for mechanisms such as sorting gates, diverter arms, paper clamp mechanisms, and other small actuator modules that require controlled angular movement.
 
@@ -57,7 +57,7 @@ The local controller interprets those commands and generates PWM signals for the
 | Servo connector | Output connection to the servo motor |
 | Control signal connector | Receives local control signals from the controller node |
 | Power connector | Supplies servo-side power |
-| Damping resistance | Stabilize the signal by suppressing ringing |
+| Damping resistor | Suppresses ringing and helps stabilize the signal |
 | Passive components | Decoupling, filtering, and electrical support |
 
 ---
