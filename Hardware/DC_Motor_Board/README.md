@@ -52,18 +52,19 @@ The local controller interprets those commands and drives the DC motor through t
 
 ## Main Components
 
-| Component	| Purpose |
+| Component | Purpose |
 |---|---|
 | [Motor driver module](https://akizukidenshi.com/catalog/g/g111219/) | Drives the connected DC motor |
 | Motor connector | Output connection to the DC motor |
-| Control signal connector | Receives local control signals from the controller node|
+| Control signal connector | Receives local control signals from the controller node |
 | Power connector | Supplies motor-side power |
-| Passive components |	Decoupling, filtering, and electrical support |
+| Passive components | Decoupling, filtering, and electrical support |
 | Protection / support components | Helps stabilize motor operation and wiring, if mounted |
 
 ### Note
-- The motor driver module in the link is not available at Digikey.
-- Now designing a board that directly implement the TB6612FNG.
+
+- The motor driver module linked above is not available from DigiKey.
+- A future revision is planned to integrate the TB6612FNG directly onto the PCB.
 
 ---
 
@@ -74,6 +75,6 @@ The local controller interprets those commands and drives the DC motor through t
 
 ## Related Documents
 
-- Hardware overview → [../README.md](../README.md) 
-- Manufacturing index → [../Manufacturing/](../Manufacturing/)
-- Firmware motor node → [../../Firmware/motor_node/](../../Firmware/motor_node/)
+- Hardware overview → [`../README.md`](../README.md) 
+- Manufacturing index → [`../Manufacturing/`](../Manufacturing/)
+- Firmware motor node → [`../../Firmware/motor_node/`](../../Firmware/motor_node/)
