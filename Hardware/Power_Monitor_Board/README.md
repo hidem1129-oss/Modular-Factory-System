@@ -75,10 +75,6 @@ The component list is managed through DigiKey MyList.
 
 - DigiKey MyList: [Power Monitor Board BOM](https://www.digikey.jp/ja/mylists/list/RITVVGPV8U)
 
-Passive components may be substituted if they match the required package size, rating, tolerance, and electrical characteristics.
-
-IC substitutions are not guaranteed to work because behavior, electrical characteristics, and register compatibility may differ.
-
 ---
 
 ## Relationship to Firmware and Software
