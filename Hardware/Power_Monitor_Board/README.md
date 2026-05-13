@@ -39,6 +39,7 @@ Motor / Servo / Sensor / Controller modules
       ↓
 Software logging and Grafana visualization
 ```
+
 The board allows the system to observe how much current each branch consumes during operation.
 
 This makes it useful not only as a power distribution board, but also as a diagnostic and visualization component.
@@ -101,7 +102,7 @@ This helps visualize the relationship between physical motion and electrical loa
 
 ## Related Documents
 
-- Hardware overview → [README.md](../README.md)
-- Manufacturing index → [Manufacturing](../Manufacturing/)
-- Software overview → [Software](../../Software/)
-- Grafana / logging related documents → [Software](../../Software/)
+- Hardware overview → [`../README.md`](../README.md)
+- Manufacturing index → [`../Manufacturing/`](../Manufacturing/)
+- Software overview → [`../../Software/`](../../Software/)
+- Grafana / logging related documents → [`../../Software/`](../../Software/)
