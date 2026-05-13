@@ -39,6 +39,7 @@ The Raspberry Pi Pico mounted on this board interprets commands received from th
 The command format is standardized so that it is common to all actuators and sensors.
 
 The role of this board is to interpret this format and generate the actual control signals.
+
 ---
 
 ## Directory Structure
