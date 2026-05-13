@@ -1,6 +1,12 @@
 # Pi5_Wiring_Auxiliary
 
-This directory contains manufacturing and schematic data for the Board_Name.
+---
+
+<img width="2016" height="1512" alt="IMG_1263" src="https://github.com/user-attachments/assets/40dbf589-2225-41d5-a115-78f62e907d39" />
+
+---
+
+This directory contains manufacturing and schematic data for the Pi5_Wiring_Auxiliary.
 
 ---
 
