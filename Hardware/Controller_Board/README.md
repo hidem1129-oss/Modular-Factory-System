@@ -60,7 +60,7 @@ The schematic is stored in:
 
 ## BOM
 
-- DigiKey MyList: [Board BOM]([URL](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78))
+- DigiKey MyList: [Board BOM](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78)
 
 ---
 
