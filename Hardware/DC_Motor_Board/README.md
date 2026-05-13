@@ -54,12 +54,16 @@ The local controller interprets those commands and drives the DC motor through t
 
 | Component	| Purpose |
 |---|---|
-| Motor driver IC / driver circuit | Drives the connected DC motor |
-|Motor connector | Output connection to the DC motor |
-|Control signal connector | Receives local control signals from the controller node|
-|Power connector | Supplies motor-side power |
-|Passive components |	Decoupling, filtering, and electrical support |
-|Protection / support components | Helps stabilize motor operation and wiring, if mounted |
+| [Motor driver module](https://akizukidenshi.com/catalog/g/g111219/) | Drives the connected DC motor |
+| Motor connector | Output connection to the DC motor |
+| Control signal connector | Receives local control signals from the controller node|
+| Power connector | Supplies motor-side power |
+| Passive components |	Decoupling, filtering, and electrical support |
+| Protection / support components | Helps stabilize motor operation and wiring, if mounted |
+
+### Note
+- The motor driver module in the link is not available at Digikey.
+- Now designing a board that directly implement the TB6612FNG.
 
 ---
 
