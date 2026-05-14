@@ -23,6 +23,8 @@ It helps confirm that motor, servo, sensor, and power monitoring boards are comm
 
 This program is optimized for running on a Raspberry Pi 5, which controls the entire system.
 
+Although it can be started on a general PC in mock mode, its main purpose is to monitor the actual I²C bus and hardware state on the Raspberry Pi 5.
+
 ---
 
 ## Main Features
