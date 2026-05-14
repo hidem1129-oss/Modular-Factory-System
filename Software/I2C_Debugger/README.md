@@ -146,7 +146,7 @@ The launcher activates the Python virtual environment and starts the PyQt applic
 - Python 3
 - PyQt5
 - smbus2
-- SQLite
+- sqlite3 (Python standard library)
   
 ---
 
