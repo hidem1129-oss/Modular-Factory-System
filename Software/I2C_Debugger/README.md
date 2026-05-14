@@ -1,5 +1,11 @@
 # I2C Debugger - Node & Power Monitor
 
+---
+
+<img width="1920" height="1032" alt="スクリーンショット 2026-05-14 213244" src="https://github.com/user-attachments/assets/04d2dc7e-5b6e-4300-918a-7d2fca8a3bf3" />
+
+---
+
 This directory contains the monitoring application for the Modular Factory System.
 
 The application monitors I²C-connected nodes, displays their current state, records state transitions, and collects power monitoring data.
