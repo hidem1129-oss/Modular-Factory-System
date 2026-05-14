@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Update this path to your local I2C_Debugger directory.
 APP_DIR="/path/to/Software/I2C_Debugger"
 
 cd "$APP_DIR" || exit 1
