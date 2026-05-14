@@ -32,6 +32,7 @@ It helps confirm that motor, servo, sensor, and power monitoring boards are comm
 
 | File | Role |
 |---|---|
+| `UI/` | PyQt UI files generated from Qt Designer |
 | `i_2_c_debugger_prototype.py` | Application entry point |
 | `mainwindow.py` | PyQt main window, UI update loop, session handling |
 | `debugger_model.py` | Polling model for I²C nodes |
