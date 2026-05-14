@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Optional, Protocol
 
 try:
-    import smbus2  # type: ignore
+    import smbus2
 except Exception:
     smbus2 = None
 
@@ -130,19 +130,19 @@ class MockRegisterReader:
             0x15: 0x02,
         }
         self.tick = 0
-        self.drop_after = 80  # simulate signal loss after some time
+        self.drop_after = 80 
 
     def read_ina219_shunt_raw(self, tca_addr: int, tca_channel: int, ina_addr: int) -> int:
         mock_currents_mA = {
-            (0x72, 0): 5.0,  # PORT_0  gray
-            (0x70, 0): 50.0,  # PORT_1  green
-            (0x70, 1): 250.0,  # PORT_2  green
-            (0x70, 2): 350.0,  # PORT_3  yellow
-            (0x70, 3): 500.0,  # PORT_4  yellow
-            (0x71, 0): 750.0,  # PORT_5  red
-            (0x71, 1): 800.0,  # PORT_6  red
-            (0x71, 2): 100,  # PORT_7  no data
-            (0x71, 3): 120.0,  # PORT_8  予備
+            (0x72, 0): 5.0,
+            (0x70, 0): 50.0,
+            (0x70, 1): 250.0,
+            (0x70, 2): 350.0,
+            (0x70, 3): 500.0,
+            (0x71, 0): 750.0,
+            (0x71, 1): 800.0, 
+            (0x71, 2): 100,
+            (0x71, 3): 120.0,
         }
 
         value = mock_currents_mA.get((tca_addr, tca_channel), 20.0)
@@ -150,12 +150,10 @@ class MockRegisterReader:
         if value is None:
             raise OSError("Mock no device")
 
-        # current_mA = shunt_raw * 0.01 / 0.1 = shunt_raw * 0.1
-        # よって shunt_raw = current_mA / 0.1
         return int(value / 0.1)
 
     def read_ina219_bus_raw(self, tca_addr: int, tca_channel: int, ina_addr: int) -> int:
-        base = 1200 + (tca_channel % 3)  # 1200 * 4mV = 4.8V
+        base = 1200 + (tca_channel % 3) 
         return base << 3
 
     def read_node(self, address: int) -> RawNodeData:
@@ -164,33 +162,31 @@ class MockRegisterReader:
         if address not in self.present:
             raise OSError(f"No device at {hex(address)}")
 
-        # Simulate one device disappearing after it had once been visible.
         if address == 0x15 and self.tick > self.drop_after:
             raise OSError(f"Signal lost at {hex(address)}")
 
-        # Occasional transient error for UNKNOWN testing.
         if address == 0x13 and random.random() < 0.05:
             raise OSError(f"Transient read error at {hex(address)}")
 
         module_type = self.present[address]
 
         if address == 0x10:
-            status = 0x21  # DATA_READY + READY
+            status = 0x21
             cmd = 0x00
         elif address == 0x11:
-            status = 0x22  # DATA_READY + BUSY
+            status = 0x22
             cmd = 0x01
         elif address == 0x12:
-            status = 0x29  # DATA_READY + WARN + READY
+            status = 0x29 
             cmd = 0x10
         elif address == 0x13:
-            status = 0x24  # DATA_READY + ERROR
+            status = 0x24
             cmd = 0x01
         elif address == 0x14:
-            status = 0x30  # DATA_READY + ESTOP
+            status = 0x30
             cmd = 0x08
         else:
-            status = 0x22  # busy
+            status = 0x22
             cmd = 0x01
 
         return RawNodeData(
