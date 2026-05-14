@@ -74,7 +74,7 @@ This makes it useful not only as a power distribution board, but also as a diagn
 
 The component list is managed through DigiKey MyList.
 
-- DigiKey MyList: [Power Monitor Board](https://www.digikey.jp/ja/mylists/list/RITVVGPV8U)
+- DigiKey MyList: [Power_Monitor_Board](https://www.digikey.jp/ja/mylists/list/RITVVGPV8U)
 
 ---
 
