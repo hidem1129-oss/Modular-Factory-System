@@ -139,6 +139,10 @@ Example launcher: `./run_i2c_debugger.sh`
 
 The launcher activates the Python virtual environment and starts the PyQt application.
 
+The launcher script contains placeholder paths.  
+
+Please update `APP_DIR` to match the directory where `I2C_Debugger` is placed on your Raspberry Pi 5.
+
 ---
 
 ## Requirements
