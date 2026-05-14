@@ -21,6 +21,8 @@ The I2C Debugger is used to observe and debug the distributed I²C node system.
 
 It helps confirm that motor, servo, sensor, and power monitoring boards are communicating correctly during tabletop demonstrations.
 
+This program is optimized for running on a Raspberry Pi 5, which controls the entire system.
+
 ---
 
 ## Main Features
