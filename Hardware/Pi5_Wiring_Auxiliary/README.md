@@ -53,7 +53,7 @@ It reduces direct wiring complexity around the Raspberry Pi 5 and provides a mor
 |---|---|
 | Raspberry Pi 5 connection header | Connection point to the Raspberry Pi 5 GPIO header |
 | GPIO / signal connector | Routes Raspberry Pi 5 signals to external wiring |
-| Pull-up / support components | Signal stabilization and basic support circuitry, if mounted |
+| Pull-up adjustment | Adjusting the pull-up resistor for the I2C signal. |
 | Passive components | Decoupling, filtering, and electrical support |
 
 ---
