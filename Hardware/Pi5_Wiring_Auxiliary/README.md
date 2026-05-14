@@ -67,9 +67,9 @@ Example effective values:
 
 | Configuration | Effective pull-up resistance |
 |---|---|
-| No jumper | 10 kΩ |
-| One additional 10 kΩ path | 5 kΩ |
-| Add all 10 kΩ paths total | 2 kΩ |
+| Default path only (no jumper) | 10 kΩ |
+| Two 10 kΩ paths in parallel | 5 kΩ |
+| Five 10 kΩ paths in parallel | 2 kΩ |
 
 This allows the I²C pull-up strength to be adjusted depending on cable length, connected modules, and bus behavior.
 
