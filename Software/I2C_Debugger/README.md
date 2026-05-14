@@ -137,6 +137,15 @@ The launcher activates the Python virtual environment and starts the PyQt applic
 
 ---
 
+## Requirements
+
+- Python 3
+- PyQt5
+- smbus2
+- SQLite
+  
+---
+
 ## Relationship to Grafana
 
 Grafana is not used for hardware control.
