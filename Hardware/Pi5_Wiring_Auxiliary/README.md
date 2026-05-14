@@ -53,8 +53,25 @@ It reduces direct wiring complexity around the Raspberry Pi 5 and provides a mor
 |---|---|
 | Raspberry Pi 5 connection header | Connection point to the Raspberry Pi 5 GPIO header |
 | GPIO / signal connector | Routes Raspberry Pi 5 signals to external wiring |
-| Pull-up adjustment | Adjusting the pull-up resistor for the I2C signal. |
+| Pull-up adjustment jumpers | Adjust the I²C pull-up strength by adding 10 kΩ pull-up resistors in parallel |
 | Passive components | Decoupling, filtering, and electrical support |
+
+### Pull-up adjustment
+
+The board includes jumper-selectable pull-up resistors for the I²C signal lines.
+
+With no jumper installed, the pull-up resistance is 10 kΩ.  
+By adding jumpers, additional 10 kΩ resistors are connected in parallel, allowing the effective pull-up resistance to be reduced.
+
+Example effective values:
+
+| Configuration | Effective pull-up resistance |
+|---|---|
+| No jumper | 10 kΩ |
+| One additional 10 kΩ path | 5 kΩ |
+| Add all 10 kΩ paths total | 2 kΩ |
+
+This allows the I²C pull-up strength to be adjusted depending on cable length, connected modules, and bus behavior.
 
 ---
 
