@@ -4,6 +4,8 @@
 
 <img width="1920" height="1032" alt="スクリーンショット 2026-05-14 213244" src="https://github.com/user-attachments/assets/04d2dc7e-5b6e-4300-918a-7d2fca8a3bf3" />
 
+
+*Screenshot of the I2C Debugger showing node states, selected node details, event logs, monitor values.*
 ---
 
 This directory contains the monitoring application for the Modular Factory System.
