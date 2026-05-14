@@ -135,7 +135,7 @@ Mock mode is useful for checking UI behavior without connecting physical hardwar
 
 ## Launch
 
-The launcher (run_i2c_debugger.sh) activates the Python virtual environment and starts the PyQt application.
+The launcher (`run_i2c_debugger.sh`) activates the Python virtual environment and starts the PyQt application.
 
 The launcher script contains placeholder paths.  
 
