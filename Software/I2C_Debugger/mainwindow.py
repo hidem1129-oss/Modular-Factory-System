@@ -285,7 +285,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.node_device.setText(node.module_name)
         self.ui.node_state.setText(node.state.value)
 
-        # 選択ノードのヘッダにも状態色を反映
         colors = STATE_COLORS[node.state]
         header_style = (
             f"background-color: {colors['bg']};"
@@ -507,13 +506,11 @@ class MainWindow(QtWidgets.QMainWindow):
         super().closeEvent(event)
 
     def update_power_monitor(self, power_data: dict[str, dict[str, float | None]]) -> None:
-        # 枝線 PORT_1〜PORT_8 をUIへ表示
         for ui_idx, port_no in enumerate(range(1, 9)):
             port_id = f"PORT_{port_no}"
             data = power_data.get(port_id, {})
             self.update_single_power_port(ui_idx, data)
 
-        # MAIN_LINE はU13の実測値を直接使う
         main_data = power_data.get(MAIN_POWER_PORT.port_id, {})
 
         main_current_mA = main_data.get("current_mA")
@@ -528,28 +525,27 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def classify_port_current_color(self, current_mA: float | None) -> str:
         if current_mA is None:
-            return COLOR_GRAY  # 濃灰
+            return COLOR_GRAY 
         if current_mA <= 10.0:
-            return COLOR_GRAY  # 0～15mA: 灰
+            return COLOR_GRAY 
         if current_mA <= 300.0:
-            return COLOR_GREEN  # 15～300mA: 緑
+            return COLOR_GREEN
         if current_mA <= 500.0:
-            return COLOR_YELLOW  # 301～500mA: 黄
-        return COLOR_RED  # 501mA以上: 赤
+            return COLOR_YELLOW
+        return COLOR_RED 
 
     def classify_main_usage_color(self, usage_percent: float) -> str:
         if usage_percent <= 20.0:
-            return COLOR_GRAY  # 濃灰
+            return COLOR_GRAY  
         if usage_percent <= 70.0:
-            return COLOR_GREEN  # 緑
+            return COLOR_GREEN  
         if usage_percent <= 90.0:
-            return COLOR_YELLOW  # 黄
-        return COLOR_RED  # 赤
+            return COLOR_YELLOW  
+        return COLOR_RED 
 
     def set_main_line_color(self, usage_percent: float) -> None:
         color = self.classify_main_usage_color(usage_percent)
 
-        # タイトル
         self.ui.port_main_label.setStyleSheet(f"""
             color: {color};
             font-weight: bold;
