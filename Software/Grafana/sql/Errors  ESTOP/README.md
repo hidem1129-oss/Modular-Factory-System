@@ -15,7 +15,6 @@ It shows:
 
 - when an error-related state transition occurred
 - which I²C address entered an error or emergency stop state
-- the previous state
 - the new state
 
 This is useful for quickly checking abnormal events during or after a monitoring session.
@@ -55,6 +54,6 @@ Recommended panel type:
 
 Notes:
 
-- Use $session_id as a dashboard variable.
+- Use `$session_id` as a dashboard variable.
 - Sort by event_time descending.
 - Limit the result count if the table becomes too large.
