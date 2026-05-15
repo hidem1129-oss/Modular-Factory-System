@@ -82,3 +82,4 @@ This makes it useful not only as a power distribution board, but also as a diagn
 - Manufacturing index → [`../Manufacturing/`](../Manufacturing/)
 - Software overview → [`../../Software/`](../../Software/)
 - Grafana / logging related documents → [`../../Software/`](../../Software/)
+- PORT_X / MAIN_LINE Power Monitor → [`../../Software/Grafana/sql/PORT_X%20MAIN_LINE/`](../../Software/Grafana/sql/PORT_X%20MAIN_LINE/)
