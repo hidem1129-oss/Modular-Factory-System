@@ -40,6 +40,10 @@ LIMIT 5;
 ---
 ## Note
 
+The "Error in session" column indicates how many times the session ID displayed has transitioned to the ERROR state.
+
+Therefore, the count will be the same for all rows.
+
 ---
 
 ## Grafana Panel Settings
