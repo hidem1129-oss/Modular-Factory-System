@@ -34,11 +34,6 @@ WHERE ts_epoch BETWEEN (${__from} / 1000.0) AND (${__to} / 1000.0)
   AND port_id = 'XXX'
 ORDER BY ts_epoch
 ```
-
-Replace XXX with PORT_X or MAIN_LINE to specify which port to monitor.
-
-Port number has 1 to 8.
-
 ---
 
 ## Note
