@@ -6,18 +6,19 @@
 
 ## Purpose
 
-This panel visualizes the following over time:
+This panel visualizes I²C node states over time.
 
-- Which device addresses are connected
-- What is the status of the connected devices?
+It shows:
 
-This information is displayed chronologically.
+- which I²C addresses are active during a monitoring session
+- how each address changes between states such as READY, BUSY, WARN, ERROR, ESTOP, Signal Lost, and No Device
 
 ---
 
 ## SQL 
 
-```text
+```sql
+
 WITH snaps AS (
   SELECT
     session_id,
@@ -95,9 +96,12 @@ SELECT
 FROM timeline_rows
 GROUP BY ts_epoch
 ORDER BY ts_epoch;
+
 ```
 ---
 
 ## Note
 
-Visualization is not possible until the end time is confirmed.
+This query uses the monitoring session end time to close the final state segment.  
+
+Therefore, the timeline is mainly intended for completed monitoring sessions.
