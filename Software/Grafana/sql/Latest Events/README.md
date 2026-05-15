@@ -3,7 +3,7 @@
 <img width="1237" height="454" alt="image" src="https://github.com/user-attachments/assets/cee0038d-e305-48ea-9dc8-8b8a058c1150" />
 
 
-*This Timeline panel showing...*
+*This Table panel showing...*
 
 ---
 
