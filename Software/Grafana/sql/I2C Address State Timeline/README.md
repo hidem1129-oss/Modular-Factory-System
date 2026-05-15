@@ -2,6 +2,8 @@
 
 <img width="1580" height="836" alt="image" src="https://github.com/user-attachments/assets/e0acfbd3-5eae-4c1f-9a07-a129cf4ef093" />
 
+*This Timeline panel showing I²C node states by address during a monitoring session.*
+
 ---
 
 ## Purpose
@@ -15,10 +17,9 @@ It shows:
 
 ---
 
-## SQL 
+## SQL
 
 ```sql
-
 WITH snaps AS (
   SELECT
     session_id,
@@ -105,3 +106,17 @@ ORDER BY ts_epoch;
 This query uses the monitoring session end time to close the final state segment.  
 
 Therefore, the timeline is mainly intended for completed monitoring sessions.
+
+---
+
+## Grafana Panel Settings
+
+Recommended panel type:
+
+- State timeline
+
+Notes:
+
+- Use `$session_id` as a dashboard variable.
+- The query is intended for completed monitoring sessions.
+- Each I²C address is displayed as a separate field.
