@@ -41,6 +41,7 @@ This query reads from the `power_port_snapshots` table.
 The result is grouped by `port_id`, so each row represents one monitored power line.
 
 `avg_power_mW` shows the average power consumption during the selected Grafana time range.
+
 `max_power_mW` shows the highest recorded power value during the same range.
 
 The table is sorted by average power consumption in descending order.
