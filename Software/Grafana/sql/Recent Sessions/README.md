@@ -8,6 +8,20 @@
 
 ## Purpose
 
+This panel lists recent monitoring sessions recorded by the I2C Debugger.
+
+It shows:
+
+- when each monitoring session started
+- when each monitoring session ended
+- session duration
+- reader mode
+- polling interval
+- session result
+- session ID used for filtering other panels
+
+This panel is useful as an entry point for selecting a session and reviewing its node timeline, events, and power monitor values.
+
 ---
 
 ## SQL
@@ -37,9 +51,14 @@ LIMIT 5;
 
 ## Note
 
-The `from_ms` and `to_ms` fields in the table are not necessary as data, but they are used to calculate the session time.
+The `from_ms` and `to_ms` fields are helper values for Grafana data links or dashboard time-range navigation.
 
-Removing them from the table will prevent the calculation of the session time.
+They are calculated with a small margin:
+
+- `from_ms` starts 10 seconds before the session start
+- `to_ms` ends 10 seconds after the session end
+
+This makes it easier to open another dashboard view focused on the selected monitoring session.
 
 ---
 
@@ -51,3 +70,7 @@ Recommended panel type:
 
 Notes:
 
+- Use this panel as a session selector or navigation table.
+- `session_link` can be used as a data link value for setting `$session_id`.
+- `from_ms` and `to_ms` can be used to update the dashboard time range.
+- Hide helper columns such as `from_ms` and `to_ms` if they are only used for data links.
