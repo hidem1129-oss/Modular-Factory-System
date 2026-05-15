@@ -2,14 +2,22 @@
 
 <img width="1237" height="454" alt="image" src="https://github.com/user-attachments/assets/cee0038d-e305-48ea-9dc8-8b8a058c1150" />
 
-
-*This Table panel showing...*
+*This panel showing the latest I²C node state change events.*
 
 ---
 
 ## Purpose
 
-This panel visualizes ...
+This panel lists recent state change events recorded by the I2C Debugger.
+
+It shows:
+
+- when each state transition occurred
+- which I²C address changed state
+- the previous state
+- the new state
+
+This is useful for quickly checking recent activity during or after a monitoring session.
 
 ---
 
@@ -31,7 +39,10 @@ LIMIT 20;
 
 ## Note
 
-...
+This query reads from the `event_logs` table and filters records where `event_type` is `STATE_CHANGE`.
+
+When `$session_id` is set to `__all`, the panel shows recent events across all sessions.  
+Otherwise, it shows events only for the selected monitoring session.
 
 ---
 
@@ -40,3 +51,9 @@ LIMIT 20;
 Recommended panel type:
 
 - Table
+
+Notes:
+
+- Use `$session_id` as a dashboard variable.
+- Sort by `event_time` descending.
+- Limit the result count if the table becomes too large.
