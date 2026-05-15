@@ -1,6 +1,6 @@
 # I2C Address State Timeline
 
-`screen shot`
+<img width="1580" height="836" alt="image" src="https://github.com/user-attachments/assets/e0acfbd3-5eae-4c1f-9a07-a129cf4ef093" />
 
 ---
 
