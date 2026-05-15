@@ -50,7 +50,7 @@ Grafana reads the SQLite database created by the I2C Debugger and visualizes the
 | Errors / ESTOP | [`sql/Errors  ESTOP/`](./sql/Errors%20%20ESTOP/) | Shows recent ERROR and ESTOP events | state_timeline |
 | Recent Sessions | [`sql/Recent Sessions/`](./sql/Recent%20Sessions/) | Lists recent monitoring sessions | state_timeline |
 | PORT_X / MAIN_LINE | [`sql/PORT_X MAIN_LINE/`](./sql/PORT_X%20MAIN_LINE/) | Shows voltage, current, and power for a selected port | power |
-| Power Consumption & MAX Ranking | [`sql/Power_consumption_&_MAX _ranking/`](./sql/Power_consumption_%26_MAX%20_ranking/) | Compares average and maximum power consumption by port | power |
+| Power Consumption & MAX Ranking | [`sql/Power_consumption_&_MAX ranking/`](./sql/Power_consumption_%26_MAX%20_ranking/) | Compares average and maximum power consumption by port | power |
 | Statistics | [`sql/Statistics/`](./sql/Statistics/) | Shows current and power min/max/P2P statistics | power |
 
 ---
