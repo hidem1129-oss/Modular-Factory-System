@@ -37,7 +37,9 @@ LIMIT 5;
 
 ## Note
 
+The `from_ms` and `to_ms` fields in the table are not necessary as data, but they are used to calculate the session time.
 
+Removing them from the table will prevent the calculation of the session time.
 
 ---
 
