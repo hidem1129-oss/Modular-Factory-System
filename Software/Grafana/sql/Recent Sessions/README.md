@@ -19,8 +19,8 @@ It shows:
 - polling interval
 - session result
 - session ID used for filtering other panels
-
-This panel is useful as an entry point for selecting a session and reviewing its node timeline and events monitor values.
+  
+This panel is useful as an entry point for selecting a session and reviewing its node timeline, event logs, and power monitor values.
 
 ---
 
