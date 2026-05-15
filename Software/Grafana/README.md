@@ -41,17 +41,17 @@ Grafana reads the SQLite database created by the I2C Debugger and visualizes the
 
 ---
 
-## Dashboard Panels
+## SQL Query Examples
 
-The dashboard can include panels such as:
-
-| Panel | Purpose |
-|---|---|
-|State Timeline | Shows node state transitions over time |
-|Latest Events | Lists recent node state changes |
-|Error / Warning Logs | Highlights ERROR, WARN, and ESTOP events |
-|Monitor Sessions | Shows monitoring session start and end information |
-|Power Monitor | Displays current, voltage, and power values for each port |
+| Panel | Directory | Description | Panel to which it belongs |
+|---|---|---|
+| I2C Address State Timeline | [`sql/I2C Address State Timeline/`](./sql/I2C%20Address%20State%20Timeline/) | Shows I²C node states over time | state_timeline |
+| Latest Events | [`sql/Latest Events/`](./sql/Latest%20Events/) | Lists recent state change events | state_timeline |
+| Errors / ESTOP | [`sql/Errors  ESTOP/`](./sql/Errors%20%20ESTOP/) | Shows recent ERROR and ESTOP events | state_timeline |
+| Recent Sessions | [`sql/Recent Sessions/`](./sql/Recent%20Sessions/) | Lists recent monitoring sessions | state_timeline |
+| PORT_X / MAIN_LINE | [`sql/PORT_X MAIN_LINE/`](./sql/PORT_X%20MAIN_LINE/) | Shows voltage, current, and power for a selected port | power |
+| Power Consumption & MAX Ranking | [`sql/Power_consumption_&_MAX _ranking/`](./sql/Power_consumption_%26_MAX%20_ranking/) | Compares average and maximum power consumption by port | power |
+| Statistics | [`sql/Statistics/`](./sql/Statistics/) | Shows current and power min/max/P2P statistics | power |
 
 ---
 
