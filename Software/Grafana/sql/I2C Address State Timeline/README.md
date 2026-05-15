@@ -1,4 +1,4 @@
-## I2C Address State Timeline
+# I2C Address State Timeline
 
 `screen shot`
 
