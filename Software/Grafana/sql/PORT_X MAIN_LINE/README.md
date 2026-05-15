@@ -1,4 +1,4 @@
-# # PORT_X / MAIN_LINE Power Monitor
+# PORT_X / MAIN_LINE Power Monitor
 
 <img width="1237" height="454" alt="image" src="https://github.com/user-attachments/assets/dcf77cd9-ea83-4f6a-b24d-c1525713b750" />
 
