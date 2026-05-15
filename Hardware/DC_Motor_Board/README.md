@@ -78,3 +78,4 @@ The local controller interprets those commands and drives the DC motor through t
 - Hardware overview → [`../README.md`](../README.md) 
 - Manufacturing index → [`../Manufacturing/`](../Manufacturing/)
 - Firmware motor node → [`../../Firmware/motor_node/`](../../Firmware/motor_node/)
+- PORT_X / MAIN_LINE Power Monitor → [`../../PORT_X MAIN_LINE`](../../Software/Grafana/sql/PORT_X%20MAIN_LINE/)
