@@ -28,7 +28,6 @@ They demonstrate:
 |---|---|---|
 | Amazon-style Sorting Demo | Detects a workpiece, identifies its color, and sorts it with a servo gate | Camera, sensor, DC motor, servo, I²C, Grafana |
 | Stamp Process Demo | Feeds paper and presses a stamp using motorized mechanisms | DC motor, servo clamp, rack-and-pinion, orchestration |
-| Power Monitoring Demo | Monitors voltage, current, and power usage during system operation | Power Monitor Board, INA219, SQLite, Grafana |
 
 ---
 
