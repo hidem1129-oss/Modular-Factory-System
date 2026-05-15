@@ -38,11 +38,12 @@ LIMIT 5;
 ```
 
 ---
+
 ## Note
 
-The "Error in session" column indicates how many times the session ID displayed has transitioned to the ERROR state.
+The `error_count` column shows how many ERROR or ESTOP transitions occurred for each I²C address within the selected session.
 
-Therefore, the count will be the same for all rows.
+When `$session_id` is set to `__all`, the count is calculated across all matching sessions.
 
 ---
 
