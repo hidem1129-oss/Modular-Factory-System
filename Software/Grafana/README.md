@@ -44,7 +44,7 @@ Grafana reads the SQLite database created by the I2C Debugger and visualizes the
 ## SQL Query Examples
 
 | Panel | Directory | Description | Panel to which it belongs |
-|---|---|---|
+|---|---|---|---|
 | I2C Address State Timeline | [`sql/I2C Address State Timeline/`](./sql/I2C%20Address%20State%20Timeline/) | Shows I²C node states over time | state_timeline |
 | Latest Events | [`sql/Latest Events/`](./sql/Latest%20Events/) | Lists recent state change events | state_timeline |
 | Errors / ESTOP | [`sql/Errors  ESTOP/`](./sql/Errors%20%20ESTOP/) | Shows recent ERROR and ESTOP events | state_timeline |
