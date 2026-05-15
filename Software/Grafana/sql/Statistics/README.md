@@ -47,7 +47,7 @@ ORDER BY port_id
 
 ## Note
 
-This query reads from the power_port_snapshots table and groups the result by `port_id`.
+This query reads from the `power_port_snapshots` table and groups the result by `port_id`.
 
 The `p2p_current_mA` column shows the difference between the maximum and minimum current during the selected Grafana time range.
 
@@ -68,4 +68,4 @@ Notes:
 - Use the Grafana time range to select the period to analyze.
 - Apply milliamp units to current columns.
 - Apply milliwatt units to power columns.
-- Sort by p2p_current_mA or p2p_power_mW when looking for ports with large fluctuations.
+- Sort by `p2p_current_mA` or `p2p_power_mW` when looking for ports with large fluctuations.
