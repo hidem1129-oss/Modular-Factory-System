@@ -64,7 +64,7 @@ Each use case should include:
 
 ---
 
-# Related Documents
+## Related Documents
 
 - Hardware overview → [`../Hardware/`](../Hardware/)
 - Firmware overview → [`../Firmware/`](../Firmware/)
