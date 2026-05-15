@@ -20,7 +20,7 @@ It shows:
 - session result
 - session ID used for filtering other panels
 
-This panel is useful as an entry point for selecting a session and reviewing its node timeline, events, and power monitor values.
+This panel is useful as an entry point for selecting a session and reviewing its node timeline and events monitor values.
 
 ---
 
@@ -73,4 +73,3 @@ Notes:
 - Use this panel as a session selector or navigation table.
 - `session_link` can be used as a data link value for setting `$session_id`.
 - `from_ms` and `to_ms` can be used to update the dashboard time range.
-- Hide helper columns such as `from_ms` and `to_ms` if they are only used for data links.
