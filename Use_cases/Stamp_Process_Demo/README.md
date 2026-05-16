@@ -38,7 +38,7 @@ This use case demonstrates:
 |---|---|
 | Controller_Board | Local I²C control node |
 | DC_Motor_Board | Motor control for feed and press mechanisms |
-| Servo_Board | Roll paper  clamp or hold-down mechanism |
+| Servo_Board | Roll paper clamp or hold-down mechanism |
 | Power_Monitor_Board | Voltage / current monitoring |
 | Pi5_Wiring_Auxiliary | Raspberry Pi 5 wiring support |
 | Raspberry Pi 5 | Host controller and monitoring system |
@@ -52,8 +52,8 @@ This use case demonstrates:
 
 | Firmware | Role |
 |---|---|
-| Firmware/motor_node | Controls feed and press motors |
-| Firmware/servo_node | Controls the clamp mechanism |
+| `Firmware/motor_node` | Controls feed and press motors |
+| `Firmware/servo_node` | Controls the clamp mechanism |
 
 ---
 
@@ -124,7 +124,7 @@ It demonstrates that the same control, monitoring, logging, and visualization la
 The following are potential areas for future improvement:
 
 - Improved accuracy of paper feed position
-- Improved accuracy of printer alignment
+- Improved stamp alignment accuracy
 - Reproducibility testing across multiple cycles
 - Addition of paper position detection sensors
 - Addition of force or current-based abnormal load detection methods
@@ -132,7 +132,7 @@ The following are potential areas for future improvement:
 
 ---
 
-##  Related Documents
+## Related Documents
 
 - Use cases overview → [`../README.md`](../README.md)
 - Hardware overview → [`../../Hardware/`](../../Hardware/)
