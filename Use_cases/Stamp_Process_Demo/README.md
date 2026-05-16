@@ -10,7 +10,7 @@ It is inspired by a simple press-processing line, where a material is fed into p
 
 The Stamp Process Demo is a small tabletop process line built with the Modular Factory System.
 
-A paper strip is fed through the mechanism by a motor-driven take-up roller.  
+A paper roll is fed through the mechanism by a motor-driven take-up roller.  
 A clamp mechanism holds the paper in place, and a rack-and-pinion mechanism presses a stamp onto the paper.
 
 Although this demo uses a stamp instead of an industrial press tool, the operation flow is similar to a simplified press-processing line:
@@ -22,7 +22,7 @@ Although this demo uses a stamp instead of an industrial press tool, the operati
 This use case demonstrates:
 
 - reuse of the same modular hardware for a different process
-- DC motor-based paper feed
+- DC motor-based roll paper feed
 - motorized press motion using a rack-and-pinion mechanism
 - servo-based clamping or holding mechanism
 - I²C-based distributed control
@@ -38,13 +38,13 @@ This use case demonstrates:
 |---|---|
 | Controller_Board | Local I²C control node |
 | DC_Motor_Board | Motor control for feed and press mechanisms |
-| Servo_Board | Paper clamp or hold-down mechanism |
+| Servo_Board | Roll paper  clamp or hold-down mechanism |
 | Power_Monitor_Board | Voltage / current monitoring |
 | Pi5_Wiring_Auxiliary | Raspberry Pi 5 wiring support |
 | Raspberry Pi 5 | Host controller and monitoring system |
 | Rack-and-pinion mechanism | Converts motor rotation into linear press motion |
 | Stamp | Physical marking tool |
-| Roll paper tape	| Work material |
+| Roll paper | Work material |
 
 ---
 
