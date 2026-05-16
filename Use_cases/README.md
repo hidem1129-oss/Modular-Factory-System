@@ -26,7 +26,7 @@ They demonstrate:
 
 | Use Case | Description | Main Technologies |
 |---|---|---|
-| Amazon-style Sorting Demo | Detects a workpiece, identifies its color, and sorts it with a servo gate | Camera, sensor, DC motor, servo, I²C, Grafana |
+| [`Amazon-style Sorting Demo`](/Amazon-style_Sorting_Demo/) | Detects a workpiece, identifies its color, and sorts it with a servo gate | Camera, sensor, DC motor, servo, I²C, Grafana |
 | Stamp Process Demo | Feeds paper and presses a stamp using motorized mechanisms | DC motor, servo clamp, rack-and-pinion, orchestration |
 
 ---
