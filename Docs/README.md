@@ -31,7 +31,7 @@ It includes:
 | Topic | Description |
 |---|---|
 | [`System_Architecture/`](./System_Architecture/) | System architecture diagrams and data/control flow overview |
-| [`Register Map`](./Register_Map/) | Common I²C register definitions and command format |
+| [`Register_Map`](./Register_Map/) | Common I²C register definitions and command format |
 | Orchestration | Host-side command sequence and workflow execution notes |
 | Troubleshooting | Common hardware / I²C / software issues |
 | Development Notes | Design decisions and future improvement ideas |
