@@ -158,16 +158,6 @@ See:
 
 ---
 
-## Future Work
-
-- Flow-editor style orchestration UI
-- More reusable module slots and standardized harnesses
-- Additional use cases using the same control modules
-- Recruiter-oriented 5-minute technical walkthrough video
-- More detailed troubleshooting and setup documentation
-
----
-
 ## Current Status
 
 - Multi-node I²C control: implemented
@@ -179,6 +169,16 @@ See:
 - Custom PCB modules: implemented
 - Gerber data and schematic files: published
 - BOM management via DigiKey MyLists: prepared
+
+---
+
+## Future Work
+
+- Flow-editor style orchestration UI
+- More reusable module slots and standardized harnesses
+- Additional use cases using the same control modules
+- Recruiter-oriented 5-minute technical walkthrough video
+- More detailed troubleshooting and setup documentation
 
 ---
 
