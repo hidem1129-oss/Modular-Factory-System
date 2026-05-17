@@ -59,7 +59,7 @@ This use case demonstrates:
 |---|---|
 | `Software/I2C_Debugger` | Monitors node states and power values |
 | `Software/Grafana` | Visualizes logs and power monitor data |
-| [`Orchestration script`](./warehouse_demo.py) | Coordinates conveyor, detection, and servo operation |
+| [`Orchestration script`](./warehouse_demo.py) | Coordinates conveyor, detection, and servo operation. Including camera operation too. |
 
 ---
 
