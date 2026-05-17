@@ -88,6 +88,9 @@ The system is designed around a distributed I²C node architecture.
 Each physical module exposes status, command, and feedback values through a register-based interface.
 The host-side software monitors these nodes, records state transitions, and visualizes the results.
 
+See also:
+- [`Docs/System_Architecture/`](./Docs/System_Architecture/)
+
 ---
 
 ## Use Cases
@@ -111,6 +114,10 @@ These use cases show that the same hardware, firmware, and software layers can b
 - Grafana dashboards for state timelines and power monitoring
 - Custom PCBs with Gerber data and DigiKey MyList-based BOMs
 - Reconfigurable tabletop mechanisms using DC motors, servos, sensors, and camera detection
+
+Protocol reference:
+
+- [`Docs/Register_Map/`](./Docs/Register_Map/)
 
 ---
 
