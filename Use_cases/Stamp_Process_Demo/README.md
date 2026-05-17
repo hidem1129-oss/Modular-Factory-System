@@ -14,6 +14,17 @@ A paper roll is fed through the mechanism by a motor-driven take-up roller.
 A clamp mechanism holds the paper in place, and a rack-and-pinion mechanism presses a stamp onto the paper.
 
 Although this demo uses a stamp instead of an industrial press tool, the operation flow is similar to a simplified press-processing line:
+```text
+Feed material
+      ↓
+Clamp / hold position
+      ↓
+Press
+      ↓
+Release
+      ↓
+Feed next position
+```
 
 ---
 
@@ -61,9 +72,9 @@ This use case demonstrates:
 
 | Software | Role |
 |---|---|
-| Software/I2C_Debugger | Monitors node states and power values |
-| Software/Grafana | Visualizes logs and power monitor data |
-| Orchestration script | Coordinates feed, clamp, press, release, and repeat operations |
+| `Software/I2C_Debugger` | Monitors node states and power values |
+| `Software/Grafana` | Visualizes logs and power monitor data |
+| [`Orchestration script`](./stamp_press_demo.py) | Coordinates feed, clamp, press, release, and repeat operations |
 
 ---
 
