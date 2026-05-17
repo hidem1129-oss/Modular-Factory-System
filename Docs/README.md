@@ -15,7 +15,7 @@ The main project structure is organized into:
 
 The `Docs` directory is used for additional design notes and reference materials that do not belong to a single hardware board, firmware node, or software tool.
 
-It include:
+It includes:
 
 - system architecture notes
 - register map references
