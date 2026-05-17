@@ -161,6 +161,20 @@ See:
 
 ---
 
+## Current Status
+
+- Multi-node I²C control: implemented
+- Camera-based sorting demo: implemented
+- Stamp process demo: implemented
+- SQLite logging: implemented
+- Grafana dashboard: implemented
+- Power monitoring dashboard: implemented
+- Custom PCB modules: implemented
+- Gerber data and schematic files: published
+- BOM management via DigiKey MyLists: prepared
+
+---
+
 ## Disclaimer
 
 This project is intended for educational, prototyping, and proof-of-concept purposes.
