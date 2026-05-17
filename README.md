@@ -1,6 +1,6 @@
 # Modular Factory System
 
-> A reconfigurable DX (Digital Transformation) platform built with distributed I²C nodes, real hardware, and data-driven orchestration.
+> A reconfigurable tabletop factory platform built with distributed I²C nodes, custom PCBs, real actuators, logging, and Grafana visualization.
 
 <img width="1920" height="1080" alt="samne" src="https://github.com/user-attachments/assets/3304786b-fce8-4f30-938c-a0456ee5e704" />
 
@@ -26,6 +26,7 @@ This video was created for a prototype contest and gives a compact overview of t
 - YouTube: https://youtu.be/8Od8Ocg0tjE
 
 The video demonstrates:
+
 - modular tabletop factory hardware
 - I²C-based motor / servo / sensor control
 - camera-based color sorting
@@ -35,127 +36,120 @@ The video demonstrates:
 
 
 ---
-## Choose your path
-
-- 🛠 Engineers (run the system) → [Quick Start](./Software/servo_node/quick_start/README.md)
-- 🧑‍💼 Recruiters (DX overview) → [Japanese Overview](./日本語版/README.md)
-
----
 
 ## What is this?
 
-This project is a **modular factory system** designed to simulate real-world industrial DX scenarios using:
+This project is a modular tabletop factory system designed to prototype small factory processes and DX-style monitoring workflows.
 
-- Raspberry Pi 5 (orchestration / AI / visualization)
-- Raspberry Pi Pico (distributed control nodes)
-- I²C-based communication
-- Real actuators and sensors
+It combines:
 
-It enables:
+- Raspberry Pi 5 as the host controller
+- Raspberry Pi Pico-based distributed I²C nodes
+- custom PCBs for control, sensing, wiring, and power monitoring
+- real actuators and sensors
+- SQLite logging
+- Grafana visualization
 
-- Rapid prototyping of factory systems
-- Reconfiguration of physical workflows
-- Integration of control, sensing, and data analytics
-  
-
-## Core System
-
-The core of this project is not a specific actuator, but a **modular node architecture**:
-
-- Distributed I²C node system
-- Register-based communication protocol
-- State machine-driven execution model
-- Hardware-agnostic module design
-
-This allows different modules to be plugged into the same system:
-
-- Servo Node (actuator example)
-- Photo Sensor Node (measurement example)
-- Motor Node (drive example)
-
-This architecture abstracts physical devices into standardized nodes,
-similar to microservices in software systems.
-
+The goal is to show how physical mechanisms, embedded control, host-side software, and data visualization can be integrated into one reusable system.
 
 ---
 
-## Quick Start
+## Repository Map
 
-Start with a simple actuator example: 
-[Servo Node Quick Start](./Software/servo_node/quick_start/README.md)
+| Directory | Description |
+|---|---|
+| [`Hardware/`](./Hardware/) | PCB design files, Gerber data, schematics, manufacturing notes, and BOM links |
+| [`Firmware/`](./Firmware/) | Raspberry Pi Pico firmware for motor, servo, and sensor I²C nodes |
+| [`Software/`](./Software/) | I²C monitoring software, SQLite logging, and Grafana visualization notes |
+| [`Use_cases/`](./Use_cases/) | Example tabletop factory processes built with the system |
+| [`Docs/`](./Docs/) | Supplementary architecture notes and design references |
+| [`日本語版/`](./日本語版/) | Japanese overview for recruiters and readers in Japan |
 
-Example:
+---
 
-```bash
-i2cset -y 1 0x14 0x30 0x10
-```
+## System Architecture
 
-## Architecture
 ```text
-[ Raspberry Pi 5 ]
-        │ I²C
- ┌──────┴─────────┐────────────────┐────────────...
- │                │                │
-Servo Node   Sensor Node       Motor Node       ...
- │                │                │
-Actuator      Measurement       Actuator        ...
+Physical mechanism
+      ↓
+Hardware boards
+      ↓
+Raspberry Pi Pico firmware nodes
+      ↓ I²C register interface
+Raspberry Pi 5 host software
+      ↓
+SQLite logs
+      ↓
+Grafana visualization
 ```
-- Distributed node architecture
-- Register-based communication
-- Hardware modules behave as interchangeable nodes
-- Scalable system design
-  
-👉 Detailed design: ./Software/servo_node/design/README.md
 
+The system is designed around a distributed I²C node architecture.
+
+Each physical module exposes status, command, and feedback values through a register-based interface.
+The host-side software monitors these nodes, records state transitions, and visualizes the results.
+
+---
+
+## Use Cases
+
+| Use Case | Description |
+|---|---|
+| [`Amazon-style Sorting Demo`](./Use_cases/Amazon-style_Sorting_Demo/) | Detects a workpiece, identifies its color, and sorts it with a servo gate |
+| [`Stamp Process Demo`](./Use_cases/Stamp_Process_Demo/) | Feeds paper and presses a stamp using motorized mechanisms |
+
+These use cases show that the same hardware, firmware, and software layers can be reused for different tabletop factory processes.
+
+---
 
 ## Technical Highlights
-- Register map (0x00–0x3F)
-- DATA_READY / UPDATE_CNT synchronization
-- Command validation (accept / reject model)
-- E-STOP propagation across nodes
-- Modular firmware architecture
 
+- Distributed I²C node architecture
+- Register-based control and feedback interface
+- Raspberry Pi Pico-based local control nodes
+- PyQt5-based I²C debugger and power monitor
+- SQLite-based event and snapshot logging
+- Grafana dashboards for state timelines and power monitoring
+- Custom PCBs with Gerber data and DigiKey MyList-based BOMs
+- Reconfigurable tabletop mechanisms using DC motors, servos, sensors, and camera detection
 
-## Why this matters
+---
 
-Modern DX requires:
+## Hardware and Manufacturing
 
-- Integration of hardware and software
-- Real-time observability
-- Flexible and modular systems
+Custom PCBs are used for control, sensing, wiring, and power monitoring.
 
-This project demonstrates:
-- Plug-and-play hardware architecture
-- Data-driven control loops
-- Physical system orchestration
+Hardware documentation includes:
 
+- board role descriptions
+- photos
+- schematics
+- Gerber files
+- DigiKey MyList BOM links
+- manufacturing notes
 
-## Hardware and BOM
+See:
 
-Custom PCBs are used for control and monitoring modules.  
-Each board has a DigiKey MyList-based BOM.
+- [`Hardware/`](./Hardware/)
+- [`Hardware/Manufacturing/`](./Hardware/Manufacturing/)
 
-- [Power Monitor Board BOM](https://www.digikey.jp/ja/mylists/list/RITVVGPV8U)
-- [DC Motor Control Board BOM](https://www.digikey.jp/ja/mylists/list/UO08XWYEAF)
-- [Servo Control Board BOM](https://www.digikey.jp/ja/mylists/list/1G5XREGH36)
-- [Sensor Board BOM](https://www.digikey.jp/ja/mylists/list/EW3FT9N8K2)
-- [Controller Board BOM](https://www.digikey.jp/ja/mylists/list/P0VEJG3F78)
-- [Pi 5 Board BOM](https://www.digikey.jp/ja/mylists/list/QO09LGCG39)
-- [Other Components BOM](https://www.digikey.jp/ja/mylists/list/5G1M6HVIDC)
+---
 
-See: [Hardware BOM](./Hardware/README.md)
+## Software and Visualization
 
-Passive components not listed may be used as long as they have matching characteristics.
+The software layer includes:
 
-## Current Status
+- I²C node monitoring
+- power monitoring
+- state transition logging
+- SQLite database generation
+- Grafana visualization notes and SQL examples
 
-- Multi-node I²C control: implemented
-- Camera-based sorting demo: implemented
-- SQLite logging: implemented
-- Grafana dashboard: implemented
-- Power monitoring dashboard: implemented
-- Custom PCB modules: implemented
-- BOM management via DigiKey MyLists: prepared
+See:
+
+- [`Software/I2C_Debugger/`](./Software/I2C_Debugger/)
+- [`Software/Grafana/`](./Software/Grafana/)
+
+---
 
 ## Future Work
 
@@ -163,6 +157,10 @@ Passive components not listed may be used as long as they have matching characte
 - More reusable module slots and standardized harnesses
 - Additional use cases using the same control modules
 - Recruiter-oriented 5-minute technical walkthrough video
+- More detailed troubleshooting and setup documentation
+
+---
 
 ## Disclaimer
-This project is intended for educational and PoC purposes.
+
+This project is intended for educational, prototyping, and proof-of-concept purposes.
