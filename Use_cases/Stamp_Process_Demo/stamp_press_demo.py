@@ -12,7 +12,6 @@ except ImportError as e:
 
 BUS_NO = 1
 
-# ---- I2C addresses ----
 STAMP_ADDR = 0x11
 PAPER_ADDR = 0x18
 
@@ -20,7 +19,6 @@ CLAMP_SERVO_ADDRS = [0x13, 0x17]
 
 LOOP = 10
 
-# ---- Registers ----
 REG_OP_MODE = 0x1D
 REG_CMD = 0x30
 
@@ -47,8 +45,7 @@ class DCMotion:
     speed: int
     tick: int
     wait: float
-    direction: int  # 0 or 1
-
+    direction: int  
 
 @dataclass(frozen=True)
 class ServoMotion:
@@ -58,7 +55,6 @@ class ServoMotion:
     wait: float
 
 
-# ---- Stamp rack-pinion motion ----
 PRESS = DCMotion(
     label="PRESS",
     addr=STAMP_ADDR,
@@ -77,8 +73,6 @@ RELEASE = DCMotion(
     direction=1,
 )
 
-# ---- Paper take-up motor ----
-# 方向確認結果に合わせて direction=1
 TAKEUP = DCMotion(
     label="PAPER TAKE-UP",
     addr=PAPER_ADDR,
@@ -88,9 +82,6 @@ TAKEUP = DCMotion(
     direction=1,
 )
 
-# ---- Paper clamp servos ----
-# まずは安全寄り。押さえが弱ければ CLAMP_DEGREE を増やす。
-# 逆向きなら CLAMP_DEGREE と RELEASE_DEGREE を入れ替える。
 CLAMP = ServoMotion(
     label="CLAMP PAPER",
     degrees={
