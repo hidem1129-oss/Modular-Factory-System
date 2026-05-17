@@ -50,7 +50,6 @@ def i2cget(addr, reg):
 
 
 def start_dc_conveyor():
-    # speed = 0x0150, time = 0xFFFF, OP_MODE = TIME(0x02)
     i2cset(DC_ADDR, "0x31", "0x01")
     i2cset(DC_ADDR, "0x32", "0x35")
     i2cset(DC_ADDR, "0x35", "0xFF")
@@ -256,7 +255,6 @@ try:
             )
 
             cv2.imshow("Warehouse Camera", disp)
-            #cv2.imwrite(f"trigger_{int(time.time()*1000)}.jpg", disp)
             cv2.waitKey(1)
 
         else:
