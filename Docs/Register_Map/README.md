@@ -14,7 +14,7 @@ It includes:
 
 | File | Description |
 |---|---|
-| [`bit_pattern_mapping.xlsx`](./bit_pattern_mapping.xlsx/) | Spreadsheet reference for register and bit-pattern mapping |
+| [`bit_pattern_mapping.xlsx`](./bit_pattern_mapping.xlsx) | Spreadsheet reference for register and bit-pattern mapping |
 
 ## Related Documents
 
