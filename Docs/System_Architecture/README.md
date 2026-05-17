@@ -6,7 +6,7 @@ This directory contains system architecture diagrams for the Modular Factory Sys
 
 ## Overall Architecture
 
-![System Architecture](./system_architecture.png)
+<img width="996" height="611" alt="system_architecture" src="https://github.com/user-attachments/assets/b561b2da-a893-4d39-8634-83152ecf9f23" />
 
 This diagram shows the overall relationship between the host controller, distributed control nodes, actuator / sensor nodes, power monitoring, logging, and visualization.
 
