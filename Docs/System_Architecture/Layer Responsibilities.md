@@ -8,31 +8,29 @@ This document defines the responsibility of each architectural layer in the Modu
 
 | Layer | Responsible for | Not responsible for |
 |---|---|---|
-| Physical mechanism | Material movement, clamping, pressing, sorting, and other physical operations | Communication protocols, state logging, dashboard rendering |
-| Hardware | Electrical connection, power distribution, signal routing, actuator and sensor interfaces | Process orchestration, application workflows, dashboard logic |
-| Firmware | Local device control, command validation, state handling, feedback publication, and E-STOP response | Cross-node process planning, persistent logging, Grafana rendering |
-| Host software | Process orchestration, I²C polling, node monitoring, event recording, and session management | Direct low-level actuator driving, electrical protection |
+| Physical mechanism | Performing the physical process represented by the prototype | Communication protocols, state logging, dashboard rendering |
+| Hardware | Electrical connection, power distribution, signal routing, and actuator or sensor interfacing | Process orchestration, application workflows, dashboard logic |
+| Firmware | Local device control, command validation, state handling, feedback publication, and E-STOP response | Cross-node process planning, persistent logging, visualization |
+| Host software | Process orchestration, I²C polling, node monitoring, event recording, and session management | Direct low-level output generation and electrical protection |
 | Storage | Persistent event, snapshot, session, and power-monitoring records | Hardware control and real-time decision making |
-| Visualization | Human-readable timelines, tables, and power trends | Hardware control, command generation, safety handling |
+| Visualization | Human-readable timelines, tables, and power trends | Hardware control, command generation, and safety handling |
 
 ---
 
 ## Physical Mechanism Layer
 
-The physical mechanism performs the visible process.
+The physical mechanism represents the real-world process being prototyped.
 
-Examples include:
+Its responsibilities are to:
 
-- conveyor movement
-- servo-driven sorting gates
-- paper feeding
-- clamping
-- rack-and-pinion press motion
-- workpiece detection positions
+- convert actuator output into observable physical behavior
+- provide measurable or detectable process states
+- expose mechanical constraints that affect control behavior
+- make the relationship between commands, movement, sensing, and monitoring visible
 
-The mechanism is intentionally simple and accessible for tabletop prototyping.
+The mechanism is replaceable.
 
-Its purpose is to provide a physical model that makes control behavior and monitoring results observable.
+The architecture does not depend on a specific process, machine type, or demonstration configuration.
 
 ---
 
@@ -42,21 +40,20 @@ The hardware layer provides the electrical foundation of the system.
 
 Primary responsibilities:
 
-- connect Raspberry Pi Pico nodes to actuator and sensor boards
+- connect Raspberry Pi Pico nodes to actuator and sensor interfaces
 - distribute power to multiple modules
 - expose I²C, control, sensor, and power connections
 - support repeated assembly, replacement, and maintenance
 - monitor branch voltage and current
-- provide physical interfaces to motors, servos, and sensors
+- provide standardized connection points between modules
 
-Typical components:
+Typical components include:
 
 - Controller Board
-- DC Motor Board
-- Servo Board
-- Sensor Board
+- actuator interface boards
+- sensor interface boards
 - Power Monitor Board
-- Pi 5 Wiring Auxiliary
+- Raspberry Pi 5 wiring support
 
 The hardware layer does not decide the process sequence. It provides the interfaces required by firmware and host software.
 
@@ -96,7 +93,8 @@ The common core is responsible for:
 Node-specific firmware is responsible for:
 
 - interpreting active setpoints and operation modes
-- driving a motor, servo, or sensor interface
+- controlling the connected device
+- acquiring device-specific input
 - publishing device-specific feedback
 - reporting operation completion
 - stopping output safely
@@ -116,16 +114,18 @@ It has two related responsibilities.
 
 ### Orchestration
 
-Orchestration scripts coordinate multiple nodes to perform a process.
+Orchestration logic coordinates multiple nodes to perform a process.
 
-Examples:
+Its responsibilities include:
 
-- start a conveyor
-- wait for workpiece detection
-- capture and classify an image
-- command a sorting gate
-- feed and clamp paper
-- execute a press sequence
+- issuing commands to nodes
+- applying parameters
+- waiting for state transitions or completion
+- evaluating process conditions
+- coordinating dependencies between nodes
+- handling process-level sequencing
+
+The host software defines the workflow, while the individual nodes remain responsible for local device behavior.
 
 ### Monitoring and logging
 
@@ -159,7 +159,7 @@ The current implementation records data such as:
 
 SQLite is part of the monitoring path, not the hardware control loop.
 
-A failure of the visualization layer should not directly change actuator behavior.
+A failure of the storage or visualization layer should not directly change local actuator behavior.
 
 ---
 
@@ -171,10 +171,10 @@ Typical views include:
 
 - node state timelines
 - recent events
-- ERROR and E-STOP events
+- warning, error, and E-STOP events
 - monitoring sessions
 - voltage, current, and power trends
-- average and maximum power comparisons
+- comparisons between monitored branches
 
 Grafana does not send control commands to nodes.
 
@@ -188,8 +188,8 @@ See [`../../Software/Grafana/`](../../Software/Grafana/).
 
 | Boundary | Interface |
 |---|---|
-| Physical mechanism ↔ Hardware | Mechanical mounting, actuator shafts, sensor positions, wiring |
-| Hardware ↔ Firmware | GPIO, PWM, I²C, power, actuator and sensor signals |
+| Physical mechanism ↔ Hardware | Mechanical mounting, actuator coupling, sensor placement, and wiring |
+| Hardware ↔ Firmware | GPIO, PWM, I²C, power, actuator signals, and sensor signals |
 | Firmware ↔ Host software | Common I²C register interface |
 | Host software ↔ Storage | SQLite writes and queries |
 | Storage ↔ Visualization | Grafana SQLite data source and SQL queries |
@@ -207,9 +207,7 @@ The system separates:
 - persistent monitoring
 - visualization
 
-This allows one layer to change without requiring every other layer to be rewritten.
-
-For example, the same monitoring and logging software can be reused when the physical process changes from sorting to stamping.
+This allows the physical process or mechanism to change while the shared control, monitoring, logging, and visualization layers remain reusable.
 
 ---
 
