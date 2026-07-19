@@ -93,14 +93,6 @@ The active node profile is selected in:
 
 [`common/platform/node_build_config.h`](./common/platform/node_build_config.h)
 
-Exactly one build profile must be set to `1`.
-
-The build stops with a compile-time error when zero or multiple profiles are selected.
-
-This prevents ambiguous profile configuration from producing an unintended UF2 image.
-
-Detailed build and flashing instructions are maintained in the common platform documentation.
-
 ---
 
 ## Common Firmware Documentation
