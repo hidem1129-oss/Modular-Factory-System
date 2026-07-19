@@ -161,7 +161,6 @@ This makes it possible to:
 ## Related Documentation
 
 - Project architecture → [`../Docs/System_Architecture/`](../Docs/System_Architecture/)
-- Common firmware overview → [`common/`](./common/)
 - Register map → [`../Docs/Register_Map/`](../Docs/Register_Map/)
 - Hardware overview → [`../Hardware/`](../Hardware/)
 - Software overview → [`../Software/`](../Software/)
