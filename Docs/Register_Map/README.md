@@ -215,8 +215,8 @@ The spreadsheet is retained as a design reference and should not be treated as t
 | Document | Purpose |
 |---|---|
 | [`Common_Register_Map.md`](./Common_Register_Map.md) | Register-by-register address, width, access, reset value, and meaning |
-| [`Status_and_Completion.md`](./Status_and_Completion.md)| STATUS, command result, completion, E-STOP, DATA_READY, and UPDATE_CNT |
-| [`Command_and_Setpoint.md`](./Command_and_Setpoint.md)| Command flags, operation modes, setpoints, timing, limits, and write sequence |
+| [`Status_and_Completion.md`](./Status_and_Completion.md) | STATUS, command result, completion, E-STOP, DATA_READY, and UPDATE_CNT |
+| [`Command_and_Setpoint.md`](./Command_and_Setpoint.md) | Command flags, operation modes, setpoints, timing, limits, and write sequence |
 
 These files should be checked against the current implementation rather than copied directly from the spreadsheet.
 
