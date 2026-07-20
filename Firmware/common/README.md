@@ -97,23 +97,6 @@ The current platform target is Raspberry Pi Pico using the Pico SDK.
 
 ---
 
-## Build Profile Selection
-
-The active node profile is selected in:
-
-[`platform/node_build_config.h`](./platform/node_build_config.h)
-
-Exactly one build profile must be set to `1`.
-
-The build stops with a compile-time error when:
-
-- all profiles are `0`
-- multiple profiles are `1`
-
-This prevents ambiguous configuration from producing an unintended UF2 image.
-
----
-
 ## Register Interface
 
 The shared register interface is implemented in:
