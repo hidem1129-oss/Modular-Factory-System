@@ -10,8 +10,6 @@ This directory contains the hardware design files and documentation for the `DC_
 
 The board provides the electrical interface between the Pico-based Controller Board, an external motor-power path, an AE-TB6612 motor-driver module, and a connected DC motor.
 
-It is used for tabletop mechanisms such as conveyor belts, take-up rollers, and rack-and-pinion actuators.
-
 ---
 
 ## Purpose
