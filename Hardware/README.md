@@ -2,7 +2,7 @@
 
 This directory contains the hardware design files and documentation for the Modular Factory System.
 
-The hardware layer is organized as a set of modular PCBs that connect the Raspberry Pi 5 host, Raspberry Pi Pico-based control nodes, actuator and sensor interfaces, and monitored 5 V power distribution.
+The hardware layer is organized as modular PCBs that connect the Raspberry Pi 5 host, Raspberry Pi Pico-based control nodes, actuator and sensor interfaces, and monitored 5 V power distribution.
 
 ---
 
@@ -14,8 +14,8 @@ It is designed to support:
 
 - distributed I²C-connected control nodes
 - replaceable actuator and sensor interface boards
-- centralized wiring from the Raspberry Pi 5
-- monitored 5 V power distribution
+- centralized Raspberry Pi 5-side wiring
+- monitored 5 V actuator-power distribution
 - repeatable tabletop factory demonstrations
 - easier maintenance through standardized connectors
 - reuse of the same electrical modules across multiple physical processes
@@ -32,7 +32,9 @@ The current implementation is intended for educational, prototyping, and proof-o
 Raspberry Pi 5
       ↓ I²C and host-side wiring
 Pi5_Wiring_Auxiliary
-      ↓ shared bus and control connections
+      ↓ shared bus, MUX reset, and control connections
+Power_Monitor_Board
+      ↓ I²C, +5V_PI, and E-STOP pass-through
 Controller_Board
       ↓ local control signals
 DC_Motor_Board / Servo_Board / Sensor_Board
@@ -40,19 +42,21 @@ DC_Motor_Board / Servo_Board / Sensor_Board
 motor / servo / photo-reflector
 ```
 
-### Power path
+### Actuator power path
 
 ```text
-5 V source
-      ↓
+external 5 V source
+      ↓ J11
 Power_Monitor_Board
-      ↓ monitored power branches
-controller and peripheral boards
+      ↓ main-line and branch monitoring
+actuator power outputs
       ↓
-physical loads
+DC motor / servo and connected loads
 ```
 
-The control path and power path are documented separately because they have different electrical and operational responsibilities.
+The control path and actuator-power path are documented separately because they have different electrical and operational responsibilities.
+
+Raspberry Pi-side logic power and actuator power are routed through related but distinct paths. See the Pi5 Wiring Auxiliary and Power Monitor Board READMEs for connector-level details.
 
 ---
 
@@ -60,12 +64,12 @@ The control path and power path are documented separately because they have diff
 
 | Category | Board | Main role |
 |---|---|---|
-| Host wiring | [`Pi5_Wiring_Auxiliary/`](./Pi5_Wiring_Auxiliary/) | Organizes Raspberry Pi 5-side I²C and module wiring |
+| Host wiring | [`Pi5_Wiring_Auxiliary/`](./Pi5_Wiring_Auxiliary/) | Organizes Raspberry Pi 5-side I²C, power, reset, and shared wiring |
+| Power infrastructure | [`Power_Monitor_Board/`](./Power_Monitor_Board/) | Receives external 5 V power, distributes and monitors main/branch power, and passes shared wiring toward the Controller Board chain |
 | Local controller | [`Controller_Board/`](./Controller_Board/) | Hosts the Raspberry Pi Pico node and exposes local control connections |
 | Actuator interface | [`DC_Motor_Board/`](./DC_Motor_Board/) | Drives DC motors |
 | Actuator interface | [`Servo_Board/`](./Servo_Board/) | Connects and powers servo actuators |
 | Sensor interface | [`Sensor_Board/`](./Sensor_Board/) | Connects the selected photo-reflector circuit and related sensing signals |
-| Power infrastructure | [`Power_Monitor_Board/`](./Power_Monitor_Board/) | Distributes 5 V and monitors branch voltage/current |
 
 Each board has a narrow responsibility so that electrical functions can be replaced, tested, and explained independently.
 
@@ -138,16 +142,22 @@ Typical connection methods include:
 - keyed or pitch-consistent connectors
 - screw terminals or equivalent power connectors
 
-### Power distribution
+### Power distribution and measurement
 
-The power architecture is designed around monitored 5 V distribution.
+The actuator-power architecture is designed around monitored 5 V distribution.
 
 Goals include:
 
 - supplying multiple branches
-- observing voltage and current
+- observing main-line and branch voltage/current behavior
 - separating logic/control wiring from higher-current paths where practical
 - exposing electrical behavior to the software layer
+- providing a common measurement boundary
+- collecting repeatable branch telemetry at a consistent cadence
+
+The centralized monitor is intended primarily for trend analysis, comparison, logging, and diagnostics rather than precision load-terminal power measurement.
+
+The Power Monitor Board distributes and observes the supplied power but does not regulate or improve the upstream source.
 
 ### Tabletop and demonstration constraints
 
@@ -189,12 +199,12 @@ Board-level status and limitations should be confirmed in each board README.
 ```text
 Hardware/
 ├─ README.md
+├─ Pi5_Wiring_Auxiliary/
+├─ Power_Monitor_Board/
 ├─ Controller_Board/
 ├─ DC_Motor_Board/
 ├─ Servo_Board/
 ├─ Sensor_Board/
-├─ Power_Monitor_Board/
-├─ Pi5_Wiring_Auxiliary/
 └─ Manufacturing/
 ```
 
@@ -205,7 +215,7 @@ Typical contents:
 | `README.md` | Board role, interfaces, design decisions, limitations, and links |
 | `schematic/` | Circuit schematic source or exported files |
 | `gerber/` | PCB manufacturing data |
-| `Manufacturing/` | Cross-board production, BOM, and assembly guidance |
+| `Manufacturing/` | Cross-board production, procurement, and assembly index |
 
 ---
 
@@ -215,18 +225,20 @@ Gerber files are provided as prototype manufacturing data.
 
 Before ordering, verify:
 
+- board revision
 - board dimensions
 - board outline
 - layer count
 - drill recognition
 - board thickness
 - copper weight
-- quantity
 - connector footprint orientation
+- polarized-component orientation
 - mounting-hole position
+- silkscreen readability
 - manufacturing preview
 
-Detailed guidance:
+Detailed guidance and cross-board links:
 
 - [`Manufacturing/`](./Manufacturing/)
 
@@ -244,7 +256,20 @@ Procurement goals include:
 - repeatability for reproduction and review
 - preference for commonly available components
 
-A BOM link does not replace checking package, footprint, ratings, tolerance, availability, and lifecycle status.
+A BOM link does not replace checking:
+
+- package
+- footprint
+- pinout
+- rating
+- tolerance
+- availability
+- lifecycle status
+- application-specific characteristics
+
+Substitution guidance is documented in:
+
+- [`Manufacturing/`](./Manufacturing/)
 
 ---
 
@@ -257,7 +282,7 @@ A BOM link does not replace checking package, footprint, ratings, tolerance, ava
 | Servo Board | Used by [`Firmware/servo_node`](../Firmware/servo_node/) |
 | Sensor Board | Used by [`Firmware/sensor_node`](../Firmware/sensor_node/) |
 | Power Monitor Board | Provides electrical data to host-side monitoring software |
-| Pi5 Wiring Auxiliary | Connects the Raspberry Pi 5 host to distributed nodes |
+| Pi5 Wiring Auxiliary | Connects the Raspberry Pi 5 host to distributed nodes and shared wiring |
 
 The public control contract is documented in:
 
@@ -280,7 +305,7 @@ The software layer uses hardware-exposed values for:
 ```text
 physical board
       ↓ electrical signal
-firmware register
+firmware register or monitor device
       ↓
 host software
       ↓
@@ -301,7 +326,8 @@ See:
 - 5 V distribution is specific to the present system
 - connectors are standardized within the project, not against an external industrial standard
 - some boards are tailored to the selected motors, servos, and photo-reflector circuit
-- protection, redundancy, and environmental tolerance are limited
+- protection is supplementary and is not safety-rated
+- redundancy and environmental tolerance are limited
 - board revision and assembly status may differ by module
 - physical mechanisms use prototype-grade construction
 
@@ -319,8 +345,9 @@ Possible future hardware extensions include:
 - configurable sensor excitation
 - dedicated protection and fault isolation
 - improved power-domain separation
-- branch fusing
-- current-limited outputs
+- electronic branch current limiting
+- faster branch fault isolation
+- software-controlled branch shutdown
 - more compact module packaging
 - mounting standards
 - automatic board identification
@@ -330,14 +357,14 @@ Possible future hardware extensions include:
 
 ## Recommended Reading Order
 
-To follow the hardware from the system center outward:
+To follow the physical system from the Raspberry Pi 5 outward:
 
 1. [`Pi5_Wiring_Auxiliary/`](./Pi5_Wiring_Auxiliary/)
-2. [`Controller_Board/`](./Controller_Board/)
-3. [`DC_Motor_Board/`](./DC_Motor_Board/)
-4. [`Servo_Board/`](./Servo_Board/)
-5. [`Sensor_Board/`](./Sensor_Board/)
-6. [`Power_Monitor_Board/`](./Power_Monitor_Board/)
+2. [`Power_Monitor_Board/`](./Power_Monitor_Board/)
+3. [`Controller_Board/`](./Controller_Board/)
+4. [`DC_Motor_Board/`](./DC_Motor_Board/)
+5. [`Servo_Board/`](./Servo_Board/)
+6. [`Sensor_Board/`](./Sensor_Board/)
 7. [`Manufacturing/`](./Manufacturing/)
 
 ---
@@ -347,12 +374,13 @@ To follow the hardware from the system center outward:
 | Topic | Authoritative source |
 |---|---|
 | Overall hardware architecture | This README and board READMEs |
+| Board role and limitations | Corresponding board README |
 | Board electrical design | Board schematic files |
 | PCB production data | Board Gerber directories |
 | Part selection | Board BOM documentation and linked lists |
 | Firmware behavior | [`../Firmware/`](../Firmware/) |
 | Register behavior | [`../Docs/Register_Map/`](../Docs/Register_Map/) |
-| Manufacturing guidance | [`Manufacturing/`](./Manufacturing/) |
+| Manufacturing and procurement guidance | [`Manufacturing/`](./Manufacturing/) |
 
 ---
 
