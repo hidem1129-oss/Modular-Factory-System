@@ -318,6 +318,19 @@ The conversion from INA219 raw values is implemented in `power_calc.py`.
 
 ---
 
+### Power-Monitor Read Failures
+
+Power-monitor read failures are handled independently from node communication states.
+
+If a shunt-current or bus-voltage measurement cannot be read, the unavailable value is represented as missing data. Power is calculated only when both voltage and current are available.
+
+The remaining measurements continue to be collected and logged where possible. A failed read from one power-monitor channel does not classify the corresponding node as `UNKNOWN`, `No Device`, or `Signal Lost`.
+
+Power-monitor read failures also do not currently generate a node-level WARN state. Real power measurements are displayed and logged separately from the node communication-state model.
+
+
+---
+
 ## Main-Line and Branch Monitoring
 
 The UI displays both individual branch measurements and the aggregate condition of the main power line.
