@@ -222,7 +222,7 @@ Real power-monitor measurements are displayed and logged separately. Automatic m
 
 A failed I²C read does not immediately prove that a node has disappeared.
 
-Temporary communication failures may occur because of bus timing, electrical noise, multiplexer switching, or another transient condition.
+Temporary communication failures may occur because of bus timing, electrical disturbances, device startup, or other transient conditions.
 
 The debugger therefore distinguishes three situations.
 
