@@ -4,7 +4,11 @@ This directory contains the host-side software used to observe, record, and visu
 
 The software layer connects the physical hardware and distributed firmware nodes to operator-facing monitoring tools and persistent system logs.
 
-It is responsible for observing the system and presenting its condition. Device-local control remains in firmware, while process-level orchestration is treated as a separate software responsibility.
+It is responsible for observing the system and presenting its condition.
+
+Device-local control remains in firmware. Process-level orchestration,
+where required, is kept separate from the monitoring and visualization
+components documented here.
 
 ---
 
