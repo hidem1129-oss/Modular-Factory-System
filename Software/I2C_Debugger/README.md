@@ -316,8 +316,6 @@ The monitoring layer records:
 
 The conversion from INA219 raw values is implemented in `power_calc.py`.
 
----
-
 ### Power-Monitor Read Failures
 
 Power-monitor read failures are handled independently from node communication states.
