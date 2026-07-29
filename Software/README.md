@@ -165,47 +165,33 @@ Firmware nodes and power monitors
              Grafana
 ```
 
-This path is used when an operator needs to inspect the current condition of the physical system.
+This data flow supports both immediate inspection through the live UI
+and later analysis through persisted SQLite records and Grafana.
 
 ---
 
 ## Observation Model
 
-The software records more than the latest displayed value.
+The monitoring component persists:
 
-The current observation model includes:
+- state-transition events
+- periodic node and power snapshots
+- state-duration records
+- monitoring-session context
 
-* monitoring sessions
-* node snapshots
-* state-transition events
-* state-duration segments
-* power-port snapshots
-* reader mode and polling configuration
+This makes it possible to inspect both the current condition and the sequence
+of events that led to it.
 
-This supports both immediate debugging and later investigation.
+For detailed table structure and session behavior, see:
 
-For example, a user can inspect not only whether a node is currently in an error state, but also:
-
-* when the error started
-* which state preceded it
-* whether communication was previously established
-* how long the condition continued
-* whether power behavior changed during the same period
+- [`I2C_Debugger/README.md`](./I2C_Debugger/README.md)
 
 ---
 
 ## Real and Mock Operation
 
-The monitoring application supports two reader modes.
-
-| Mode   | Purpose                                                         |
-| ------ | --------------------------------------------------------------- |
-| `real` | Reads actual I²C nodes and power-monitor devices                |
-| `mock` | Simulates node states, communication failures, and power values |
-
-Mock mode allows UI, state interpretation, logging, and failure handling to be tested without requiring the complete physical system.
-
-The mock reader is treated as a replaceable data source rather than a separate application architecture.
+The I2C Debugger supports both physical I²C access and mock data sources,
+allowing monitoring behavior to be tested without the complete hardware system.
 
 ---
 
@@ -242,7 +228,6 @@ It currently assumes:
 * a single SQLite database
 * local dashboard access
 * no production-grade authentication or access control
-* tabletop prototype scope
 
 These constraints are intentional for the current proof-of-concept scope.
 
