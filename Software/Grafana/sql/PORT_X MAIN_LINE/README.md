@@ -41,7 +41,7 @@ It does not independently determine which software command, module action, or ph
 
 ## Displayed Measurements
 
-The panel returns three measurement fields:
+The panel returns two acquired measurement fields and one calculated power field:
 
 | Field | Meaning | Recommended Grafana unit |
 |---|---|---|
