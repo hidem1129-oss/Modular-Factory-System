@@ -27,7 +27,7 @@ This panel helps answer questions such as:
 
 * How did the bus voltage change over time?
 * When did current consumption increase or decrease?
-* When did the measured power reach its highest or lowest level?
+* When did the calculated power reach its highest or lowest level?
 * Did a branch load change during a particular operation?
 * Did the main monitored line change at approximately the same time as a branch?
 * Was an electrical change temporary or sustained?
