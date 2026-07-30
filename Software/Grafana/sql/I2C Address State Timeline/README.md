@@ -21,7 +21,7 @@ The panel is intended for retrospective analysis of completed monitoring session
 This panel helps answer questions such as:
 
 * In what order did node states change?
-* How long did each observed state continue?
+* Over what observed time range did each state appear?
 * Which nodes changed state at approximately the same time?
 * Did a node recover after an ERROR, ESTOP, or communication loss?
 * What was the final observed state of each node when the session ended?
@@ -257,7 +257,7 @@ The current query already:
 * searches for the active state at each boundary
 * pivots the result into separate Grafana fields
 
-The query is already relatively expensive for the current SQLite-based prototype.
+The query is already one of the more computationally expensive dashboard queries in the current SQLite-based prototype.
 
 Supporting both a fixed session-end time and a continuously changing current time would increase SQL and dashboard complexity, add repeated recalculation, and blur the existing responsibility boundary between live monitoring and historical analysis.
 
