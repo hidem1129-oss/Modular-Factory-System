@@ -482,7 +482,7 @@ Recommended configuration:
 * Configure `session_link` as a Grafana data link.
 * Pass `session_link` to the destination dashboard as `$session_id`.
 * Pass `from_ms` and `to_ms` as the destination dashboard time range.
-* Hide `from_ms` and `to_ms` from the visible table if they are used only for links.
+* Hide or visually minimize `from_ms` and `to_ms` when they are used only for data links.
 * Keep the session ID visible when it is useful for troubleshooting.
 * Apply value mappings to reader mode or result values when helpful.
 * Consider visually distinguishing active sessions with no end time.
