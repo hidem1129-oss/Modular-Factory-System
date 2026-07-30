@@ -43,11 +43,15 @@ It does not independently determine which software command, module action, or ph
 
 The panel returns three measurement fields:
 
-| Field           | Meaning                                                     | Recommended Grafana unit |
-| --------------- | ----------------------------------------------------------- | ------------------------ |
-| `bus_voltage_V` | Measured bus voltage for the selected power-monitor channel | Volts                    |
-| `current_mA`    | Measured current for the selected power-monitor channel     | Milliamps                |
-| `power_mW`      | Measured power for the selected power-monitor channel       | Milliwatts               |
+| Field | Meaning | Recommended Grafana unit |
+|---|---|---|
+| `bus_voltage_V` | Measured bus voltage for the selected power-monitor channel | Volts |
+| `current_mA` | Measured current for the selected power-monitor channel | Milliamps |
+| `power_mW` | Power calculated by the I2C Debugger from the recorded voltage and current values | Milliwatts |
+
+`power_mW` is not an independently measured channel.
+
+The I2C Debugger calculates it from the acquired voltage and current values before storing the snapshot in SQLite.
 
 All three values are plotted against the same timestamp field:
 
