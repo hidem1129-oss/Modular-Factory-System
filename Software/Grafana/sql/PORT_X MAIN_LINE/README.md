@@ -301,7 +301,7 @@ Short changes occurring between recorded samples may not appear in the panel.
 
 ## Operational Interpretation
 
-A change in current or power indicates that the stored electrical measurement changed for the selected channel.
+A change in the displayed values indicates that the recorded electrical behavior changed for the selected channel.
 
 The panel does not by itself prove:
 
