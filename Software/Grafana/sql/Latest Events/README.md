@@ -25,7 +25,7 @@ This panel helps answer questions such as:
 * What was the previous state?
 * What state did the node enter?
 * Did several nodes change state near the same time?
-* Did an abnormal state occur before another recorded event?
+* Did an abnormal state occur shortly before another recent event?
 
 The panel is intended for quick event inspection rather than full state-duration analysis.
 
@@ -223,7 +223,7 @@ Recommended dashboard variable:
 
 Panel notes:
 
-* Sort by `event_time` descending.
+* Keep the SQL result ordered by `ts_epoch` descending.
 * Display the newest event at the top.
 * Use a completed or active session ID when reviewing one monitoring run.
 * Use `__all` only when a cross-session overview is useful.
