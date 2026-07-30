@@ -59,8 +59,6 @@ All three values are plotted against the same timestamp field:
 ts_epoch
 ```
 
-The panel returns two acquired measurement fields and one calculated field.
-
 This makes it possible to compare voltage, current, and power behavior across the same displayed period.
 
 ---
