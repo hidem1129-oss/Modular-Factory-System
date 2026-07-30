@@ -13,7 +13,7 @@ This panel visualizes electrical measurements recorded for one selected power-mo
 The target can be:
 
 * one branch power line from `PORT_1` to `PORT_8`
-* the combined monitored line identified as `MAIN_LINE`
+* the main monitored power line identified as `MAIN_LINE`
 
 The panel displays bus voltage, current, and power across the selected Grafana time range.
 
