@@ -140,7 +140,7 @@ This may include:
 * a developer investigating repeated failures
 * a system owner comparing different configurations
 * a project member evaluating whether the PoC behaved as expected
-* a decision-maker reviewing utilization or power-consumption trends
+* a decision-maker reviewing state-duration or power-consumption trends
 
 This view prioritizes patterns, duration, comparisons, and changes over time.
 
