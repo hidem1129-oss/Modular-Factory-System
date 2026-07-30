@@ -323,7 +323,7 @@ Panel notes:
 * Highlight ERROR and ESTOP using distinct value mappings.
 * Use one selected session for detailed incident investigation.
 * Use `__all` only when comparing abnormal-transition frequency across sessions.
-* Keep the result limit small when the panel is used as an alert-oriented summary.
+* Keep the result limit small when the panel is used as a compact abnormal-event summary.
 * Increase the limit when deeper historical inspection is required.
 * Consider renaming the displayed `error_count` field to `ERROR / ESTOP Count` in Grafana.
 
