@@ -59,6 +59,8 @@ All three values are plotted against the same timestamp field:
 ts_epoch
 ```
 
+The panel returns two acquired measurement fields and one calculated field.
+
 This makes it possible to compare voltage, current, and power behavior across the same displayed period.
 
 ---
@@ -71,7 +73,7 @@ The query reads from:
 power_port_snapshots
 ```
 
-The table contains timestamped electrical measurements recorded by the I2C Debugger from the Power Monitor Board.
+The table contains timestamped voltage and current measurements acquired from the Power Monitor Board, together with power values calculated by the I2C Debugger.
 
 Each record used by this panel contains:
 
