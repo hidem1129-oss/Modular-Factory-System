@@ -140,7 +140,7 @@ These values can be included in a Grafana data link to set the destination dashb
 
 Grafana navigation timestamps are expressed in milliseconds, while the database stores session timestamps as Unix epoch seconds. The query therefore multiplies the values by `1000`.
 
-## Hidden Navigation Fields
+### Hidden Navigation Fields
 
 The `from_ms` and `to_ms` fields are helper values used by Grafana data links to set the destination dashboard time range.
 
