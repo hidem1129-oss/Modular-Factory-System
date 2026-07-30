@@ -209,7 +209,7 @@ Grafana uses monitoring records written by the I2C Debugger.
 
 | SQLite data            | Grafana use                                                   |
 | ---------------------- | ------------------------------------------------------------- |
-| `event_logs`           | Recent transitions, warning events, errors, and ESTOP history |
+| `event_logs`           | Recent state transitions, including WARN, ERROR, and ESTOP changes |
 | `node_snapshots`       | Node-state timelines and point-in-time inspection             |
 | `state_segments`       | Duration spent in each observed state                         |
 | `monitor_sessions`     | Session selection, filtering, and comparison                  |
