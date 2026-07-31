@@ -187,7 +187,6 @@ It includes panels for:
 
 * individual branch power-monitor channels
 * the main monitored power line
-* the main power line
 * current, voltage, and power trends
 * average and maximum recorded calculated-power values
 * recorded current and calculated-power maximum, minimum, and maximum-to-minimum ranges
