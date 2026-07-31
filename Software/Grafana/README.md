@@ -188,8 +188,8 @@ It includes panels for:
 * individual power-monitor ports
 * the main power line
 * current, voltage, and power trends
-* average and maximum power consumption
-* minimum, maximum, and peak-to-peak statistics
+* average and maximum recorded calculated-power values
+* recorded current and calculated-power maximum, minimum, and maximum-to-minimum ranges
 
 This dashboard helps answer questions such as:
 
