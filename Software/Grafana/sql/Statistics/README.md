@@ -8,7 +8,7 @@
 
 ## Overview
 
-This panel compares the recorded value ranges of each monitored power channel during the selected Grafana time range.
+The panel is intended for identifying channels with a wide recorded value range during a demonstration, test run, or selected monitoring period.
 
 For every `port_id`, it displays:
 
