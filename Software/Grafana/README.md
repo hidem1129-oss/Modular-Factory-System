@@ -198,7 +198,7 @@ This dashboard helps answer questions such as:
 * Did power consumption change during a node-state transition?
 * Was the main-line load approaching the configured monitoring limit?
 * Did one test session consume more power than another?
-* Was a measurement stable or highly variable?
+* Which channel showed the widest recorded maximum-to-minimum range?
 
 The configured application limits shown in the monitoring system are observation thresholds. Grafana does not replace hardware current limiting, fuses, power-supply protection, firmware shutdown behavior, or other safety mechanisms.
 
