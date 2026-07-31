@@ -185,8 +185,8 @@ The power dashboard is used to inspect electrical measurements recorded by the p
 
 It includes panels for:
 
-* Which branch had the highest average recorded calculated power?
-* Which channel produced the highest recorded calculated-power sample?
+* individual branch power-monitor channels
+* the main monitored power line
 * the main power line
 * current, voltage, and power trends
 * average and maximum recorded calculated-power values
@@ -194,10 +194,10 @@ It includes panels for:
 
 This dashboard helps answer questions such as:
 
-* Which port consumed the most power?
-* Did power consumption change during a node-state transition?
+* Which branch had the highest average recorded calculated power?
+* Which channel produced the highest recorded calculated-power sample?
+* Did recorded electrical load change during a node-state transition?
 * Was the main-line load approaching the configured monitoring limit?
-* Did one test session consume more power than another?
 * Which channel showed the widest recorded maximum-to-minimum range?
 
 The configured application limits shown in the monitoring system are observation thresholds. Grafana does not replace hardware current limiting, fuses, power-supply protection, firmware shutdown behavior, or other safety mechanisms.
