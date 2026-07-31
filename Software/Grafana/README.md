@@ -45,7 +45,7 @@ A supervisor or system owner may instead need to determine:
 * which state preceded it
 * how long the condition continued
 * whether the same problem occurred repeatedly
-* whether power consumption changed during the event
+* whether recorded electrical load changed during the event
 * whether behavior differed between test runs
 * whether a change improved or degraded system behavior
 
@@ -63,7 +63,7 @@ Grafana owns:
 * monitoring-session selection and comparison
 * visualization of time spent in each state
 * visualization of current, voltage, and power measurements
-* comparison of average and maximum power consumption
+* comparison of average and maximum recorded calculated-power values
 * trend and statistical analysis based on persisted observations
 
 Grafana does not own:
@@ -140,7 +140,7 @@ This may include:
 * a developer investigating repeated failures
 * a system owner comparing different configurations
 * a project member evaluating whether the PoC behaved as expected
-* a decision-maker reviewing state-duration or power-consumption trends
+* a decision-maker reviewing state-duration or recorded electrical-load trends
 
 This view prioritizes patterns, duration, comparisons, and changes over time.
 
