@@ -255,9 +255,9 @@ The current SQL query examples are organized by panel.
 | Latest Events                   | [`sql/Latest Events/`](./sql/Latest%20Events/)                                        | Lists recent state-change events                                      | State timeline |
 | Errors / ESTOP                  | [`sql/Errors  ESTOP/`](./sql/Errors%20%20ESTOP/)                                      | Shows recent ERROR and ESTOP events                                   | State timeline |
 | Recent Sessions                 | [`sql/Recent Sessions/`](./sql/Recent%20Sessions/)                                    | Lists recent monitoring sessions                                      | State timeline |
-| PORT_X / MAIN_LINE | Shows acquired voltage and current together with calculated power for a selected channel |
-| Power Consumption & MAX Ranking | Compares average and maximum recorded calculated-power samples by channel |
-| Statistics | Compares recorded current and calculated-power maximum, minimum, and maximum-to-minimum ranges |
+| PORT_X / MAIN_LINE              | [`sql/PORT_X MAIN_LINE/`](./sql/PORT_X%20MAIN_LINE/)                                  | Shows acquired voltage and current together with calculated power for a selected channel                 | Power          |
+| Power Consumption & MAX Ranking | [`sql/Power_consumption_&_MAX ranking/`](./sql/Power_consumption_%26_MAX%20_ranking/) | Compares average and maximum recorded calculated-power samples by channel | Power          |
+| Statistics                      | [`sql/Statistics/`](./sql/Statistics/)                                                | Compares recorded current and calculated-power maximum, minimum, and maximum-to-minimum ranges | Power          |
 
 Each directory may contain:
 
