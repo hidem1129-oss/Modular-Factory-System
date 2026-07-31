@@ -185,7 +185,8 @@ The power dashboard is used to inspect electrical measurements recorded by the p
 
 It includes panels for:
 
-* individual power-monitor ports
+* Which branch had the highest average recorded calculated power?
+* Which channel produced the highest recorded calculated-power sample?
 * the main power line
 * current, voltage, and power trends
 * average and maximum recorded calculated-power values
