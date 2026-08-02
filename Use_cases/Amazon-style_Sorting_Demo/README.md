@@ -234,11 +234,10 @@ This section should record the parts actually used in the demonstrated configura
 
 | Source part or product | Original intended role | Role in this demo                   | Modification or attachment | Reason selected |
 | ---------------------- | ---------------------- | ----------------------------------- | -------------------------- | --------------- |
-| To be documented       | —                      | Conveyor structure or drive element | —                          | —               |
-| To be documented       | —                      | Workpiece guide                     | —                          | —               |
-| To be documented       | —                      | Camera support                      | —                          | —               |
-| To be documented       | —                      | Photo-reflector support             | —                          | —               |
-| To be documented       | —                      | Sorting-gate mechanism              | —                          | —               |
+| [連結式クローラー&スプロケットセット](https://www.tamiya.com/japan/products/70237/index.html) | —                      | Conveyor structure | —                          | —               |
+| [ミニモーター標準ギヤボックス （8速）](https://www.tamiya.com/japan/products/70188/index.html) | —                      | Workpiece guide                     | —                          | —               |
+| [ユニバーサルプレートL（210×160mm）](https://www.tamiya.com/japan/products/70172/index.html) | —                      | Camera support                      | —                          | —               |
+| [マイクロサーボ9g SG90](https://akizukidenshi.com/catalog/g/g108761/)       | —                      | Photo-reflector support             | —                          | —               |
 
 This record describes the demonstrated implementation.
 
