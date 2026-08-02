@@ -148,34 +148,29 @@ The objective is to create a mechanism that is sufficient for process and archit
 
 ---
 
-### Reuse of Commercial Construction Kits
+### Reuse of Commercial Products and Available Parts
 
-Some mechanical elements originate from commercially available educational construction products.
+Some mechanical elements originate from commercially available construction products, model kits, educational materials, or other readily available items.
 
-For example, parts from the Tamiya Educational Construction Series may be reused as mechanical building blocks.
+For example, products from the
+[Tamiya official website](https://www.tamiya.com/english/)
+may provide motors, gearboxes, wheels, shafts, plates, fasteners, and other useful mechanical elements.
 
-A product such as the Tamiya Tracked Vehicle Chassis Kit is originally intended to assemble a small battery-powered tracked vehicle. Its components include a wooden chassis, tracks, wheels, sprockets, a gearbox, and a Type 130 motor.
+However, the Modular Factory System does not require any specific product series or manufacturer.
 
-In this project, a construction product does not have to be used only in the form described by its original assembly instructions.
+A component may be reused whenever its dimensions, material, motion, or mechanical function are suitable for the prototype. Depending on the situation, suitable parts could also come from:
 
-Its parts can instead be treated as general-purpose mechanical elements.
+- educational construction kits
+- vehicle or aircraft model kits
+- unused model-kit parts
+- toys and experimental equipment
+- general-purpose hardware
+- reused household or workshop materials
+- custom 3D-printed parts
 
-```text
-Original product role
-└─ Small tracked vehicle
+The original product does not have to be assembled or used exactly as described in its instructions.
 
-Possible prototype roles
-├─ conveyor or feed mechanism
-├─ rotating shaft support
-├─ motor and gearbox source
-├─ wheel or sprocket source
-├─ structural base
-└─ temporary mechanism frame
-```
-
-This allows existing parts to be rearranged according to the requirements of the demonstration process.
-
-The project does not claim that these modified configurations are supported or intended by the original product manufacturer.
+Its components may instead be treated as available mechanical building blocks and rearranged according to the requirements of the demonstration process.
 
 ---
 
