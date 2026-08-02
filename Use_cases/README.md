@@ -138,6 +138,246 @@ This allows different processes to be observed using the same monitoring and dat
 
 ---
 
+## Mechanism Construction and Material Strategy
+
+The physical mechanisms used in these demonstrations are not built from a dedicated industrial-machine frame or a custom structural system.
+
+They are assembled from readily available construction kits, general-purpose mechanical parts, reused components, and simple temporary fixtures.
+
+The objective is to create a mechanism that is sufficient for process and architecture validation without requiring a fully custom machine structure.
+
+---
+
+### Reuse of Commercial Construction Kits
+
+Some mechanical elements originate from commercially available educational construction products.
+
+For example, parts from the Tamiya Educational Construction Series may be reused as mechanical building blocks.
+
+A product such as the Tamiya Tracked Vehicle Chassis Kit is originally intended to assemble a small battery-powered tracked vehicle. Its components include a wooden chassis, tracks, wheels, sprockets, a gearbox, and a Type 130 motor.
+
+In this project, a construction product does not have to be used only in the form described by its original assembly instructions.
+
+Its parts can instead be treated as general-purpose mechanical elements.
+
+```text
+Original product role
+└─ Small tracked vehicle
+
+Possible prototype roles
+├─ conveyor or feed mechanism
+├─ rotating shaft support
+├─ motor and gearbox source
+├─ wheel or sprocket source
+├─ structural base
+└─ temporary mechanism frame
+```
+
+This allows existing parts to be rearranged according to the requirements of the demonstration process.
+
+The project does not claim that these modified configurations are supported or intended by the original product manufacturer.
+
+---
+
+### No Dedicated Structural System
+
+The current tabletop mechanisms do not rely on a dedicated machine frame, custom jig system, or standardized industrial structural material.
+
+Depending on the demonstration, components may be positioned or held using:
+
+* screws already available during assembly
+* nuts, washers, and spacers
+* wooden boards
+* plastic plates
+* cardboard
+* adhesive tape
+* double-sided tape
+* cable ties
+* reused brackets
+* parts taken from construction kits
+* other readily available workshop materials
+
+These materials are selected according to the immediate mechanical requirement rather than a fixed structural standard.
+
+The resulting mechanism should therefore be interpreted as a functional prototype rather than a finished machine assembly.
+
+---
+
+### Temporary Fixtures Are Intentional
+
+Temporary attachment methods are acceptable when they are sufficient to validate the intended operation.
+
+For example, tape or an improvised screw arrangement may be used to confirm:
+
+* component position
+* actuator travel
+* sensor placement
+* workpiece guidance
+* interference between mechanisms
+* required mounting angle
+* approximate mechanical load
+* whether the process sequence is physically feasible
+
+```text
+Initial prototype
+└─ Position parts quickly and test the mechanism
+
+After validation
+└─ Improve only the portions that require accuracy, rigidity, or repeatability
+```
+
+A dedicated fixture is not created before its necessity has been demonstrated.
+
+This avoids spending substantial time designing a precise structure for a mechanism that may later be changed or rejected.
+
+---
+
+### Function Before Mechanical Finish
+
+The mechanical construction follows a function-first approach.
+
+The initial questions are:
+
+* Can the workpiece be moved?
+* Can the actuator reach the required position?
+* Can the sensor detect the intended event?
+* Can the process sequence be completed?
+* Can the monitoring system observe the operation?
+* Which mechanical requirements actually affect the result?
+
+Cosmetic finish and structural refinement are secondary during the initial proof-of-concept stage.
+
+This does not mean that rigidity, accuracy, durability, or safety are unimportant.
+
+It means that they are added according to demonstrated requirements rather than assumed in advance.
+
+---
+
+### Replaceability of the Mechanical Structure
+
+The mechanisms shown in the current demonstrations are examples of one possible physical implementation.
+
+They are not mandatory parts of the Modular Factory System architecture.
+
+A user could replace the current mechanism with:
+
+* a different commercial construction kit
+* aluminum extrusion
+* laser-cut plates
+* machined components
+* a custom wooden structure
+* 3D-printed parts
+* an existing laboratory mechanism
+* a small industrial training device
+
+The control nodes, register interface, orchestration structure, monitoring software, and data-visualization path can remain conceptually similar.
+
+```text
+Replaceable
+└─ Physical structure and attachment method
+
+Reusable
+├─ distributed control interface
+├─ firmware-node roles
+├─ host-side orchestration
+├─ monitoring
+├─ SQLite logging
+└─ Grafana analysis
+```
+
+This separation is important because the project is intended to demonstrate system architecture rather than prescribe one mechanical construction method.
+
+---
+
+### Possible Use of 3D-Printed Parts
+
+A 3D printer may be used when a custom part provides clear value.
+
+Suitable examples include:
+
+* sensor brackets
+* motor mounts
+* servo holders
+* workpiece guides
+* shaft supports
+* alignment features
+* cable-routing parts
+* adapters between incompatible hole patterns
+
+However, custom printing is not required for every component.
+
+Before designing a dedicated part, the project may first use an improvised fixture to determine:
+
+* the required dimensions
+* the correct mounting position
+* the necessary rigidity
+* whether adjustment is required
+* whether the mechanism will remain in the final design
+
+This prevents the project from producing precise custom parts before the underlying mechanism has been validated.
+
+---
+
+### Design Intent
+
+This construction strategy supports the goals of a tabletop proof of concept.
+
+It provides:
+
+* rapid physical experimentation
+* low initial construction cost
+* easy modification
+* reuse of readily available parts
+* reduced dependence on specialized fabrication equipment
+* earlier discovery of mechanical and integration requirements
+* a clear path from temporary fixture to refined component
+
+The mechanism is therefore developed progressively.
+
+```text
+Available parts
+      ↓
+Temporary physical arrangement
+      ↓
+Functional test
+      ↓
+Requirement discovery
+      ↓
+Selective structural improvement
+```
+
+The purpose is not to demonstrate that tape, improvised screws, or educational kits are appropriate for production machinery.
+
+The purpose is to demonstrate that a process concept and system architecture can be tested before committing to dedicated mechanical construction.
+
+---
+
+### Scope and Limitations
+
+The current mechanism-construction approach is suitable for:
+
+* tabletop demonstrations
+* architecture validation
+* process-sequence experiments
+* sensor and actuator integration
+* communication between technical and non-technical participants
+* early proof-of-concept work
+
+It is not intended to provide:
+
+* production-machine rigidity
+* certified guarding
+* controlled mechanical tolerances
+* validated fatigue life
+* industrial cycle-time performance
+* formal maintainability
+* repeatable production assembly
+* safety-rated mechanical construction
+
+If the system were developed beyond the proof-of-concept stage, the physical mechanism and fixtures would need to be redesigned according to the required accuracy, load, lifetime, environment, and safety standards.
+
+---
+
 ## Use-Case-Specific Elements
 
 Each process defines its own combination of:
