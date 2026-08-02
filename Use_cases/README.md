@@ -1,71 +1,433 @@
 # Use Cases
 
-This directory contains example use cases built with the Modular Factory System.
+This directory contains process-level demonstrations built with the Modular Factory System.
 
-Each use case demonstrates how the hardware boards, firmware nodes, and software monitoring tools can be combined to create a small tabletop factory process.
+Each use case shows how common hardware boards, firmware nodes, monitoring software, and visualization tools can be reused and recombined to implement a different tabletop process.
+
+The use cases are not isolated machines.
+
+They are case studies showing how one modular platform can support multiple physical mechanisms, control sequences, and observation workflows.
+
+---
+
+## Overview
+
+The Modular Factory System separates reusable platform components from process-specific configuration.
+
+```text
+Reusable platform
+├─ hardware control boards
+├─ Raspberry Pi Pico firmware nodes
+├─ I²C register interface
+├─ Raspberry Pi 5 host
+├─ I2C Debugger
+├─ SQLite logging
+└─ Grafana visualization
+
+Use-case-specific configuration
+├─ physical mechanism
+├─ selected modules
+├─ orchestration sequence
+├─ sensor conditions
+└─ process objective
+```
+
+The current use cases demonstrate that the same control and monitoring foundation can be applied to different tabletop processes.
 
 ---
 
 ## Purpose
 
-The use cases show how the system can be reconfigured for different mechanisms and workflows.
+The use cases are intended to demonstrate:
 
-They demonstrate:
+* modular reuse of hardware and firmware
+* separation of platform functions from process logic
+* replacement of physical mechanisms without redesigning the entire system
+* host-side orchestration of distributed I²C nodes
+* observation of process behavior through a shared monitoring layer
+* persistence of events and measurements in SQLite
+* retrospective analysis through Grafana
+* tabletop-scale validation of architecture and process concepts
 
-- modular hardware reuse
-- I²C-based distributed control
-- firmware node reuse
-- host-side orchestration
-- monitoring and logging
-- Grafana visualization
-- tabletop-scale process prototyping
+The primary objective is not to reproduce a production machine at full scale.
+
+The objective is to validate how physical mechanisms, embedded control, orchestration, monitoring, persistence, and visualization can be connected through a reusable architecture.
 
 ---
 
-## Use Case Overview
+## Use Cases as Architecture Validation
 
-| Use Case | Description | Main Technologies |
-|---|---|---|
-| [`Amazon-style Sorting Demo`](Amazon-style_Sorting_Demo/) | Detects a workpiece, identifies its color, and sorts it with a servo gate | Camera, sensor, DC motor, servo, I²C, Grafana |
-| [`Stamp Process Demo`](Stamp_Process_Demo/) | Feeds paper and presses a stamp using motorized mechanisms | DC motor, servo clamp, rack-and-pinion, orchestration |
+The use cases provide evidence that the architecture can support more than one fixed demonstration.
+
+A single successful machine could be the result of application-specific integration.
+
+Multiple processes built on the same platform provide stronger evidence of reuse.
+
+```text
+Sorting process
+└─ sensing, image classification, transport, and diversion
+
+Stamp process
+└─ material feed, positioning, holding, pressing, and release
+```
+
+The physical mechanisms and process sequences differ.
+
+The underlying platform remains largely shared.
+
+This distinction is central to the system design.
+
+---
+
+## Current Use Cases
+
+| Use Case                                                    | Process Type                      | Primary Operation                                        | Main Technologies                                              |
+| ----------------------------------------------------------- | --------------------------------- | -------------------------------------------------------- | -------------------------------------------------------------- |
+| [`Amazon-style Sorting Demo`](./Amazon-style_Sorting_Demo/) | Tabletop sorting and logistics    | Detects, classifies, transports, and diverts a workpiece | Camera, photo-reflector, DC motor, servo, I²C, SQLite, Grafana |
+| [`Stamp Process Demo`](./Stamp_Process_Demo/)               | Simplified press-style processing | Feeds, holds, presses, releases, and advances roll paper | DC motors, servo clamp, rack-and-pinion, I²C, SQLite, Grafana  |
+
+The two processes use different mechanisms and operation sequences while reusing the same architectural layers.
+
+---
+
+## Shared Platform Components
+
+The current use cases reuse the following platform elements.
+
+### Hardware Layer
+
+* Raspberry Pi 5 host
+* Raspberry Pi Pico-based distributed nodes
+* Controller Board
+* DC Motor Board
+* Servo Board
+* Power Monitor Board
+* Pi 5 Wiring Auxiliary Board
+* common I²C wiring and register interface
+
+Sensor and mechanism requirements differ between use cases, but the control and monitoring foundation remains shared.
+
+### Firmware Layer
+
+The use cases reuse firmware roles such as:
+
+* motor-node control
+* servo-node control
+* sensor-node access
+* command validation
+* lifecycle-state reporting
+* feedback exposure through registers
+
+The host does not directly implement low-level actuator timing.
+
+Device-local behavior remains inside the corresponding firmware node.
+
+### Software Layer
+
+The use cases share:
+
+* host-side orchestration
+* I2C Debugger live monitoring
+* state interpretation
+* event and snapshot logging
+* monitoring-session handling
+* SQLite persistence
+* Grafana historical analysis
+
+This allows different processes to be observed using the same monitoring and data-analysis path.
+
+---
+
+## Use-Case-Specific Elements
+
+Each process defines its own combination of:
+
+* physical mechanism
+* module arrangement
+* actuator assignment
+* sensor conditions
+* process sequence
+* image-processing or decision logic
+* timing assumptions
+* completion criteria
+
+For example:
+
+```text
+Sorting Demo
+├─ conveyor
+├─ workpiece sensor
+├─ camera classification
+└─ servo diversion gate
+
+Stamp Process Demo
+├─ paper-feed mechanism
+├─ clamp
+├─ rack-and-pinion press
+└─ repeated feed-and-press sequence
+```
+
+These elements can change without replacing the entire hardware, firmware, monitoring, and visualization stack.
 
 ---
 
 ## Common System Flow
 
+The use cases follow the same broad architecture.
+
 ```text
+Process objective
+      ↓
 Physical mechanism
       ↓
-Hardware boards
+Hardware control boards
       ↓
 Firmware nodes
       ↓
-Raspberry Pi 5 orchestration / monitoring
+I²C register interface
       ↓
-SQLite logs
+Raspberry Pi 5 orchestration
       ↓
-Grafana visualization
+I2C Debugger observation and SQLite logging
+      ↓
+Grafana historical visualization
 ```
+
+Not every use case must use every available component.
+
+The system allows each process to select only the modules and observations it requires.
+
+---
+
+## Orchestration Boundary
+
+The orchestration layer coordinates multiple nodes to implement the process sequence.
+
+Typical responsibilities include:
+
+* issuing commands to distributed nodes
+* waiting for node readiness or completion
+* evaluating sensor conditions
+* selecting the next process step
+* coordinating multiple actuators
+* handling process-level sequencing
+
+The orchestration layer does not replace device-local firmware control.
+
+```text
+Orchestration
+└─ decides what operation should happen next
+
+Firmware node
+└─ validates and performs the local operation
+```
+
+This separation allows process sequences to change without moving all behavior into one central program.
+
+---
+
+## Observation and Validation
+
+Each use case is evaluated through both physical behavior and persisted observations.
+
+### Physical Validation
+
+The mechanism should complete the intended process flow.
+
+Examples include:
+
+* transporting a workpiece
+* detecting a workpiece
+* moving a sorting gate
+* feeding paper
+* clamping material
+* performing a press motion
+
+### Monitoring Validation
+
+The I2C Debugger can show:
+
+* current node states
+* command and feedback values
+* detected state transitions
+* current electrical measurements
+* communication failures
+* active monitoring-session context
+
+### Historical Validation
+
+Grafana can be used to inspect:
+
+* node-state timelines
+* transition events
+* ERROR and ESTOP history
+* current, voltage, and calculated-power trends
+* average and maximum recorded calculated-power values
+* recorded maximum, minimum, and maximum-to-minimum ranges
+
+The monitoring data supports later investigation but does not independently prove the cause of a physical event.
+
+---
+
+## Relationship Between the Current Use Cases
+
+The current demonstrations were selected to exercise different process characteristics.
+
+### Amazon-style Sorting Demo
+
+The sorting demonstration emphasizes:
+
+* event-driven sensing
+* image-based classification
+* transport control
+* actuator selection based on a recognition result
+* coordination between sensing, software decisions, and physical diversion
+
+### Stamp Process Demo
+
+The stamp demonstration emphasizes:
+
+* sequential multi-actuator operation
+* repeated process cycles
+* material feed
+* holding and release
+* conversion of rotational motion into linear press movement
+* reuse of the same monitoring stack with a different mechanism
+
+Together, the two demonstrations show that the platform is not limited to one process category.
+
+---
+
+## Reconfiguration Model
+
+A new use case can be created by changing a limited set of elements.
+
+```text
+Keep
+├─ common control boards
+├─ firmware-node interface
+├─ I²C communication
+├─ monitoring software
+├─ SQLite logging
+└─ Grafana analysis
+
+Change
+├─ mechanism
+├─ module arrangement
+├─ orchestration program
+├─ sensor conditions
+└─ process-specific validation
+```
+
+This model supports rapid tabletop proof-of-concept development.
+
+It also makes it easier to identify whether a requirement belongs to:
+
+* reusable platform architecture
+* device-local implementation
+* process orchestration
+* physical mechanism design
+* monitoring or analysis
 
 ---
 
 ## Documentation Format
 
-Each use case should include:
+Each use-case directory should document the process as a small architecture case study.
 
-- overview
-- hardware used
-- firmware used
-- software used
-- operation flow
-- photos / GIFs / video links
-- observed results
-- notes and future improvements
+Recommended sections include:
+
+1. Overview
+2. Process Goal
+3. System Boundary
+4. Reused Platform Components
+5. Use-Case-Specific Components
+6. Hardware Used
+7. Firmware Used
+8. Software and Orchestration
+9. Operation Sequence
+10. Observation and Validation
+11. Results
+12. Limitations
+13. Reconfiguration Lessons
+14. Possible Future Improvements
+15. Related Documents
+
+This structure distinguishes implementation details from the architectural evidence provided by the use case.
+
+---
+
+## What the Use Cases Demonstrate
+
+The current use cases demonstrate that:
+
+* the distributed I²C architecture can coordinate multiple physical modules
+* common firmware roles can support different process configurations
+* process logic can remain separate from device-local control
+* the same monitoring software can observe different mechanisms
+* the same SQLite and Grafana path can analyze different process runs
+* physical reconfiguration does not require redesigning every software layer
+* tabletop models can expose architecture, integration, and operational questions before larger-scale implementation
+
+---
+
+## Current Scope and Limitations
+
+The current use cases are tabletop proof-of-concept demonstrations.
+
+They currently assume:
+
+* local operation
+* controlled demonstration conditions
+* manually assembled mechanisms
+* low-voltage prototype hardware
+* a local Raspberry Pi host
+* a shared I²C bus
+* manually developed orchestration scripts
+* no production-grade safety certification
+* no industrial cycle-time guarantee
+* no formal reliability or maintainability qualification
+
+The demonstrations are not intended to replace:
+
+* industrial PLC systems
+* production SCADA platforms
+* certified safety controllers
+* guarded industrial machinery
+* validated production equipment
+* formal manufacturing-process qualification
+
+Their purpose is architecture validation, communication, experimentation, and early process prototyping.
+
+---
+
+## Possible Future Use Cases
+
+Possible future demonstrations include:
+
+* multi-axis positioning
+* inspection and rejection
+* buffer and queue control
+* simple assembly processes
+* process recovery after a simulated failure
+* module discovery and Plug & Play configuration
+* configurable routing through a flow editor
+* abnormal-load investigation using monitoring data
+* comparison of two process configurations
+* hardware or software fault-injection exercises
+
+New use cases should continue to distinguish reusable platform functions from process-specific implementation.
 
 ---
 
 ## Related Documents
 
-- Hardware overview → [`../Hardware/`](../Hardware/)
-- Firmware overview → [`../Firmware/`](../Firmware/)
-- Software overview → [`../Software/`](../Software/)
+* Repository overview → [`../README.md`](../README.md)
+* Hardware overview → [`../Hardware/`](../Hardware/)
+* Firmware overview → [`../Firmware/`](../Firmware/)
+* Software overview → [`../Software/`](../Software/)
+* I2C Debugger → [`../Software/I2C_Debugger/`](../Software/I2C_Debugger/)
+* Grafana → [`../Software/Grafana/`](../Software/Grafana/)
+* System architecture → [`../Docs/System_Architecture/`](../Docs/System_Architecture/)
+* Register map → [`../Docs/Register_Map/`](../Docs/Register_Map/)
+* Architecture Decision Log → [`../ADL/`](../ADL/)
