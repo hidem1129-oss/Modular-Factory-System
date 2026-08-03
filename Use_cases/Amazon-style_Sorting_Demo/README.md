@@ -230,7 +230,7 @@ A part is selected according to properties such as:
 
 ## Actual Mechanical Parts Used
 
-This section should record the parts actually used in the demonstrated configuration.
+This section records the main commercially sourced mechanical parts used in the demonstrated configuration.
 
 | Source part or product | Original intended role | Role in this demo                   | Reason selected |
 | ---------------------- | ---------------------- | ----------------------------------- | --------------- |
