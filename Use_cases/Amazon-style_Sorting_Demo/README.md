@@ -247,34 +247,84 @@ It does not imply that the same commercial products or parts are required to rep
 
 ## Workpiece
 
-The current demonstration classifies workpieces by visible color.
+The current demonstration uses commercially available colored wooden cubes as workpieces.
 
-The implemented classification categories are:
+Three color variants of the same product type are used:
 
-| Classification | Destination            |
-| -------------- | ---------------------- |
-| Blue           | Blue gate              |
-| Green          | Green gate             |
-| Yellow         | Yellow gate            |
-| Unknown        | No mapped sorting gate |
+* blue
+* green
+* yellow
 
-The workpiece geometry, material, dimensions, and surface finish should be documented for the demonstrated configuration because they can affect:
+An example of the product used is available from:
 
-* sensor detection
-* conveyor transport
-* image appearance
-* gate interaction
-* repeatability
+* [Amazon Japan product page](https://www.amazon.co.jp/dp/B0F929ZYLC)
 
-Current workpiece details:
+The product link identifies the demonstrated workpiece source.
 
-| Property               | Demonstrated configuration |
-| ---------------------- | -------------------------- |
-| Shape                  | To be documented           |
-| Approximate dimensions | To be documented           |
-| Material               | To be documented           |
-| Color variants         | Blue, green, and yellow    |
-| Surface condition      | To be documented           |
+The sorting architecture does not require this exact product, provided that a replacement workpiece is compatible with the conveyor, sensor, camera-classification conditions, and sorting gates.
+
+---
+
+### Workpiece Properties
+
+| Property               | Demonstrated configuration                          |
+| ---------------------- | --------------------------------------------------- |
+| Shape                  | Cube                                                |
+| Approximate dimensions | `10 mm × 10 mm × 10 mm`                             |
+| Material               | Wood                                                |
+| Color variants         | Blue, green, and yellow                             |
+| Surface condition      | Commercially painted or color-coated wooden surface |
+| Classification feature | Visible surface color                               |
+
+The exact wood species and coating material have not been identified.
+
+The workpiece should therefore be treated as a commercially manufactured painted wooden cube rather than as a controlled reference material.
+
+---
+
+### Role in the Demonstration
+
+The workpiece is used to validate:
+
+* transport on the crawler-based conveyor
+* detection by the photo-reflector
+* positioning inside the camera region of interest
+* HSV-based visible-color classification
+* physical interaction with the servo-driven sorting gates
+* diversion toward the corresponding destination
+
+The use of three color variants allows the same physical shape and approximate material properties to be retained while changing the classification target.
+
+This reduces the number of mechanical variables between sorting categories.
+
+---
+
+### Workpiece-Dependent Conditions
+
+The current sensor and image-processing parameters are tuned for these workpieces.
+
+Relevant characteristics include:
+
+* cube dimensions
+* wooden material
+* painted surface
+* visible color
+* surface reflectivity
+* distance from the photo-reflector
+* orientation on the conveyor
+* illumination at the camera position
+
+A replacement workpiece may require changes to:
+
+* the photo-reflector threshold
+* conveyor guides
+* camera position
+* image region of interest
+* HSV thresholds
+* capture delay
+* sorting-gate geometry
+
+The current workpiece is therefore part of the demonstrated configuration, but it is not a mandatory architectural component.
 
 ---
 
