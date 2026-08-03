@@ -266,39 +266,56 @@ It does not imply that the same products are required to reproduce the system ar
 
 ## Process Material
 
-The process material is roll paper.
+The demonstrated configuration uses a commercially available roll of paper tape purchased from a local store.
 
-The paper is:
+The paper tape was not selected according to a predefined material specification.
 
-* routed beneath the stamp
-* held during the press operation
-* released after the stamp returns
-* advanced by the take-up mechanism
-* processed repeatedly at successive positions
+It was selected because its roll shape and approximate size appeared suitable for installation in a tabletop mechanism and for continuous feeding, clamping, stamping, and take-up.
 
-Current material details:
+The holding, guiding, and take-up mechanisms were then arranged around the available paper roll.
 
-| Property             | Demonstrated configuration   |
-| -------------------- | ---------------------------- |
-| Material type        | Roll paper                   |
-| Paper width          | To be documented             |
-| Paper thickness      | To be documented             |
-| Surface finish       | To be documented             |
-| Roll-core dimensions | To be documented             |
-| Feed direction       | Toward the take-up mechanism |
-| Processed feature    | Repeated stamped marks       |
+```text
+Available paper roll
+      ↓
+Check whether it can be installed and fed
+      ↓
+Arrange the holding and paper path
+      ↓
+Build the clamp and take-up mechanisms around it
+      ↓
+Adjust the process timing for the resulting configuration
+```
 
-Paper properties can affect:
+This represents a material-first prototype approach rather than selection against a fixed production-material specification.
 
-* friction
-* clamp effectiveness
-* feed accuracy
-* wrinkling
-* stamp transfer
-* required press force
-* repeatability between cycles
+### Demonstrated Material Properties
 
-The current material is part of the demonstrated configuration but is not a mandatory architectural component.
+| Property            | Demonstrated configuration                                                       |
+| ------------------- | -------------------------------------------------------------------------------- |
+| Material type       | Commercially available paper tape                                                |
+| Source              | Purchased from a local store                                                     |
+| Form                | Continuous paper wound into a roll                                               |
+| Approximate width   | `17 mm`, measured with a ruler                                                   |
+| Thickness           | Not measured                                                                     |
+| Paper specification | Not identified                                                                   |
+| Roll dimensions     | Selected to fit within the tabletop mechanism                                    |
+| Feed direction      | Toward the take-up mechanism                                                     |
+| Processed feature   | Repeated stamped marks                                                           |
+| Selection basis     | Availability, roll form, and apparent compatibility with the prototype mechanism |
+
+The paper roll is similar in general form to a small roll of kitchen paper, although it is used here as paper tape for the stamping demonstration.
+
+The exact product is not required to reproduce the system architecture.
+
+A replacement roll material may be used if:
+
+* it can be installed in the available mechanism
+* it can be pulled through the paper path
+* it can be held by the clamp mechanisms
+* it accepts a visible stamp mark
+* it can be wound by the take-up mechanism
+
+Changing the roll width, stiffness, surface, core size, or diameter may require modifications to the mechanical arrangement and process parameters.
 
 ---
 
