@@ -247,12 +247,11 @@ This section records the main commercially sourced mechanical parts used in the 
 | Source part or product | Original intended role | Role in this demo               | Reason selected |
 | ---------------------- | ---------------------- | ------------------------------- | --------------- |
 | [PILOT Frixion Stamp](https://webcatalog.pilot.co.jp/products/DispDetail.do?itemID=t000100003553&volumeName=00004&category=...) | Manually operated self-inking stationery stamp | Physical marking tool | Available off-the-shelf tool that can produce repeated visible marks without a separate ink pad |
-| To be documented       | —                      | Rack-and-pinion press mechanism | —               |
-| To be documented       | —                      | Stamp-drive motor and gearbox   | —               |
-| To be documented       | —                      | Paper take-up motor and gearbox | —               |
-| To be documented       | —                      | Paper-clamp actuators           | —               |
-| To be documented       | —                      | Roll-paper support or guide     | —               |
-| To be documented       | —                      | Physical stamp                  | —               |
+| [ラック&ピニオン ギヤセット](https://www.tamiya.com/japan/products/70235/index.html)       | —                      | Rack-and-pinion press mechanism | —               |
+| [ユニバーサルプレート （2枚セット）](https://www.tamiya.com/japan/products/70157/index.html)       | —                      | Stamp-drive motor and gearbox   | —               |
+| [ミニモーター標準ギヤボックス （8速）](https://www.tamiya.com/japan/products/70188/index.html)       | —                      | Paper take-up motor and gearbox | —               |
+| [ミニモーター低速ギヤボックス （4速）](https://www.tamiya.com/japan/products/70189/index.html)       | —                      | Paper-clamp actuators           | —               |
+| [ユニバーサルプレートL（210×160mm）](https://www.tamiya.com/japan/products/70172/index.html)       | —                      | Roll-paper support or guide     | —               |
 
 This record should describe the demonstrated implementation.
 
