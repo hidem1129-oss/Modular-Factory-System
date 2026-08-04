@@ -232,12 +232,14 @@ A part is selected according to properties such as:
 
 This section records the main commercially sourced mechanical parts used in the demonstrated configuration.
 
-| Source part or product | Original intended role | Role in this demo                   | Reason selected |
-| ---------------------- | ---------------------- | ----------------------------------- | --------------- |
-| [連結式クローラー&スプロケットセット](https://www.tamiya.com/japan/products/70237/index.html) | Tracked vehicle running mechanism | Conveyor belt / transport surface | Readily available linked track structure |
-| [ミニモーター標準ギヤボックス （8速）](https://www.tamiya.com/japan/products/70188/index.html) | Geared drive unit for educational models | Conveyor drive | Multiple gear ratios and compact motor drive |
-| [ユニバーサルプレートL（210×160mm）](https://www.tamiya.com/japan/products/70172/index.html) | General-purpose construction base | Structural base or mounting plate | Regular mounting-hole pattern and easy modification |
-| [マイクロサーボ9g SG90](https://akizukidenshi.com/catalog/g/g108761/)       | Small position-controlled actuator | Sorting-gate actuator | Compact, inexpensive, and easy to replace |
+| No. | Source part or product | Original intended role | Role in this demo                   | Reason selected |
+| --- | ---------------------- | ---------------------- | ----------------------------------- | --------------- |
+| ① | [連結式クローラー&スプロケットセット](https://www.tamiya.com/japan/products/70237/index.html) | Tracked vehicle running mechanism | Conveyor belt / transport surface | Readily available linked track structure |
+| ② | [ミニモーター標準ギヤボックス （8速）](https://www.tamiya.com/japan/products/70188/index.html) | Geared drive unit for educational models | Conveyor drive | Multiple gear ratios and compact motor drive |
+| ③ | [ユニバーサルプレートL（210×160mm）](https://www.tamiya.com/japan/products/70172/index.html) | General-purpose construction base | Structural base or mounting plate | Regular mounting-hole pattern and easy modification |
+| ④ | [マイクロサーボ9g SG90](https://akizukidenshi.com/catalog/g/g108761/)       | Small position-controlled actuator | Sorting-gate actuator | Compact, inexpensive, and easy to replace |
+| ⑤ | [ユニバーサルアームセット](https://www.tamiya.com/japan/products/70143/index.html) | XXX | XXX | XXX | 
+| ⑥ | [C270 HDウェブカメラ](https://www.logicool.co.jp/ja-jp/shop/p/hd-webcam-c270n) | XXX | XXX | XXX |
 
 This record describes the demonstrated implementation.
 
