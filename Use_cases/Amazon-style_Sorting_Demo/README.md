@@ -230,6 +230,8 @@ A part is selected according to properties such as:
 
 ## Actual Mechanical Parts Used
 
+<img width="2856" height="1607" alt="IMG_1295_2 (1)" src="https://github.com/user-attachments/assets/c0ac0208-e81b-4752-bada-d4c809410353" />
+
 This section records the main commercially sourced mechanical parts used in the demonstrated configuration.
 
 | No. | Source part or product | Original intended role | Role in this demo                   | Reason selected |
@@ -240,6 +242,10 @@ This section records the main commercially sourced mechanical parts used in the 
 | ④ | [マイクロサーボ9g SG90](https://akizukidenshi.com/catalog/g/g108761/)       | Small position-controlled actuator | Sorting-gate actuator | Compact, inexpensive, and easy to replace |
 | ⑤ | [ユニバーサルアームセット](https://www.tamiya.com/japan/products/70143/index.html) | General-purpose structural arms for educational construction | Supports and positions the sorting-gate servos, webcam, and other mechanism components | Regular mounting holes allow components to be positioned and rearranged without manufacturing a dedicated frame |
 | ⑥ | [C270 HDウェブカメラ](https://www.logicool.co.jp/ja-jp/shop/p/hd-webcam-c270n) | General-purpose USB webcam | Captures workpiece images for visible-color classification | Readily available USB camera that can be mounted above the conveyor and accessed directly from the Raspberry Pi 5 |
+
+Three SG90 servos are used as sorting-gate actuators. The numbered arrow indicates one representative installation.
+
+The arrow indicates one representative universal-arm member used in the support structure.
 
 This record describes the demonstrated implementation.
 
