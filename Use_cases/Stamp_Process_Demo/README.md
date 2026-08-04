@@ -242,6 +242,9 @@ The control architecture does not require the same products, dimensions, or atta
 
 ## Actual Mechanical Parts Used
 
+<img width="2856" height="1607" alt="IMG_1294_3 (1)" src="https://github.com/user-attachments/assets/3cc9f645-6718-486b-99d1-5cc04f4b253e" />
+
+
 This section records the main commercially sourced mechanical parts used in the demonstrated configuration.
 
 | No. | Source part or product                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Original intended role                               | Role in this demo                                                       | Reason selected                                                                                                            |
