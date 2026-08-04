@@ -64,6 +64,7 @@ The goal is to show how physical mechanisms, embedded control, host-side softwar
 | [`Use_cases/`](./Use_cases/) | Example tabletop factory processes built with the system |
 | [`Docs/`](./Docs/) | Supplementary architecture notes and design references |
 | [`日本語版/`](./日本語版/) | Japanese overview for recruiters and readers in Japan |
+| [`ADL/`](./ADL/) | Architecture decisions, design constraints, principles, alternatives, and implementation consequences |
 
 ---
 
