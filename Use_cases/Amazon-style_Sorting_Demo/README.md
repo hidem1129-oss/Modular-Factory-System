@@ -238,8 +238,8 @@ This section records the main commercially sourced mechanical parts used in the 
 | ② | [ミニモーター標準ギヤボックス （8速）](https://www.tamiya.com/japan/products/70188/index.html) | Geared drive unit for educational models | Conveyor drive | Multiple gear ratios and compact motor drive |
 | ③ | [ユニバーサルプレートL（210×160mm）](https://www.tamiya.com/japan/products/70172/index.html) | General-purpose construction base | Structural base or mounting plate | Regular mounting-hole pattern and easy modification |
 | ④ | [マイクロサーボ9g SG90](https://akizukidenshi.com/catalog/g/g108761/)       | Small position-controlled actuator | Sorting-gate actuator | Compact, inexpensive, and easy to replace |
-| ⑤ | [ユニバーサルアームセット](https://www.tamiya.com/japan/products/70143/index.html) | XXX | XXX | XXX | 
-| ⑥ | [C270 HDウェブカメラ](https://www.logicool.co.jp/ja-jp/shop/p/hd-webcam-c270n) | XXX | XXX | XXX |
+| ⑤ | [ユニバーサルアームセット](https://www.tamiya.com/japan/products/70143/index.html) | General-purpose structural arms for educational construction | Supports and positions the sorting-gate servos, webcam, and other mechanism components | Regular mounting holes allow components to be positioned and rearranged without manufacturing a dedicated frame |
+| ⑥ | [C270 HDウェブカメラ](https://www.logicool.co.jp/ja-jp/shop/p/hd-webcam-c270n) | General-purpose USB webcam | Captures workpiece images for visible-color classification | Readily available USB camera that can be mounted above the conveyor and accessed directly from the Raspberry Pi 5 |
 
 This record describes the demonstrated implementation.
 
