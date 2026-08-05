@@ -144,7 +144,7 @@ The goal is to identify architectural questions before committing to a larger im
 
 The following principles guide the architectural and implementation decisions documented in this directory.
 
-## 1. Scale Fit and Limited Change Propagation
+### 1. Scale Fit and Limited Change Propagation
 
 A selected approach should fit the scale and purpose of the tabletop proof of concept.
 
@@ -162,7 +162,7 @@ Examples include:
 
 This principle leads to modular boundaries, common interfaces, and separation of responsibilities.
 
-## 2. Supply-Chain Risk Reduction
+### 2. Supply-Chain Risk Reduction
 
 Components should be obtainable through traceable and reasonably repeatable procurement channels.
 
@@ -189,7 +189,7 @@ The objective is not to eliminate every supply-chain risk.
 
 The objective is to avoid making the system unnecessarily dependent on parts that are difficult to identify, replace, or reproduce.
 
-## 3. Low Learning and Startup Cost
+### 3. Low Learning and Startup Cost
 
 The time and effort required to learn, integrate, debug, and begin using a technology are treated as part of its architectural cost.
 
@@ -210,7 +210,7 @@ The preferred solution is not necessarily the most technically advanced one.
 
 It is the solution that provides sufficient capability while allowing the project to progress toward its system-level goals.
 
-## 4. Tabletop Physical and Spatial Fit
+### 4. Tabletop Physical and Spatial Fit
 
 The complete demonstrated system should fit within the physical and spatial limits of a tabletop environment.
 
@@ -241,7 +241,7 @@ Component selection and mechanism design therefore consider:
 
 A component that is appropriate in a larger installation may be unsuitable if it introduces unnecessary size, weight, wiring, or mounting complexity at tabletop scale.
 
-## 5. Reconfiguration Through Replacement and Configuration
+### 5. Reconfiguration Through Replacement and Configuration
 
 The system should support different physical behaviors through replacement, rearrangement, orchestration changes, and parameter adjustment rather than complete redesign.
 
