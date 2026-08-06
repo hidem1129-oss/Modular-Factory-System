@@ -38,9 +38,6 @@ These responses are translated into the following system requirements:
 
 The system is therefore intended to function as a shared and observable architecture prototype rather than only as a machine that performs one specific task.
 
-> **Diagram placeholder:**
-> Add a diagram showing the flow from problem awareness through required responses, system requirements, success conditions, and implementation evidence.
-
 ---
 
 ## Intended Value
@@ -128,9 +125,6 @@ The high-level requirements are divided into five categories.
 | R3 | Explicit responsibility boundaries        |
 | R4 | Reconfiguration across physical processes |
 | R5 | Practical tabletop implementation         |
-
-> **Diagram placeholder:**
-> Add a diagram showing the five requirement categories and their relationship to the Modular Factory System.
 
 ---
 
@@ -550,9 +544,6 @@ The reasons for deferring specific capabilities are documented in:
 | R3: Explicit responsibility boundaries        | Distributed firmware nodes, orchestration scripts, I2C Debugger, SQLite, and Grafana                                  |
 | R4: Reconfiguration across physical processes | Two use cases with different mechanisms, sequences, and node arrangements                                             |
 | R5: Practical tabletop implementation         | Compact computing hardware, custom PCBs, commercially available construction parts, and published implementation data |
-
-> **Diagram placeholder:**
-> Add a diagram connecting the five requirements to the main architectural elements and implementation evidence.
 
 ---
 
