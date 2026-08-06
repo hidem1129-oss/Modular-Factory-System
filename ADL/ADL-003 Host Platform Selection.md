@@ -389,6 +389,41 @@ Logical separation is maintained through software boundaries, even though the re
 
 ---
 
+### H11: Independence from Production Infrastructure
+
+The host needed to operate without requiring production factory infrastructure.
+
+The platform should support local development and demonstration using:
+
+* local storage
+* local device communication
+* locally executed orchestration
+* locally available monitoring
+* locally hosted or accessible visualization
+
+The Raspberry Pi 5 allows the complete proof-of-concept host environment to operate without requiring an MES, industrial network, external database server, or plant-wide computing infrastructure.
+
+---
+
+### H12: Suitability for Supervised Proof-of-Concept Operation
+
+The host was intended for supervised development and demonstration rather than unattended production operation.
+
+The platform therefore needed to support:
+
+* direct developer access
+* incremental software changes
+* manual startup and shutdown
+* interactive debugging
+* local observation
+* recovery through developer intervention
+
+The Raspberry Pi 5 is suitable for this operating model.
+
+It does not provide the reliability, safety, environmental protection, or lifecycle support expected from a production industrial controller.
+
+---
+
 ## Considered Alternatives
 
 ### Alternative A: Conventional Desktop or Laptop Computer
@@ -415,7 +450,7 @@ A conventional computer could support:
 * less compact as a permanent system component
 * less self-contained as a tabletop control platform
 * direct hardware integration may require additional adapters
-* the development computer becomes part of the operating system
+* the development computer becomes a required part of the demonstration setup
 * replacement or relocation can affect the demonstration setup
 
 #### Evaluation
