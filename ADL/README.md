@@ -272,7 +272,7 @@ It requires the reusable boundaries to remain clear enough that process-specific
 | ------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | [ADL-000](./ADL-000%20Requirements%20Definition%20and%20Success%20Conditions.md) | Requirements Definition and Success Conditions | Defines the project motivation, intended value, high-level requirements, non-goals, and success conditions              |
 | [ADL-001](./ADL-001%20System%20Context%20and%20Goals.md) | System Context and Goals                       | Defines the system boundary, major elements, external relationships, intended use, and architectural scope              |
-| ADL-002 | Design and Development Constraints             | Records the physical, cost, schedule, implementation, maintenance, and prototype constraints                            |
+| [ADL-002](./ADL-002%20Design%20and%20Development%20Constraints.md) | Design and Development Constraints             | Records the physical, cost, schedule, implementation, maintenance, and prototype constraints                            |
 | ADL-003 | Host Platform Selection                        | Explains the selection of the Raspberry Pi 5 and compares it with alternative host platforms                            |
 | ADL-004 | Distributed Node Architecture                  | Explains the decision to use separate Raspberry Pi Pico-based control nodes                                             |
 | ADL-005 | Communication Interface Selection              | Explains the selection of I²C for the demonstrated tabletop system and its limitations                                  |
