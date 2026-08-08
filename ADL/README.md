@@ -270,7 +270,7 @@ It requires the reusable boundaries to remain clear enough that process-specific
 
 | ID      | Document                                       | Purpose                                                                                                                 |
 | ------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| [ADL-000](https://github.com/hidem1129-oss/Modular-Factory-System/blob/main/ADL/ADL-000%20Requirements%20Definition%20and%20Success%20Conditions.md) | Requirements Definition and Success Conditions | Defines the project motivation, intended value, high-level requirements, non-goals, and success conditions              |
+| [ADL-000](./ADL-000%20Requirements%20Definition%20and%20Success%20Conditions.md) | Requirements Definition and Success Conditions | Defines the project motivation, intended value, high-level requirements, non-goals, and success conditions              |
 | ADL-001 | System Context and Goals                       | Defines the system boundary, major elements, external relationships, intended use, and architectural scope              |
 | ADL-002 | Design and Development Constraints             | Records the physical, cost, schedule, implementation, maintenance, and prototype constraints                            |
 | ADL-003 | Host Platform Selection                        | Explains the selection of the Raspberry Pi 5 and compares it with alternative host platforms                            |
