@@ -277,11 +277,11 @@ It requires the reusable boundaries to remain clear enough that process-specific
 | [ADL-004](./ADL-004%20Distributed%20Node%20Architecture.md) | Distributed Node Architecture                  | Explains the decision to use separate Raspberry Pi Pico-based control nodes                                             |
 | [ADL-005](./ADL-005%20Communication%20Interface%20Selection.md) | Communication Interface Selection              | Explains the selection of I²C for the demonstrated tabletop system and its limitations                                  |
 | [ADL-006](./ADL-006%20Common%20Register%20Interface.md) | Common Register Interface                      | Explains the shared register-based communication model used by the distributed nodes                                    |
-| ADL-007 | Separation of Responsibilities                 | Defines the boundaries between physical mechanisms, firmware, orchestration, monitoring, persistence, and visualization |
-| ADL-008 | Reconfigurable Physical Mechanisms             | Explains the separation of reusable control infrastructure from replaceable process-specific mechanisms                 |
-| ADL-009 | Monitoring and Control Separation              | Explains why monitoring, persistence, and Grafana visualization remain outside the direct device-control path           |
-| ADL-010 | Component Selection and Reproducibility        | Records the principles used for sourcing, replacement, manufacturing-data publication, and reproduction                 |
-| ADL-011 | Prototype Scope and Deferred Features          | Records intentionally omitted or deferred production-level capabilities and the reasons for those boundaries            |
+| [ADL-007](./ADL-007%20Separation%20of%20Responsibilities.md) | Separation of Responsibilities                 | Defines the boundaries between physical mechanisms, firmware, orchestration, monitoring, persistence, and visualization |
+| [ADL-008](./ADL-008%20Reconfigurable%20Physical%20Mechanisms.md) | Reconfigurable Physical Mechanisms             | Explains the separation of reusable control infrastructure from replaceable process-specific mechanisms                 |
+| [ADL-009](./ADL-009%20Monitoring%20and%20Control%20Separation.md) | Monitoring and Control Separation              | Explains why monitoring, persistence, and Grafana visualization remain outside the direct device-control path           |
+| [ADL-010](./ADL-010%20Component%20Selection%20and%20Reproducibility.md) | Component Selection and Reproducibility        | Records the principles used for sourcing, replacement, manufacturing-data publication, and reproduction                 |
+| [ADL-011](./ADL-011%20Prototype%20Scope%20and%20Deferred%20Features.md) | Prototype Scope and Deferred Features          | Records intentionally omitted or deferred production-level capabilities and the reasons for those boundaries            |
 
 ---
 
