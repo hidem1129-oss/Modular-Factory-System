@@ -530,9 +530,10 @@ The hardware and mechanisms are prototype implementations.
 
 ---
 
-## Current Future Work
+## Current Future Work and Extensions
 
-The repository identifies several possible future improvements.
+The repository identifies several possible future improvements and extensions.
+These include both architectural or technical extensions and non-architectural work such as documentation and presentation improvements.
 
 These currently include:
 
