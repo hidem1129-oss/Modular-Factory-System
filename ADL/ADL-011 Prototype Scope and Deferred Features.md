@@ -322,13 +322,13 @@ The project documentation therefore identifies future work and current limitatio
 
 This makes it possible to state:
 
-```text id="8h1ndc"
+```text
 Not implemented because it is outside current scope
 ```
 
 rather than leaving the reader to infer:
 
-```text id="05w3ca"
+```text
 Not implemented because the architecture cannot support it
 ```
 
