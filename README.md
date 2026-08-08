@@ -90,7 +90,10 @@ The goal is to show how physical mechanisms, embedded control, host-side softwar
 The system is designed around a distributed I²C node architecture.
 
 Each physical module exposes status, command, and feedback values through a register-based interface.
-The host-side software monitors these nodes, records state transitions, and visualizes the results.
+
+Host-side orchestration coordinates the physical process through the common register interface.
+
+Separate monitoring software observes exposed node states and feedback, persists selected records to SQLite, and Grafana visualizes the stored historical data.
 
 See also:
 - [`Docs/System_Architecture/`](./Docs/System_Architecture/)
@@ -179,7 +182,8 @@ See:
 ## Future Work
 
 - Flow-editor style orchestration UI
-- More reusable module slots and standardized harnesses
+- Re-evaluation of the control-module physical interconnection and harness strategy  
+  - See [`Control Module Interconnection and Operational Feedback`](./Docs/Design_Reviews/Control_Module_Interconnection_and_Operational_Feedback.md)
 - Additional use cases using the same control modules
 - Recruiter-oriented 5-minute technical walkthrough video
 - More detailed troubleshooting and setup documentation
