@@ -71,17 +71,20 @@ The goal is to show how physical mechanisms, embedded control, host-side softwar
 ## System Architecture
 
 ```text
-Physical mechanism
-      ↓
-Hardware boards
-      ↓
-Raspberry Pi Pico firmware nodes
-      ↓ I²C register interface
-Raspberry Pi 5 host software
-      ↓
-SQLite logs
-      ↓
-Grafana visualization
+                      Raspberry Pi 5
+                            │
+             ┌──────────────┴──────────────┐
+             │                             │
+      Host orchestration              Monitoring
+             │                             │
+             ↓                             ↓
+     I²C register interface          SQLite logging
+             │                             │
+             ↓                             ↓
+       Pico device nodes                 Grafana
+             │
+             ↓
+      Physical mechanisms
 ```
 
 The system is designed around a distributed I²C node architecture.
