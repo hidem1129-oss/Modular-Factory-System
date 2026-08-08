@@ -1,30 +1,30 @@
-ADL-011: Prototype Scope and Deferred Features
+# ADL-011: Prototype Scope and Deferred Features
 
-Purpose of This Document
+## Purpose of This Document
 
 This document defines the intended scope of the Modular Factory System proof of concept and explains why selected capabilities were intentionally deferred.
 
 This decision follows the previously established architecture defined in:
 
-* ADL-000: Requirements Definition and Success Conditions
-* ADL-001: System Context and Goals
-* ADL-002: Design and Development Constraints
-* ADL-003: Host Platform Selection
-* ADL-004: Distributed Node Architecture
-* ADL-005: Communication Interface Selection
-* ADL-006: Common Register Interface
-* ADL-007: Separation of Responsibilities
-* ADL-008: Reconfigurable Physical Mechanisms
-* ADL-009: Monitoring and Control Separation
-* ADL-010: Component Selection and Reproducibility
+* [ADL-000: Requirements Definition and Success Conditions](./ADL-000%20Requirements%20Definition%20and%20Success%20Conditions.md)
+* [ADL-001: System Context and Goals](./ADL-001%20System%20Context%20and%20Goals.md)
+* [ADL-002: Design and Development Constraints](./ADL-002%20Design%20and%20Development%20Constraints.md)
+* [ADL-003: Host Platform Selection](./ADL-003%20Host%20Platform%20Selection.md)
+* [ADL-004: Distributed Node Architecture](./ADL-004%20Distributed%20Node%20Architecture.md)
+* [ADL-005: Communication Interface Selection](./ADL-005%20Communication%20Interface%20Selection.md)
+* [ADL-006: Common Register Interface](./ADL-006%20Common%20Register%20Interface.md)
+* [ADL-007: Separation of Responsibilities](./ADL-007%20Separation%20of%20Responsibilities.md)
+* [ADL-008: Reconfigurable Physical Mechanisms](./ADL-008%20Reconfigurable%20Physical%20Mechanisms.md)
+* [ADL-009: Monitoring and Control Separation](./ADL-009%20Monitoring%20and%20Control%20Separation.md)
+* [ADL-010: Component Selection and Reproducibility](./ADL-010%20Component%20Selection%20and%20Reproducibility.md)
 
 The earlier documents explain individual architectural choices.
 
 This document defines the boundary around the complete proof of concept.
 
-⸻
+---
 
-Decision Summary
+## Decision Summary
 
 The Modular Factory System is intentionally a tabletop proof-of-concept platform.
 
@@ -54,9 +54,9 @@ Features are deferred when they:
 
 Deferral is therefore treated as an architectural scope decision rather than as an accidental absence of implementation.
 
-⸻
+---
 
-Decision Context
+## Decision Context
 
 The system spans several engineering domains:
 
@@ -88,40 +88,46 @@ Attempting to implement production-level depth in every layer would have prevent
 
 The project therefore prioritizes:
 
+```text id="8vt3sx"
 Complete system-level architectural evidence
+```
 
 over:
 
+```text id="5m0fhq"
 Maximum maturity of every subsystem
+```
 
-⸻
+---
 
-Scope Goals
+## Scope Goals
 
 The scope strategy was selected to support the following goals.
 
-ID	Goal
-PS1	Demonstrate an end-to-end physical system
-PS2	Validate responsibility boundaries
-PS3	Validate reuse across different processes
-PS4	Use real hardware rather than software-only simulation
-PS5	Make system state observable
-PS6	Preserve historical evidence
-PS7	Demonstrate custom hardware integration
-PS8	Keep the project achievable by one developer
-PS9	Avoid production-level features without a current validation need
-PS10	Make deferred capability explicit
-PS11	Preserve extension paths where practical
-PS12	Avoid implying production readiness
+| ID   | Goal                                                              |
+| ---- | ----------------------------------------------------------------- |
+| PS1  | Demonstrate an end-to-end physical system                         |
+| PS2  | Validate responsibility boundaries                                |
+| PS3  | Validate reuse across different processes                         |
+| PS4  | Use real hardware rather than software-only simulation            |
+| PS5  | Make system state observable                                      |
+| PS6  | Preserve historical evidence                                      |
+| PS7  | Demonstrate custom hardware integration                           |
+| PS8  | Keep the project achievable by one developer                      |
+| PS9  | Avoid production-level features without a current validation need |
+| PS10 | Make deferred capability explicit                                 |
+| PS11 | Preserve extension paths where practical                          |
+| PS12 | Avoid implying production readiness                               |
 
-⸻
+---
 
-PS1: End-to-End System Demonstration
+## PS1: End-to-End System Demonstration
 
 The prototype must demonstrate a complete path from physical process to software observation.
 
 The current architecture includes:
 
+```text id="hkl49p"
 Physical mechanism
         ↓
 Hardware boards
@@ -135,14 +141,15 @@ Raspberry Pi 5 host
 Monitoring and persistence
         ↓
 Grafana visualization
+```
 
 The project therefore prioritizes having each major architectural layer represented and connected.
 
 A more sophisticated isolated subsystem is less valuable to the current objective if the complete system cannot be demonstrated.
 
-⸻
+---
 
-PS2: Responsibility Boundary Validation
+## PS2: Responsibility Boundary Validation
 
 The prototype must provide enough implementation to evaluate the major responsibility boundaries.
 
@@ -158,9 +165,9 @@ The purpose is not only to show that individual components operate.
 
 The system should demonstrate that those responsibilities can interact through explicit interfaces.
 
-⸻
+---
 
-PS3: Multiple Process Configurations
+## PS3: Multiple Process Configurations
 
 One process alone would provide limited evidence of reconfigurability.
 
@@ -183,9 +190,9 @@ while reusing substantial portions of the same control and monitoring architectu
 
 This provides stronger evidence of reuse than a single fixed machine.
 
-⸻
+---
 
-PS4: Real Physical Hardware
+## PS4: Real Physical Hardware
 
 The architectural demonstration includes actual:
 
@@ -207,9 +214,9 @@ Mock operation remains useful for software testing.
 
 However, physical implementation is required to expose integration issues that do not appear in software-only models.
 
-⸻
+---
 
-PS5: System Observability
+## PS5: System Observability
 
 The proof of concept includes enough monitoring to inspect:
 
@@ -227,9 +234,9 @@ This supports system-level debugging and explanation.
 
 The monitoring architecture does not attempt to provide complete physical-process verification.
 
-⸻
+---
 
-PS6: Historical Evidence
+## PS6: Historical Evidence
 
 The project includes persistent monitoring records because a live demonstration alone provides limited evidence after execution.
 
@@ -246,9 +253,9 @@ This allows later review of:
 
 Historical monitoring is included because it directly supports architecture validation and debugging.
 
-⸻
+---
 
-PS7: Custom Hardware Integration
+## PS7: Custom Hardware Integration
 
 The prototype includes custom PCB modules rather than relying entirely on breadboards or opaque commercial modules.
 
@@ -264,9 +271,9 @@ The objective is not production PCB qualification.
 
 The objective is to demonstrate that the proposed hardware architecture can be implemented as reproducible physical modules.
 
-⸻
+---
 
-PS8: Individual Development Capacity
+## PS8: Individual Development Capacity
 
 The project must remain achievable and maintainable by one developer.
 
@@ -281,9 +288,9 @@ This directly limits:
 
 A technically valuable feature may still be deferred when its implementation cost prevents completion of more important architectural evidence.
 
-⸻
+---
 
-PS9: Production Features Are Not Default Requirements
+## PS9: Production Features Are Not Default Requirements
 
 Production-level features are not added automatically.
 
@@ -300,9 +307,9 @@ Such features should be implemented only when they answer a specific architectur
 
 This avoids using production realism as an unlimited scope-expansion mechanism.
 
-⸻
+---
 
-PS10: Explicit Deferred Capability
+## PS10: Explicit Deferred Capability
 
 A feature that is intentionally deferred should be distinguishable from:
 
@@ -315,15 +322,19 @@ The project documentation therefore identifies future work and current limitatio
 
 This makes it possible to state:
 
+```text id="8h1ndc"
 Not implemented because it is outside current scope
+```
 
 rather than leaving the reader to infer:
 
+```text id="05w3ca"
 Not implemented because the architecture cannot support it
+```
 
-⸻
+---
 
-PS11: Preserve Extension Paths
+## PS11: Preserve Extension Paths
 
 A deferred feature does not need to be implemented immediately for the architecture to leave space for it.
 
@@ -341,9 +352,9 @@ The project favors boundaries that allow these capabilities to be added without 
 
 This does not guarantee that every future extension will fit the current architecture unchanged.
 
-⸻
+---
 
-PS12: Production Readiness Boundary
+## PS12: Production Readiness Boundary
 
 The current system must not be interpreted as production-ready equipment.
 
@@ -363,36 +374,37 @@ It is not validated as:
 
 This distinction is an explicit architectural boundary.
 
-⸻
+---
 
-Included Prototype Scope
+## Included Prototype Scope
 
 The current proof of concept includes the following major capabilities.
 
-Area	Included capability
-Physical process	Real tabletop mechanisms
-Actuation	DC motors and servo motors
-Sensing	Photo-reflector-based sensing
-Vision	Camera-based color classification in the sorting demo
-Distributed control	Raspberry Pi Pico device nodes
-Communication	Shared I²C register interface
-Host	Raspberry Pi 5
-Orchestration	Use-case-specific host-side process logic
-Monitoring	I2C Debugger
-Persistence	SQLite
-Visualization	Grafana
-Electrical observation	Main and branch power monitoring
-Hardware	Custom modular PCBs
-Reconfiguration	Different physical process configurations
-Reproducibility	Schematics, Gerbers, procurement references, documentation
+| Area                   | Included capability                                        |
+| ---------------------- | ---------------------------------------------------------- |
+| Physical process       | Real tabletop mechanisms                                   |
+| Actuation              | DC motors and servo motors                                 |
+| Sensing                | Photo-reflector-based sensing                              |
+| Vision                 | Camera-based color classification in the sorting demo      |
+| Distributed control    | Raspberry Pi Pico device nodes                             |
+| Communication          | Shared I²C register interface                              |
+| Host                   | Raspberry Pi 5                                             |
+| Orchestration          | Use-case-specific host-side process logic                  |
+| Monitoring             | I2C Debugger                                               |
+| Persistence            | SQLite                                                     |
+| Visualization          | Grafana                                                    |
+| Electrical observation | Main and branch power monitoring                           |
+| Hardware               | Custom modular PCBs                                        |
+| Reconfiguration        | Different physical process configurations                  |
+| Reproducibility        | Schematics, Gerbers, procurement references, documentation |
 
-⸻
+---
 
-Explicitly Deferred Production Capabilities
+## Explicitly Deferred Production Capabilities
 
 The following capabilities are outside the required scope of the current proof of concept.
 
-Industrial Functional Safety
+### Industrial Functional Safety
 
 The project does not provide:
 
@@ -404,9 +416,9 @@ The project does not provide:
 
 The current operating assumption is supervised, low-energy tabletop use.
 
-⸻
+---
 
-Hard Real-Time Guarantees
+### Hard Real-Time Guarantees
 
 The architecture does not provide formal hard real-time guarantees.
 
@@ -414,9 +426,9 @@ The current host and monitoring environment uses general-purpose Linux and polli
 
 The firmware architecture is sufficient for the demonstrated tabletop processes but is not presented as a deterministic industrial motion-control platform.
 
-⸻
+---
 
-Long-Distance Industrial Communication
+### Long-Distance Industrial Communication
 
 The current I²C communication model is intended for short-distance local communication.
 
@@ -429,9 +441,9 @@ The project does not currently require:
 
 A different communication architecture should be reconsidered if physical scale changes substantially.
 
-⸻
+---
 
-Full Redundancy and Automatic Failover
+### Full Redundancy and Automatic Failover
 
 The current prototype does not provide:
 
@@ -444,9 +456,9 @@ The current prototype does not provide:
 
 The current goal is architecture validation, not production availability.
 
-⸻
+---
 
-Production-Grade Cybersecurity
+### Production-Grade Cybersecurity
 
 The current system does not implement a production cybersecurity architecture.
 
@@ -463,9 +475,9 @@ It does not currently provide a complete design for:
 
 These capabilities require a deployment context that is outside the present scope.
 
-⸻
+---
 
-MES and ERP Integration
+### MES and ERP Integration
 
 The prototype does not currently integrate with:
 
@@ -478,9 +490,9 @@ The current data path terminates at local persistence and visualization.
 
 Enterprise integration would represent a separate architectural concern.
 
-⸻
+---
 
-Full Autonomous Fault Recovery
+### Full Autonomous Fault Recovery
 
 The current system does not attempt to diagnose and recover automatically from every fault.
 
@@ -503,9 +515,9 @@ Automatic recovery would need explicit rules for:
 
 Those behaviors are not required for the current proof of concept.
 
-⸻
+---
 
-Formal Industrial Certification
+### Formal Industrial Certification
 
 The project does not currently target formal certification for:
 
@@ -516,9 +528,9 @@ The project does not currently target formal certification for:
 
 The hardware and mechanisms are prototype implementations.
 
-⸻
+---
 
-Current Future Work
+## Current Future Work
 
 The repository identifies several possible future improvements.
 
@@ -539,9 +551,9 @@ Others improve usability, documentation, or communication.
 
 They remain future work because the existing implementation already demonstrates the core architectural path.
 
-⸻
+---
 
-Flow-Editor Style Orchestration UI
+## Flow-Editor Style Orchestration UI
 
 A graphical flow editor could allow process logic to be assembled through higher-level visual composition rather than editing process scripts directly.
 
@@ -567,9 +579,9 @@ The current architecture can demonstrate host-side orchestration without requiri
 
 The flow editor is therefore deferred.
 
-⸻
+---
 
-Standardized Harnesses and Module Slots
+## Standardized Harnesses and Module Slots
 
 The current hardware already uses modular boards and organized connectors.
 
@@ -590,9 +602,9 @@ Possible future work includes:
 
 These improvements may reduce setup effort but are not necessary to validate the current responsibility and communication boundaries.
 
-⸻
+---
 
-Additional Use Cases
+## Additional Use Cases
 
 Additional process demonstrations could provide more evidence of reuse.
 
@@ -609,9 +621,9 @@ The existing sorting and stamping demonstrations already provide two substantial
 
 Additional use cases are therefore useful extensions rather than requirements for validating the current architecture.
 
-⸻
+---
 
-Documentation and Presentation Improvements
+## Documentation and Presentation Improvements
 
 Possible future documentation work includes:
 
@@ -625,15 +637,17 @@ They do not fundamentally alter the architecture.
 
 They can therefore continue independently after the principal architecture documentation is complete.
 
-⸻
+---
 
-Deferred Feature Decision Rule
+## Deferred Feature Decision Rule
 
 A feature should normally remain deferred when:
 
+```text id="1pwzyr"
 Implementation cost
         >
 Architectural evidence gained
+```
 
 for the current project stage.
 
@@ -647,19 +661,23 @@ A deferred feature should be reconsidered when at least one of the following bec
 * a production requirement becomes part of the actual goal
 * the feature materially improves fault isolation, safety, or reproducibility for a new intended use
 
-⸻
+---
 
-Deferred Does Not Mean Rejected
+## Deferred Does Not Mean Rejected
 
 A deferred feature may still be technically valuable.
 
 The project distinguishes:
 
+```text id="uv67ib"
 Not selected for the current architecture
+```
 
 from:
 
+```text id="2jn8kb"
 Not required yet
+```
 
 For example:
 
@@ -671,40 +689,42 @@ For example:
 
 The current decision only states that these capabilities are not required to validate the present proof of concept.
 
-⸻
+---
 
-Risks and Mitigations
+## Risks and Mitigations
 
-Risk	Current mitigation
-Prototype scope expands indefinitely	Require clear relation to current architectural goals
-Deferred feature is mistaken for forgotten work	Document future work and exclusions
-PoC is mistaken for production-ready equipment	Explicitly state production boundaries
-Too little implementation weakens architectural evidence	Maintain real end-to-end physical demonstrations
-Too much subsystem refinement prevents completion	Prioritize system-level validation
-New use cases require large redesign	Preserve modular boundaries and extension points
-Production assumptions leak into current design	Evaluate features against actual tabletop requirements
-Future work list becomes a commitment	Treat items as candidates rather than guaranteed roadmap
-Simplified implementation is mistaken for inability	Record why higher-complexity alternatives were deferred
+| Risk                                                     | Current mitigation                                       |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| Prototype scope expands indefinitely                     | Require clear relation to current architectural goals    |
+| Deferred feature is mistaken for forgotten work          | Document future work and exclusions                      |
+| PoC is mistaken for production-ready equipment           | Explicitly state production boundaries                   |
+| Too little implementation weakens architectural evidence | Maintain real end-to-end physical demonstrations         |
+| Too much subsystem refinement prevents completion        | Prioritize system-level validation                       |
+| New use cases require large redesign                     | Preserve modular boundaries and extension points         |
+| Production assumptions leak into current design          | Evaluate features against actual tabletop requirements   |
+| Future work list becomes a commitment                    | Treat items as candidates rather than guaranteed roadmap |
+| Simplified implementation is mistaken for inability      | Record why higher-complexity alternatives were deferred  |
 
-⸻
+---
 
-Comparison Summary
+## Comparison Summary
 
-Alternative	Main strengths	Main limitations	Fit for current PoC
-Build only a minimal isolated demo	Lowest implementation effort	Weak evidence of end-to-end architecture	Weak
-Implement end-to-end PoC with explicit limits	Strong architectural evidence with manageable scope	Some production capabilities remain deferred	Strong
-Add selected production features during PoC	Provides more realism	High risk of scope expansion	Moderate
-Attempt production-ready implementation	Broad capability and robustness	Disproportionate effort and validation requirements	Weak
+| Alternative                                   | Main strengths                                      | Main limitations                                    | Fit for current PoC |
+| --------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | :-----------------: |
+| Build only a minimal isolated demo            | Lowest implementation effort                        | Weak evidence of end-to-end architecture            |         Weak        |
+| Implement end-to-end PoC with explicit limits | Strong architectural evidence with manageable scope | Some production capabilities remain deferred        |        Strong       |
+| Add selected production features during PoC   | Provides more realism                               | High risk of scope expansion                        |       Moderate      |
+| Attempt production-ready implementation       | Broad capability and robustness                     | Disproportionate effort and validation requirements |         Weak        |
 
 The ratings describe suitability for the current project.
 
 They are not general rankings of development strategies.
 
-⸻
+---
 
-Considered Alternatives
+## Considered Alternatives
 
-Alternative A: Minimal Isolated Demonstration
+### Alternative A: Minimal Isolated Demonstration
 
 The project could demonstrate only one subsystem.
 
@@ -715,14 +735,14 @@ Examples include:
 * one monitoring dashboard
 * one mechanical process without monitoring
 
-Advantages
+#### Advantages
 
 * low development effort
 * fast initial result
 * easy debugging
 * limited hardware requirement
 
-Disadvantages
+#### Disadvantages
 
 * weak evidence of integration
 * responsibility boundaries remain largely theoretical
@@ -730,19 +750,19 @@ Disadvantages
 * monitoring and control separation cannot be evaluated end to end
 * cross-domain issues remain hidden
 
-Evaluation
+#### Evaluation
 
 This approach is useful during early subsystem development.
 
 It is insufficient as the final architectural proof of concept.
 
-⸻
+---
 
-Alternative B: End-to-End Proof of Concept with Explicit Limits
+### Alternative B: End-to-End Proof of Concept with Explicit Limits
 
 The selected approach implements enough of each major layer to demonstrate the complete architecture.
 
-Advantages
+#### Advantages
 
 * demonstrates real system integration
 * exposes cross-domain issues
@@ -751,21 +771,21 @@ Advantages
 * remains achievable at tabletop scale
 * allows production features to remain deferred explicitly
 
-Disadvantages
+#### Disadvantages
 
 * individual subsystems remain less mature than production equivalents
 * some limitations require manual supervision
 * architecture must clearly document what is and is not demonstrated
 
-Evaluation
+#### Evaluation
 
 This provides the strongest fit for the current project.
 
 It was selected.
 
-⸻
+---
 
-Alternative C: Add Selected Production Features During the PoC
+### Alternative C: Add Selected Production Features During the PoC
 
 The project could progressively add features such as:
 
@@ -775,13 +795,13 @@ The project could progressively add features such as:
 * industrial networking
 * automatic recovery
 
-Advantages
+#### Advantages
 
 * closer to production behavior
 * more failure scenarios can be evaluated
 * selected production concerns become visible earlier
 
-Disadvantages
+#### Disadvantages
 
 * significantly larger scope
 * more dependencies
@@ -789,26 +809,26 @@ Disadvantages
 * harder to determine when the prototype is complete
 * implementation effort may exceed the architectural evidence gained
 
-Evaluation
+#### Evaluation
 
 Selected production features may be appropriate when they answer a specific future validation question.
 
 They are not required by default.
 
-⸻
+---
 
-Alternative D: Production-Ready System as the Initial Goal
+### Alternative D: Production-Ready System as the Initial Goal
 
 The project could attempt to satisfy production requirements from the beginning.
 
-Advantages
+#### Advantages
 
 * stronger robustness
 * stronger safety
 * greater deployment realism
 * clearer path toward industrial operation
 
-Disadvantages
+#### Disadvantages
 
 * formal requirements would need to be defined first
 * much larger multidisciplinary effort
@@ -818,18 +838,19 @@ Disadvantages
 * much longer development time
 * reduced ability to rapidly change the architecture
 
-Evaluation
+#### Evaluation
 
 This does not match the current purpose or development environment.
 
 It was not selected.
 
-⸻
+---
 
-Selected Scope Strategy
+## Selected Scope Strategy
 
 The selected strategy is:
 
+```text id="3laqw2"
 Define architectural question
         ↓
 Implement minimum meaningful physical evidence
@@ -843,6 +864,7 @@ Document limitations
 Defer features that do not improve the current proof
         ↓
 Reconsider when requirements change
+```
 
 This provides the strongest balance between:
 
@@ -852,11 +874,11 @@ This provides the strongest balance between:
 * practical completion
 * system-level evidence
 
-⸻
+---
 
-Consequences
+## Consequences
 
-Positive Consequences
+### Positive Consequences
 
 The selected scope provides:
 
@@ -868,9 +890,9 @@ The selected scope provides:
 * explicit extension paths
 * clear distinction between PoC and production concerns
 
-⸻
+---
 
-Negative Consequences
+### Negative Consequences
 
 The selected scope also means:
 
@@ -881,26 +903,27 @@ The selected scope also means:
 * some reconfiguration requires recalibration
 * production deployment would require additional architectural work
 
-⸻
+---
 
-Context-Dependent Consequences
+### Context-Dependent Consequences
 
-The scope should change when the project’s purpose changes.
+The scope should change when the project's purpose changes.
 
-New goal	Possible scope expansion
-Production machinery	Safety architecture, guarding, certification
-Long-distance installation	Industrial communication transport
-High availability	Redundancy and failover
-Multi-machine deployment	Centralized monitoring and external storage
-Remote operation	Cybersecurity and access control
-Factory-system integration	MES / ERP interfaces
-Complex orchestration	Flow-editor or higher-level orchestration model
-Faster physical setup	Standardized harnesses and module slots
-Autonomous recovery	Fault classification and recovery logic
+| New goal                   | Possible scope expansion                        |
+| -------------------------- | ----------------------------------------------- |
+| Production machinery       | Safety architecture, guarding, certification    |
+| Long-distance installation | Industrial communication transport              |
+| High availability          | Redundancy and failover                         |
+| Multi-machine deployment   | Centralized monitoring and external storage     |
+| Remote operation           | Cybersecurity and access control                |
+| Factory-system integration | MES / ERP interfaces                            |
+| Complex orchestration      | Flow-editor or higher-level orchestration model |
+| Faster physical setup      | Standardized harnesses and module slots         |
+| Autonomous recovery        | Fault classification and recovery logic         |
 
-⸻
+---
 
-Validation Through Current Implementation
+## Validation Through Current Implementation
 
 The current system demonstrates the selected scope through:
 
@@ -919,9 +942,9 @@ The current system demonstrates the selected scope through:
 
 These elements provide sufficient evidence for the current architectural purpose without requiring production-level completion of every subsystem.
 
-⸻
+---
 
-Decision Boundary
+## Decision Boundary
 
 This decision establishes:
 
@@ -942,24 +965,24 @@ This decision does not establish:
 * guaranteed scalability to factory-wide deployment
 * formal production reliability targets
 
-⸻
+---
 
-Related Documents
+## Related Documents
 
-* Architecture Decision Log overview
-* ADL-000: Requirements Definition and Success Conditions
-* ADL-001: System Context and Goals
-* ADL-002: Design and Development Constraints
-* ADL-003: Host Platform Selection
-* ADL-004: Distributed Node Architecture
-* ADL-005: Communication Interface Selection
-* ADL-006: Common Register Interface
-* ADL-007: Separation of Responsibilities
-* ADL-008: Reconfigurable Physical Mechanisms
-* ADL-009: Monitoring and Control Separation
-* ADL-010: Component Selection and Reproducibility
-* Repository Overview
-* Hardware
-* Firmware
-* Software
-* Use Cases
+* [Architecture Decision Log overview](./README.md)
+* [ADL-000: Requirements Definition and Success Conditions](./ADL-000%20Requirements%20Definition%20and%20Success%20Conditions.md)
+* [ADL-001: System Context and Goals](./ADL-001%20System%20Context%20and%20Goals.md)
+* [ADL-002: Design and Development Constraints](./ADL-002%20Design%20and%20Development%20Constraints.md)
+* [ADL-003: Host Platform Selection](./ADL-003%20Host%20Platform%20Selection.md)
+* [ADL-004: Distributed Node Architecture](./ADL-004%20Distributed%20Node%20Architecture.md)
+* [ADL-005: Communication Interface Selection](./ADL-005%20Communication%20Interface%20Selection.md)
+* [ADL-006: Common Register Interface](./ADL-006%20Common%20Register%20Interface.md)
+* [ADL-007: Separation of Responsibilities](./ADL-007%20Separation%20of%20Responsibilities.md)
+* [ADL-008: Reconfigurable Physical Mechanisms](./ADL-008%20Reconfigurable%20Physical%20Mechanisms.md)
+* [ADL-009: Monitoring and Control Separation](./ADL-009%20Monitoring%20and%20Control%20Separation.md)
+* [ADL-010: Component Selection and Reproducibility](./ADL-010%20Component%20Selection%20and%20Reproducibility.md)
+* [Repository Overview](../README.md)
+* [Hardware](../Hardware/)
+* [Firmware](../Firmware/)
+* [Software](../Software/)
+* [Use Cases](../Use_cases/)
