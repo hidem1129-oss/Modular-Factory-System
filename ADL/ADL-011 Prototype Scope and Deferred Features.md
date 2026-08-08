@@ -88,13 +88,13 @@ Attempting to implement production-level depth in every layer would have prevent
 
 The project therefore prioritizes:
 
-```text id="8vt3sx"
+```text
 Complete system-level architectural evidence
 ```
 
 over:
 
-```text id="5m0fhq"
+```text
 Maximum maturity of every subsystem
 ```
 
@@ -127,7 +127,7 @@ The prototype must demonstrate a complete path from physical process to software
 
 The current architecture includes:
 
-```text id="hkl49p"
+```text
 Physical mechanism
         ↓
 Hardware boards
@@ -643,7 +643,7 @@ They can therefore continue independently after the principal architecture docum
 
 A feature should normally remain deferred when:
 
-```text id="1pwzyr"
+```text
 Implementation cost
         >
 Architectural evidence gained
@@ -669,13 +669,13 @@ A deferred feature may still be technically valuable.
 
 The project distinguishes:
 
-```text id="uv67ib"
+```text
 Not selected for the current architecture
 ```
 
 from:
 
-```text id="2jn8kb"
+```text
 Not required yet
 ```
 
@@ -850,7 +850,7 @@ It was not selected.
 
 The selected strategy is:
 
-```text id="3laqw2"
+```text
 Define architectural question
         ↓
 Implement minimum meaningful physical evidence
