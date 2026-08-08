@@ -43,7 +43,7 @@ This project is a modular tabletop factory system designed to prototype small fa
 
 It combines:
 
-- Raspberry Pi 5 as the host controller
+- Raspberry Pi 5 as the host platform
 - Raspberry Pi Pico-based distributed I²C nodes
 - custom PCBs for control, sensing, wiring, and power monitoring
 - real actuators and sensors
@@ -121,6 +121,7 @@ These use cases show that the same hardware, firmware, and software layers can b
 - Grafana dashboards for state timelines and power monitoring
 - Custom PCBs with Gerber data and DigiKey MyList-based BOMs
 - Reconfigurable tabletop mechanisms using DC motors, servos, sensors, and camera detection
+- Architecture Decision Log covering requirements, constraints, alternatives, responsibility boundaries, reproducibility, and deferred scope
 
 Protocol reference:
 
