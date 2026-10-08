@@ -63,7 +63,7 @@ The goal is to show how physical mechanisms, embedded control, host-side softwar
 | [`Software/`](./Software/) | I²C monitoring software, SQLite logging, and Grafana visualization notes |
 | [`Use_cases/`](./Use_cases/) | Example tabletop factory processes built with the system |
 | [`Docs/`](./Docs/) | Supplementary architecture notes and design references |
-| [`日本語版/`](./日本語版/) | Japanese overview for recruiters and readers in Japan |
+| [`日本語版/`](https://github.com/hidem1129-oss/Modular-Factory-System-Japanese_version) | Japanese overview for recruiters and readers in Japan |
 | [`ADL/`](./ADL/) | Architecture decisions, design constraints, principles, alternatives, and implementation consequences |
 
 ---
