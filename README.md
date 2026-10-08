@@ -18,10 +18,7 @@
 
 *Animated preview of the conveyor-based demo running on the modular factory platform.*
 
-
-### Contest Version
-
-This video was created for a prototype contest and gives a compact overview of the system.
+This video provides a quick overview of the system.
 
 - YouTube: https://youtu.be/8Od8Ocg0tjE
 
