@@ -392,5 +392,5 @@ To follow the physical system from the Raspberry Pi 5 outward:
 - System architecture → [`../Docs/System_Architecture/`](../Docs/System_Architecture/)
 - Register map → [`../Docs/Register_Map/`](../Docs/Register_Map/)
 - Use cases → [`../Use_cases/`](../Use_cases/)
-- Japanese overview → [`../日本語版/`](../日本語版/)
+- Japanese overview → [日本語版](https://github.com/hidem1129-oss/Modular-Factory-System-Japanese_version)
 - Manufacturing → [`Manufacturing/`](./Manufacturing/)
